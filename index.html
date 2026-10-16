@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -168,7 +169,12 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 /* DOC LIBRARY */
 .doc-grid{margin-top:1.2rem;display:grid;grid-template-columns:repeat(2, 1fr);gap:1rem;}
 @media (max-width:700px){ .doc-grid{grid-template-columns:1fr;} }
-.doc-card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;}
+.doc-card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;overflow:hidden;}
+.doc-shot{margin:-1rem -1.2rem .8rem;cursor:zoom-in;border-bottom:1px solid var(--line);}
+.doc-shot-frame{aspect-ratio:16/10;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.doc-shot-frame img{width:100%;height:100%;object-fit:cover;object-position:top;}
+.doc-shot:hover .doc-shot-frame, .doc-shot:focus-visible .doc-shot-frame{outline:2px solid var(--forest-mid);outline-offset:-2px;}
+.doc-shot-caption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
 .doc-tag{display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--forest-mid);margin-bottom:.4rem;}
 .doc-card h4{font-family:'Inter',sans-serif;font-size:.95rem;font-weight:600;margin:0 0 .4rem;color:var(--ink);}
 .doc-card p{font-size:.85rem;color:var(--muted);margin:0;}
@@ -274,11 +280,11 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
 <div class="layout">
   <nav class="sidenav" aria-label="Section navigation">
           <a class="nav-link" href="#experience" data-target="experience">Experience</a>
-          <a class="nav-link" href="#certifications" data-target="certifications">Certifications</a>
           <a class="nav-link" href="#pitt-edge-course" data-target="pitt-edge-course">Pitt EDGE Course</a>
           <a class="nav-link" href="#naxt-erp" data-target="naxt-erp">NAXT ERP Program</a>
           <a class="nav-link" href="#adp-wfm" data-target="adp-wfm">ADP Workforce Mgr</a>
           <a class="nav-link" href="#pitt-docs" data-target="pitt-docs">Pitt Tech Docs</a>
+          <a class="nav-link" href="#certifications" data-target="certifications">Certifications</a>
           <a class="nav-link" href="#upcoming" data-target="upcoming">Upcoming</a>
   </nav>
 
@@ -322,125 +328,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </div>
       <div class="subhead">Education</div>
       <ul class="edu-list">
-        <li class="edu-item-with-image">
-          <div class="edu-text"><strong>Master of Science, Business Education</strong><span>Robert Morris University</span><span class="edu-note">Conferred with a 4.0 cumulative GPA.</span></div>
-          <figure class="edu-shot shot" data-full="assets/edu-rmu-degree-line.png" tabindex="0" role="button" aria-label="Open larger view">
-            <div class="edu-shot-frame"><img src="assets/edu-rmu-degree-line.png" alt="Master of Science, Business Education — Robert Morris University" loading="lazy"></div>
-            <figcaption class="edu-shot-caption">Master of Science, Business Education — Robert Morris University</figcaption>
-          </figure>
-        </li>
+        <li><strong>Master of Science, Business Education</strong><span>Robert Morris University</span><span class="edu-note">Conferred with a 4.0 cumulative GPA.</span></li>
 
         <li><strong>Teaching Certificate, Business, Computers &amp; Information Technology PK-12</strong><span>Robert Morris University</span></li>
 
-        <li class="edu-item-with-image">
-          <div class="edu-text"><strong>Bachelor of Science, Business Administration &amp; Human Resource Management</strong><span>West Virginia University</span></div>
-          <figure class="edu-shot shot" data-full="assets/edu-wvu-diploma.png" tabindex="0" role="button" aria-label="Open larger view">
-            <div class="edu-shot-frame"><img src="assets/edu-wvu-diploma.png" alt="Bachelor of Science, Business Administration &amp;amp; Human Resource Management — West Virginia University" loading="lazy"></div>
-            <figcaption class="edu-shot-caption">Bachelor of Science, Business Administration &amp; Human Resource Management — West Virginia University</figcaption>
-          </figure>
-        </li>
+        <li><strong>Bachelor of Science, Business Administration &amp; Human Resource Management</strong><span>West Virginia University</span></li>
       </ul>
-    </section>
-
-    <section class="section" id="certifications">
-      <div class="section-head">
-        <span class="pill">Credentials</span>
-        <h2>Certifications &amp; Professional Development</h2>
-      </div>
-      <div class="section-intro">
-        <p>Ongoing coursework and vendor certifications across the tools and practices this work draws on &mdash; platform-specific (Canvas, Lucid), AI and accessibility literacy, and the foundational instructional design theory behind the course and program work shown below.</p>
-      </div>
-      <div class="cert-grid">
-        <figure class="cert-card" data-full="assets/cert-google-educator.png" tabindex="0" role="button" aria-label="Open larger view of Google Certified Educator">
-          <div class="cert-frame"><img src="assets/cert-google-educator.png" alt="Google Certified Educator" loading="lazy"></div>
-          <figcaption><strong>Google Certified Educator</strong><span>Level 2 · Google for Education</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-gemini-faculty.png" tabindex="0" role="button" aria-label="Open larger view of Gemini Certified Faculty">
-          <div class="cert-frame"><img src="assets/cert-gemini-faculty.png" alt="Gemini Certified Faculty" loading="lazy"></div>
-          <figcaption><strong>Gemini Certified Faculty</strong><span>Google for Education</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-canvas-basics.png" tabindex="0" role="button" aria-label="Open larger view of Canvas Basics">
-          <div class="cert-frame"><img src="assets/cert-canvas-basics.png" alt="Canvas Basics" loading="lazy"></div>
-          <figcaption><strong>Canvas Basics</strong><span>Instructure Training Services</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-lucidchart-fundamentals.png" tabindex="0" role="button" aria-label="Open larger view of Lucidchart Fundamentals">
-          <div class="cert-frame"><img src="assets/cert-lucidchart-fundamentals.png" alt="Lucidchart Fundamentals" loading="lazy"></div>
-          <figcaption><strong>Lucidchart Fundamentals</strong><span>Lucid Software</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-lucidchart-basics.png" tabindex="0" role="button" aria-label="Open larger view of Basics in Lucidchart">
-          <div class="cert-frame"><img src="assets/cert-lucidchart-basics.png" alt="Basics in Lucidchart" loading="lazy"></div>
-          <figcaption><strong>Basics in Lucidchart</strong><span>Lucid Software</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-lucidspark-basics.png" tabindex="0" role="button" aria-label="Open larger view of Basics in Lucidspark">
-          <div class="cert-frame"><img src="assets/cert-lucidspark-basics.png" alt="Basics in Lucidspark" loading="lazy"></div>
-          <figcaption><strong>Basics in Lucidspark</strong><span>Lucid Software</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-process-diagrams-lucidchart.png" tabindex="0" role="button" aria-label="Open larger view of Process Diagrams in Lucidchart">
-          <div class="cert-frame"><img src="assets/cert-process-diagrams-lucidchart.png" alt="Process Diagrams in Lucidchart" loading="lazy"></div>
-          <figcaption><strong>Process Diagrams in Lucidchart</strong><span>Lucid Software</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-lucidchart-linkedin.png" tabindex="0" role="button" aria-label="Open larger view of Learning Lucidchart">
-          <div class="cert-frame"><img src="assets/cert-lucidchart-linkedin.png" alt="Learning Lucidchart" loading="lazy"></div>
-          <figcaption><strong>Learning Lucidchart</strong><span>LinkedIn Learning</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-elearning-essentials-id.png" tabindex="0" role="button" aria-label="Open larger view of Elearning Essentials: Instructional Design">
-          <div class="cert-frame"><img src="assets/cert-elearning-essentials-id.png" alt="Elearning Essentials: Instructional Design" loading="lazy"></div>
-          <figcaption><strong>Elearning Essentials: Instructional Design</strong><span>LinkedIn Learning</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-scenario-based-learning.png" tabindex="0" role="button" aria-label="Open larger view of Designing Scenario-Based Learning">
-          <div class="cert-frame"><img src="assets/cert-scenario-based-learning.png" alt="Designing Scenario-Based Learning" loading="lazy"></div>
-          <figcaption><strong>Designing Scenario-Based Learning</strong><span>LinkedIn Learning</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-articulate-storyline.png" tabindex="0" role="button" aria-label="Open larger view of Articulate Storyline Essential Training">
-          <div class="cert-frame"><img src="assets/cert-articulate-storyline.png" alt="Articulate Storyline Essential Training" loading="lazy"></div>
-          <figcaption><strong>Articulate Storyline Essential Training</strong><span>LinkedIn Learning</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-wcag-22.png" tabindex="0" role="button" aria-label="Open larger view of Designing with the WCAG 2.2 Guidelines">
-          <div class="cert-frame"><img src="assets/cert-wcag-22.png" alt="Designing with the WCAG 2.2 Guidelines" loading="lazy"></div>
-          <figcaption><strong>Designing with the WCAG 2.2 Guidelines</strong><span>LinkedIn Learning</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-ai-for-id.png" tabindex="0" role="button" aria-label="Open larger view of Tips for Using AI as an Instructional Designer">
-          <div class="cert-frame"><img src="assets/cert-ai-for-id.png" alt="Tips for Using AI as an Instructional Designer" loading="lazy"></div>
-          <figcaption><strong>Tips for Using AI as an Instructional Designer</strong><span>LinkedIn Learning</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-genai-higher-ed.png" tabindex="0" role="button" aria-label="Open larger view of Strategic Foundations of GenAI for Higher Ed Leaders">
-          <div class="cert-frame"><img src="assets/cert-genai-higher-ed.png" alt="Strategic Foundations of GenAI for Higher Ed Leaders" loading="lazy"></div>
-          <figcaption><strong>Strategic Foundations of GenAI for Higher Ed Leaders</strong><span>LinkedIn Learning</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-build-your-own-training.png" tabindex="0" role="button" aria-label="Open larger view of Build Your Own Professional Training">
-          <div class="cert-frame"><img src="assets/cert-build-your-own-training.png" alt="Build Your Own Professional Training" loading="lazy"></div>
-          <figcaption><strong>Build Your Own Professional Training</strong><span>LinkedIn Learning</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-docusign.png" tabindex="0" role="button" aria-label="Open larger view of Learning DocuSign">
-          <div class="cert-frame"><img src="assets/cert-docusign.png" alt="Learning DocuSign" loading="lazy"></div>
-          <figcaption><strong>Learning DocuSign</strong><span>LinkedIn Learning</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-ferpa-101.png" tabindex="0" role="button" aria-label="Open larger view of FERPA 101: Colleges and Universities">
-          <div class="cert-frame"><img src="assets/cert-ferpa-101.png" alt="FERPA 101: Colleges and Universities" loading="lazy"></div>
-          <figcaption><strong>FERPA 101: Colleges and Universities</strong><span>U.S. Dept. of Education</span></figcaption>
-        </figure>
-
-        <figure class="cert-card" data-full="assets/cert-uci-course-dev.png" tabindex="0" role="button" aria-label="Open larger view of Instructional Design: Course Development">
-          <div class="cert-frame"><img src="assets/cert-uci-course-dev.png" alt="Instructional Design: Course Development" loading="lazy"></div>
-          <figcaption><strong>Instructional Design: Course Development</strong><span>UC Irvine · FutureLearn</span></figcaption>
-        </figure>
-      </div>
     </section>
 
     <section class="section" id="pitt-edge-course">
@@ -720,142 +613,335 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </div>
       <div class="doc-grid">
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-bugherd-overview.png" tabindex="0" role="button" aria-label="Open larger view of BugHerd Overview">
+              <div class="doc-shot-frame"><img src="assets/doc-bugherd-overview.png" alt="BugHerd Overview" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">BugHerd Overview</figcaption>
+            </figure>
             <span class="doc-tag">BugHerd</span>
             <h4>BugHerd Overview</h4>
             <p>Role-and-workflow overview of BugHerd as Pitt EDGE's project-based feedback tool for reviewing Canvas course builds.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-bugherd-tools.png" tabindex="0" role="button" aria-label="Open larger view of BugHerd Tools">
+              <div class="doc-shot-frame"><img src="assets/doc-bugherd-tools.png" alt="BugHerd Tools" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">BugHerd Tools</figcaption>
+            </figure>
             <span class="doc-tag">BugHerd</span>
             <h4>BugHerd Tools</h4>
             <p>Sidebar-focused walkthrough of the specific tools used to leave feedback directly on a page under review.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-examsoft-foundations.png" tabindex="0" role="button" aria-label="Open larger view of Foundations of ExamSoft System">
+              <div class="doc-shot-frame"><img src="assets/doc-examsoft-foundations.png" alt="Foundations of ExamSoft System" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">Foundations of ExamSoft System</figcaption>
+            </figure>
             <span class="doc-tag">ExamSoft</span>
             <h4>Foundations of ExamSoft System</h4>
             <p>Introduces the full ecosystem of tools that work together to support secure digital assessment end to end.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-examsoft-create-assessments.png" tabindex="0" role="button" aria-label="Open larger view of ExamSoft: Create Assessments">
+              <div class="doc-shot-frame"><img src="assets/doc-examsoft-create-assessments.png" alt="ExamSoft: Create Assessments" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">ExamSoft: Create Assessments</figcaption>
+            </figure>
             <span class="doc-tag">ExamSoft</span>
             <h4>ExamSoft: Create Assessments</h4>
             <p>Guides faculty through the Set Up &rarr; Build &rarr; Deliver workflow for creating a new assessment.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-examsoft-categories.png" tabindex="0" role="button" aria-label="Open larger view of ExamSoft: Categories and Tagging">
+              <div class="doc-shot-frame"><img src="assets/doc-examsoft-categories.png" alt="ExamSoft: Categories and Tagging" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">ExamSoft: Categories and Tagging</figcaption>
+            </figure>
             <span class="doc-tag">ExamSoft</span>
             <h4>ExamSoft: Categories and Tagging</h4>
             <p>Explains how categories and tagging organize content and support Blueprint exam design and reporting.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-examsoft-rubrics.png" tabindex="0" role="button" aria-label="Open larger view of ExamSoft: Create and Use Rubrics">
+              <div class="doc-shot-frame"><img src="assets/doc-examsoft-rubrics.png" alt="ExamSoft: Create and Use Rubrics" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">ExamSoft: Create and Use Rubrics</figcaption>
+            </figure>
             <span class="doc-tag">ExamSoft</span>
             <h4>ExamSoft: Create and Use Rubrics</h4>
             <p>Covers building a rubric in the rubric editor and attaching it to an exam question for consistent grading.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-examsoft-examplify.png" tabindex="0" role="button" aria-label="Open larger view of ExamSoft: Examplify Student Perspective">
+              <div class="doc-shot-frame"><img src="assets/doc-examsoft-examplify.png" alt="ExamSoft: Examplify Student Perspective" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">ExamSoft: Examplify Student Perspective</figcaption>
+            </figure>
             <span class="doc-tag">ExamSoft</span>
             <h4>ExamSoft: Examplify Student Perspective</h4>
             <p>Shows faculty what students actually see inside the locked-down Examplify testing application.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-examsoft-meeting.png" tabindex="0" role="button" aria-label="Open larger view of ExamSoft Meeting Overview (8/10/26)">
+              <div class="doc-shot-frame"><img src="assets/doc-examsoft-meeting.png" alt="ExamSoft Meeting Overview (8/10/26)" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">ExamSoft Meeting Overview (8/10/26)</figcaption>
+            </figure>
             <span class="doc-tag">ExamSoft</span>
             <h4>ExamSoft Meeting Overview (8/10/26)</h4>
             <p>Notes from a vendor session mapping the ExamID and ExamMonitor ecosystem for faculty-facing use.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-harmonize-discussion.png" tabindex="0" role="button" aria-label="Open larger view of Create a Graded Discussion with Harmonize in Canvas">
+              <div class="doc-shot-frame"><img src="assets/doc-harmonize-discussion.png" alt="Create a Graded Discussion with Harmonize in Canvas" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">Create a Graded Discussion with Harmonize in Canvas</figcaption>
+            </figure>
             <span class="doc-tag">Harmonize</span>
             <h4>Create a Graded Discussion with Harmonize in Canvas</h4>
             <p>Step-by-step setup for configuring a graded Harmonize discussion inside a Canvas course.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-lucid-overview.png" tabindex="0" role="button" aria-label="Open larger view of Lucid: Overview and Access within Canvas">
+              <div class="doc-shot-frame"><img src="assets/doc-lucid-overview.png" alt="Lucid: Overview and Access within Canvas" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">Lucid: Overview and Access within Canvas</figcaption>
+            </figure>
             <span class="doc-tag">Lucid</span>
             <h4>Lucid: Overview and Access within Canvas</h4>
             <p>Orientation to Lucidchart and Lucidspark and how faculty reach them from inside a course.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-lucid-interface.png" tabindex="0" role="button" aria-label="Open larger view of Lucid Interface: Content Selector">
+              <div class="doc-shot-frame"><img src="assets/doc-lucid-interface.png" alt="Lucid Interface: Content Selector" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">Lucid Interface: Content Selector</figcaption>
+            </figure>
             <span class="doc-tag">Lucid</span>
             <h4>Lucid Interface: Content Selector</h4>
             <p>Breaks down the Lucid Content Selector's interface elements for creating and embedding content.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-lucidchart-qrg.png" tabindex="0" role="button" aria-label="Open larger view of Lucidchart Quick Reference Guide (Basics)">
+              <div class="doc-shot-frame"><img src="assets/doc-lucidchart-qrg.png" alt="Lucidchart Quick Reference Guide (Basics)" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">Lucidchart Quick Reference Guide (Basics)</figcaption>
+            </figure>
             <span class="doc-tag">Lucid</span>
             <h4>Lucidchart Quick Reference Guide (Basics)</h4>
             <p>Fast-reference guide to the core Lucidchart features needed to build and share a diagram.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-panopto-best-practices.png" tabindex="0" role="button" aria-label="Open larger view of Best Practices for Creating Videos">
+              <div class="doc-shot-frame"><img src="assets/doc-panopto-best-practices.png" alt="Best Practices for Creating Videos" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">Best Practices for Creating Videos</figcaption>
+            </figure>
             <span class="doc-tag">Panopto</span>
             <h4>Best Practices for Creating Videos</h4>
             <p>Audio, slide design, and accessibility guidance for faculty recording their own instructional videos.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-panopto-media-tracker.png" tabindex="0" role="button" aria-label="Open larger view of Media Asset Tracker and Panopto Workflow">
+              <div class="doc-shot-frame"><img src="assets/doc-panopto-media-tracker.png" alt="Media Asset Tracker and Panopto Workflow" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">Media Asset Tracker and Panopto Workflow</figcaption>
+            </figure>
             <span class="doc-tag">Panopto</span>
             <h4>Media Asset Tracker and Panopto Workflow</h4>
             <p>Meeting notes documenting a tracking system built for managing media assets through Panopto.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-panopto-video-id-guide.png" tabindex="0" role="button" aria-label="Open larger view of Pitt EDGE Video Production ID Guide">
+              <div class="doc-shot-frame"><img src="assets/doc-panopto-video-id-guide.png" alt="Pitt EDGE Video Production ID Guide" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">Pitt EDGE Video Production ID Guide</figcaption>
+            </figure>
             <span class="doc-tag">Panopto</span>
             <h4>Pitt EDGE Video Production ID Guide</h4>
             <p>Internal workflow guide for instructional designers managing the video production pipeline.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-pittedge-talking-points.png" tabindex="0" role="button" aria-label="Open larger view of EDGE Software Stack Talking Points">
+              <div class="doc-shot-frame"><img src="assets/doc-pittedge-talking-points.png" alt="EDGE Software Stack Talking Points" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">EDGE Software Stack Talking Points</figcaption>
+            </figure>
             <span class="doc-tag">Pitt EDGE</span>
             <h4>EDGE Software Stack Talking Points</h4>
             <p>Internal talking points for discussing the Pitt EDGE technology ecosystem with faculty.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-pittedge-reverse-image.png" tabindex="0" role="button" aria-label="Open larger view of Reverse Image Search">
+              <div class="doc-shot-frame"><img src="assets/doc-pittedge-reverse-image.png" alt="Reverse Image Search" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">Reverse Image Search</figcaption>
+            </figure>
             <span class="doc-tag">Pitt EDGE</span>
             <h4>Reverse Image Search</h4>
             <p>Quick step-by-step guide for verifying image sourcing before reuse in course content.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-powerpoint-best-practices.png" tabindex="0" role="button" aria-label="Open larger view of PowerPoint Best Practices">
+              <div class="doc-shot-frame"><img src="assets/doc-powerpoint-best-practices.png" alt="PowerPoint Best Practices" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">PowerPoint Best Practices</figcaption>
+            </figure>
             <span class="doc-tag">PowerPoint</span>
             <h4>PowerPoint Best Practices</h4>
             <p>Design guidelines for layout, typography, and color to keep faculty slide decks clear and consistent.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-reeldx-summary.png" tabindex="0" role="button" aria-label="Open larger view of ReelDx Training Session Summary Notes">
+              <div class="doc-shot-frame"><img src="assets/doc-reeldx-summary.png" alt="ReelDx Training Session Summary Notes" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">ReelDx Training Session Summary Notes</figcaption>
+            </figure>
             <span class="doc-tag">ReelDx</span>
             <h4>ReelDx Training Session Summary Notes</h4>
             <p>Cleaned summary notes from a ReelDx training session, kept for reference and follow-up.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-respondus-setup.png" tabindex="0" role="button" aria-label="Open larger view of Set Up a Canvas Quiz Requiring LockDown Browser">
+              <div class="doc-shot-frame"><img src="assets/doc-respondus-setup.png" alt="Set Up a Canvas Quiz Requiring LockDown Browser" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">Set Up a Canvas Quiz Requiring LockDown Browser</figcaption>
+            </figure>
             <span class="doc-tag">Respondus</span>
             <h4>Set Up a Canvas Quiz Requiring LockDown Browser</h4>
             <p>Step-by-step setup for requiring Respondus LockDown Browser on a Canvas quiz.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-sharepoint-upload.png" tabindex="0" role="button" aria-label="Open larger view of SharePoint Upload: Faculty Guidance">
+              <div class="doc-shot-frame"><img src="assets/doc-sharepoint-upload.png" alt="SharePoint Upload: Faculty Guidance" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">SharePoint Upload: Faculty Guidance</figcaption>
+            </figure>
             <span class="doc-tag">SharePoint</span>
             <h4>SharePoint Upload: Faculty Guidance</h4>
             <p>Walks faculty through logging in via Pitt Passport and uploading files to SharePoint.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-tdx-workflow.png" tabindex="0" role="button" aria-label="Open larger view of TDX Workflow">
+              <div class="doc-shot-frame"><img src="assets/doc-tdx-workflow.png" alt="TDX Workflow" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">TDX Workflow</figcaption>
+            </figure>
             <span class="doc-tag">TeamDynamix</span>
             <h4>TDX Workflow</h4>
             <p>Explains how TeamDynamix is used for time tracking and project visibility across course builds.</p>
           </div>
 
           <div class="doc-card">
+            <figure class="doc-shot shot" data-full="assets/doc-tidyup-summary.png" tabindex="0" role="button" aria-label="Open larger view of Cidi Labs TidyUp: Testing Summary &amp;amp; Purchase Recommendation">
+              <div class="doc-shot-frame"><img src="assets/doc-tidyup-summary.png" alt="Cidi Labs TidyUp: Testing Summary &amp;amp; Purchase Recommendation" loading="lazy"></div>
+              <figcaption class="doc-shot-caption">Cidi Labs TidyUp: Testing Summary &amp; Purchase Recommendation</figcaption>
+            </figure>
             <span class="doc-tag">Vendor Evaluation</span>
             <h4>Cidi Labs TidyUp: Testing Summary &amp; Purchase Recommendation</h4>
             <p>A formal usability test &mdash; 5 courses, 4.1/5 usability &mdash; backing a purchase recommendation for a Canvas cleanup tool.</p>
           </div>
+      </div>
+    </section>
+
+    <section class="section" id="certifications">
+      <div class="section-head">
+        <span class="pill">Credentials</span>
+        <h2>Certifications &amp; Professional Development</h2>
+      </div>
+      <div class="section-intro">
+        <p>Ongoing coursework and vendor certifications across the tools and practices this work draws on &mdash; platform-specific (Canvas, Lucid), AI and accessibility literacy, and the foundational instructional design theory behind the course and program work shown above.</p>
+      </div>
+      <div class="cert-grid">
+        <figure class="cert-card" data-full="assets/cert-google-educator.png" tabindex="0" role="button" aria-label="Open larger view of Google Certified Educator">
+          <div class="cert-frame"><img src="assets/cert-google-educator.png" alt="Google Certified Educator" loading="lazy"></div>
+          <figcaption><strong>Google Certified Educator</strong><span>Level 2 · Google for Education</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-gemini-faculty.png" tabindex="0" role="button" aria-label="Open larger view of Gemini Certified Faculty">
+          <div class="cert-frame"><img src="assets/cert-gemini-faculty.png" alt="Gemini Certified Faculty" loading="lazy"></div>
+          <figcaption><strong>Gemini Certified Faculty</strong><span>Google for Education</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-canvas-basics.png" tabindex="0" role="button" aria-label="Open larger view of Canvas Basics">
+          <div class="cert-frame"><img src="assets/cert-canvas-basics.png" alt="Canvas Basics" loading="lazy"></div>
+          <figcaption><strong>Canvas Basics</strong><span>Instructure Training Services</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-lucidchart-fundamentals.png" tabindex="0" role="button" aria-label="Open larger view of Lucidchart Fundamentals">
+          <div class="cert-frame"><img src="assets/cert-lucidchart-fundamentals.png" alt="Lucidchart Fundamentals" loading="lazy"></div>
+          <figcaption><strong>Lucidchart Fundamentals</strong><span>Lucid Software</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-lucidchart-basics.png" tabindex="0" role="button" aria-label="Open larger view of Basics in Lucidchart">
+          <div class="cert-frame"><img src="assets/cert-lucidchart-basics.png" alt="Basics in Lucidchart" loading="lazy"></div>
+          <figcaption><strong>Basics in Lucidchart</strong><span>Lucid Software</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-lucidspark-basics.png" tabindex="0" role="button" aria-label="Open larger view of Basics in Lucidspark">
+          <div class="cert-frame"><img src="assets/cert-lucidspark-basics.png" alt="Basics in Lucidspark" loading="lazy"></div>
+          <figcaption><strong>Basics in Lucidspark</strong><span>Lucid Software</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-process-diagrams-lucidchart.png" tabindex="0" role="button" aria-label="Open larger view of Process Diagrams in Lucidchart">
+          <div class="cert-frame"><img src="assets/cert-process-diagrams-lucidchart.png" alt="Process Diagrams in Lucidchart" loading="lazy"></div>
+          <figcaption><strong>Process Diagrams in Lucidchart</strong><span>Lucid Software</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-lucidchart-linkedin.png" tabindex="0" role="button" aria-label="Open larger view of Learning Lucidchart">
+          <div class="cert-frame"><img src="assets/cert-lucidchart-linkedin.png" alt="Learning Lucidchart" loading="lazy"></div>
+          <figcaption><strong>Learning Lucidchart</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-elearning-essentials-id.png" tabindex="0" role="button" aria-label="Open larger view of Elearning Essentials: Instructional Design">
+          <div class="cert-frame"><img src="assets/cert-elearning-essentials-id.png" alt="Elearning Essentials: Instructional Design" loading="lazy"></div>
+          <figcaption><strong>Elearning Essentials: Instructional Design</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-scenario-based-learning.png" tabindex="0" role="button" aria-label="Open larger view of Designing Scenario-Based Learning">
+          <div class="cert-frame"><img src="assets/cert-scenario-based-learning.png" alt="Designing Scenario-Based Learning" loading="lazy"></div>
+          <figcaption><strong>Designing Scenario-Based Learning</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-articulate-storyline.png" tabindex="0" role="button" aria-label="Open larger view of Articulate Storyline Essential Training">
+          <div class="cert-frame"><img src="assets/cert-articulate-storyline.png" alt="Articulate Storyline Essential Training" loading="lazy"></div>
+          <figcaption><strong>Articulate Storyline Essential Training</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-wcag-22.png" tabindex="0" role="button" aria-label="Open larger view of Designing with the WCAG 2.2 Guidelines">
+          <div class="cert-frame"><img src="assets/cert-wcag-22.png" alt="Designing with the WCAG 2.2 Guidelines" loading="lazy"></div>
+          <figcaption><strong>Designing with the WCAG 2.2 Guidelines</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-ai-for-id.png" tabindex="0" role="button" aria-label="Open larger view of Tips for Using AI as an Instructional Designer">
+          <div class="cert-frame"><img src="assets/cert-ai-for-id.png" alt="Tips for Using AI as an Instructional Designer" loading="lazy"></div>
+          <figcaption><strong>Tips for Using AI as an Instructional Designer</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-genai-higher-ed.png" tabindex="0" role="button" aria-label="Open larger view of Strategic Foundations of GenAI for Higher Ed Leaders">
+          <div class="cert-frame"><img src="assets/cert-genai-higher-ed.png" alt="Strategic Foundations of GenAI for Higher Ed Leaders" loading="lazy"></div>
+          <figcaption><strong>Strategic Foundations of GenAI for Higher Ed Leaders</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-build-your-own-training.png" tabindex="0" role="button" aria-label="Open larger view of Build Your Own Professional Training">
+          <div class="cert-frame"><img src="assets/cert-build-your-own-training.png" alt="Build Your Own Professional Training" loading="lazy"></div>
+          <figcaption><strong>Build Your Own Professional Training</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-docusign.png" tabindex="0" role="button" aria-label="Open larger view of Learning DocuSign">
+          <div class="cert-frame"><img src="assets/cert-docusign.png" alt="Learning DocuSign" loading="lazy"></div>
+          <figcaption><strong>Learning DocuSign</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-ferpa-101.png" tabindex="0" role="button" aria-label="Open larger view of FERPA 101: Colleges and Universities">
+          <div class="cert-frame"><img src="assets/cert-ferpa-101.png" alt="FERPA 101: Colleges and Universities" loading="lazy"></div>
+          <figcaption><strong>FERPA 101: Colleges and Universities</strong><span>U.S. Dept. of Education</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-uci-course-dev.png" tabindex="0" role="button" aria-label="Open larger view of Instructional Design: Course Development">
+          <div class="cert-frame"><img src="assets/cert-uci-course-dev.png" alt="Instructional Design: Course Development" loading="lazy"></div>
+          <figcaption><strong>Instructional Design: Course Development</strong><span>UC Irvine · FutureLearn</span></figcaption>
+        </figure>
       </div>
     </section>
 
@@ -876,7 +962,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
 <footer>
   <div class="footer-inner">
     <h3>About this portfolio</h3>
-    <p>Every document and screenshot above comes from real project work. Captions describe the decision behind each piece, not just what's on it. Get in touch to walk through any program in more detail.</p>
+    <p>The artifacts and screenshots included represent selected highlights from real project work. Each example includes context about the goals, decisions, and design considerations that informed the final solution. These snapshots offer a glimpse into the broader programs and initiatives behind the work. If you'd like to explore any project in greater detail, I'd welcome the conversation.</p>
     <p class="contact">Deanna Gilkey Schmuck, MS &mdash; <a href="mailto:deannagilkey@comcast.net">deannagilkey@comcast.net</a> &middot; <a href="mailto:deannagilkey@gmail.com">deannagilkey@gmail.com</a> &middot; <a href="tel:+14123029025">412-302-9025</a></p>
   </div>
 </footer>
