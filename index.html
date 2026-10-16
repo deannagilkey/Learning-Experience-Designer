@@ -9,30 +9,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#1F2E22;
-  --forest-deep:#162B1D;
-  --forest:#2E5339;
-  --forest-mid:#3E6B4C;
-  --gold:#B8903A;
-  --gold-deep:#8C6A26;
+  --ink:#1B2430;
+  --forest-deep:#15213A;
+  --forest:#1F3254;
+  --forest-mid:#3C5C8F;
+  --gold:#D9A441;
+  --gold-deep:#B8872B;
   --paper:#F6F3EC;
   --panel:#FFFFFF;
-  --muted:#5B6B5E;
-  --line:#E3DFD2;
+  --muted:#5B6472;
+  --line:#E1DFD5;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --ink:#E9ECE6;
-    --forest-deep:#0E1A12;
-    --forest:#4C7D5C;
-    --forest-mid:#6FA37E;
-    --gold:#D8AE5C;
-    --gold-deep:#E4C27A;
-    --paper:#11150E;
-    --panel:#1A2017;
-    --muted:#A5B0A0;
-    --line:#2A3326;
+    --ink:#E7EAF0;
+    --forest-deep:#0D1626;
+    --forest:#1E3353;
+    --forest-mid:#6FA0D8;
+    --gold:#E8C27A;
+    --gold-deep:#F0D08C;
+    --paper:#10131C;
+    --panel:#191D27;
+    --muted:#9AA3B5;
+    --line:#262B38;
   }
 }
 *{box-sizing:border-box;}
@@ -173,6 +173,41 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .doc-card h4{font-family:'Inter',sans-serif;font-size:.95rem;font-weight:600;margin:0 0 .4rem;color:var(--ink);}
 .doc-card p{font-size:.85rem;color:var(--muted);margin:0;}
 
+/* EXPERIENCE */
+.exp-grid{margin-top:1.2rem;display:flex;flex-direction:column;gap:1rem;}
+.exp-card{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--forest-mid);border-radius:4px;padding:1.1rem 1.4rem;}
+.exp-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.5rem;}
+.exp-head h4{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;margin:0;color:var(--forest-deep);}
+.exp-dates{font-size:.8rem;color:var(--muted);white-space:nowrap;}
+.exp-role{font-size:.88rem;font-weight:600;color:var(--ink);margin-top:.15rem;margin-bottom:.5rem;}
+.exp-card p{font-size:.88rem;color:var(--muted);margin:0;max-width:none;}
+
+.edu-list{margin-top:1.4rem;list-style:none;padding:0;display:flex;flex-direction:column;gap:.7rem;}
+.edu-list li{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:.9rem 1.2rem;}
+.edu-list strong{font-size:.92rem;color:var(--ink);font-weight:600;}
+.edu-list span{font-size:.82rem;color:var(--muted);margin-top:.15rem;display:block;}
+.edu-note{font-style:italic;}
+.edu-item-with-image{flex-direction:row;align-items:center;gap:1.2rem;flex-wrap:wrap;}
+.edu-text{flex:1;min-width:200px;}
+.edu-shot{margin:0;width:140px;flex-shrink:0;cursor:zoom-in;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#fff;}
+.edu-shot:hover, .edu-shot:focus-visible{border-color:var(--forest-mid);}
+.edu-shot-frame{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.edu-shot-frame img{width:100%;height:100%;object-fit:contain;}
+.edu-shot-caption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
+@media (max-width:500px){ .edu-item-with-image{flex-direction:column;align-items:flex-start;} .edu-shot{width:100%;} }
+
+.resume-btn{
+  display:inline-flex;align-items:center;gap:.5em;
+  margin-top:1.4rem;
+  background:var(--gold);color:#2A1E07;
+  font-weight:600;font-size:.88rem;
+  padding:.65em 1.3em;
+  border-radius:4px;
+  text-decoration:none;
+  transition:background .15s;
+}
+.resume-btn:hover{background:var(--gold-deep);}
+
 /* TEXT CARDS (workshops etc) */
 .text-card-grid{margin-top:1.2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
 @media (max-width:900px){ .text-card-grid{grid-template-columns:1fr;} }
@@ -228,6 +263,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       <div><div class="stat-num">3</div><div class="stat-label">major programs</div></div>
       <div><div class="stat-num">90+</div><div class="stat-label">supporting documents</div></div>
     </div>
+    <a class="resume-btn" href="assets/resume-deanna-schmuck.pdf" target="_blank" rel="noopener">Download Resume &darr;</a>
   </div>
 </header>
 
@@ -237,6 +273,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
 
 <div class="layout">
   <nav class="sidenav" aria-label="Section navigation">
+          <a class="nav-link" href="#experience" data-target="experience">Experience</a>
           <a class="nav-link" href="#certifications" data-target="certifications">Certifications</a>
           <a class="nav-link" href="#pitt-edge-course" data-target="pitt-edge-course">Pitt EDGE Course</a>
           <a class="nav-link" href="#naxt-erp" data-target="naxt-erp">NAXT ERP Program</a>
@@ -246,6 +283,64 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
   </nav>
 
   <main id="main-content">
+
+    <section class="section" id="experience">
+      <div class="section-head">
+        <span class="pill">Background</span>
+        <h2>Professional Experience &amp; Education</h2>
+      </div>
+      <div class="section-intro">
+        <p>18+ years spanning higher education, workforce development, and enterprise L&amp;D &mdash; the three roles below map directly to the case studies on this site.</p>
+      </div>
+      <div class="exp-grid">
+        <div class="exp-card">
+          <div class="exp-head">
+            <h4>University of Pittsburgh &mdash; EDGE</h4>
+            <span class="exp-dates">04/2026&ndash;Present</span>
+          </div>
+          <div class="exp-role">Instructional Technologist</div>
+          <p>Created the Pitt EDGE Technology Tools Canvas course shown on this site, and is developing a structured onboarding program for incoming instructional designers. Serves as Canvas Sub-Account Administrator and consults on Harmonize, Lucid, Respondus, ExamSoft, and Google Gemini.</p>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-head">
+            <h4>Cleveland Brothers Equipment / CAT</h4>
+            <span class="exp-dates">11/2023&ndash;04/2026</span>
+          </div>
+          <div class="exp-role">Technology Learning Specialist</div>
+          <p>Led learning enablement for the NAXT ERP and Microsoft 365 rollouts shown on this site &mdash; role-based curricula, eLearning, ILT/VILT programs, and Train-the-Trainer initiatives supporting 1,400+ employees across 30+ locations.</p>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-head">
+            <h4>Bidwell Training Center</h4>
+            <span class="exp-dates">04/2007&ndash;11/2023</span>
+          </div>
+          <div class="exp-role">Technology Instructor / Instructional Designer</div>
+          <p>Sixteen years designing curriculum and instructional materials for adult learners in workforce development &mdash; digital literacy, blended and online learning, LMS management, and Chromebook/ed-tech integration.</p>
+        </div>
+      </div>
+      <div class="subhead">Education</div>
+      <ul class="edu-list">
+        <li class="edu-item-with-image">
+          <div class="edu-text"><strong>Master of Science, Business Education</strong><span>Robert Morris University</span><span class="edu-note">Conferred with a 4.0 cumulative GPA.</span></div>
+          <figure class="edu-shot shot" data-full="assets/edu-rmu-degree-line.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="edu-shot-frame"><img src="assets/edu-rmu-degree-line.png" alt="Master of Science, Business Education — Robert Morris University" loading="lazy"></div>
+            <figcaption class="edu-shot-caption">Master of Science, Business Education — Robert Morris University</figcaption>
+          </figure>
+        </li>
+
+        <li><strong>Teaching Certificate, Business, Computers &amp; Information Technology PK-12</strong><span>Robert Morris University</span></li>
+
+        <li class="edu-item-with-image">
+          <div class="edu-text"><strong>Bachelor of Science, Business Administration &amp; Human Resource Management</strong><span>West Virginia University</span></div>
+          <figure class="edu-shot shot" data-full="assets/edu-wvu-diploma.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="edu-shot-frame"><img src="assets/edu-wvu-diploma.png" alt="Bachelor of Science, Business Administration &amp;amp; Human Resource Management — West Virginia University" loading="lazy"></div>
+            <figcaption class="edu-shot-caption">Bachelor of Science, Business Administration &amp; Human Resource Management — West Virginia University</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
 
     <section class="section" id="certifications">
       <div class="section-head">
