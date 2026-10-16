@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deanna Gilkey Schmuck, MS | Learning Experience Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1F2E22;
+  --forest-deep:#162B1D;
+  --forest:#2E5339;
+  --forest-mid:#3E6B4C;
+  --gold:#B8903A;
+  --gold-deep:#8C6A26;
+  --paper:#F6F3EC;
+  --panel:#FFFFFF;
+  --muted:#5B6B5E;
+  --line:#E3DFD2;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#E9ECE6;
+    --forest-deep:#0E1A12;
+    --forest:#4C7D5C;
+    --forest-mid:#6FA37E;
+    --gold:#D8AE5C;
+    --gold-deep:#E4C27A;
+    --paper:#11150E;
+    --panel:#1A2017;
+    --muted:#A5B0A0;
+    --line:#2A3326;
+  }
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Inter', -apple-system, sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.65;
+}
+h1,h2,h3{
+  font-family:'Fraunces', Georgia, serif;
+  margin:0;
+  color:var(--ink);
+}
+p{margin:0 0 1em 0; max-width:68ch;}
+a{color:var(--forest-mid);}
+img{max-width:100%;display:block;}
+
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--forest-deep);padding:.6em 1em;z-index:200;}
+.skip-link:focus{left:1em;top:1em;}
+
+/* HERO */
+.hero{
+  background:linear-gradient(165deg, var(--forest-deep) 0%, var(--forest) 100%);
+  color:#F3F6F1;
+  padding:4.5rem 1.5rem 3.5rem;
+}
+.hero-inner{max-width:1180px;margin:0 auto;}
+.eyebrow-pill{
+  display:inline-block;
+  background:var(--gold);
+  color:#2A1E07;
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  font-size:.8rem;
+  letter-spacing:.02em;
+  padding:.35em 1em;
+  border-radius:999px;
+  margin-bottom:1.4rem;
+}
+.hero h1{
+  font-size:clamp(2rem, 4vw, 3rem);
+  font-weight:600;
+  line-height:1.18;
+  max-width:19ch;
+  color:#fff;
+}
+.hero .dek{
+  margin-top:1.3rem;
+  font-size:1.1rem;
+  max-width:64ch;
+  color:#D3DDCE;
+}
+.hero .dek strong{color:#fff;font-weight:600;}
+.byline{
+  margin-top:1.3rem;
+  font-size:.95rem;
+  font-weight:600;
+  letter-spacing:.02em;
+  color:var(--gold-deep);
+}
+.stat-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:2.4rem;
+  margin-top:2.2rem;
+}
+.stat-row div{min-width:120px;}
+.stat-num{font-family:'Fraunces',serif;font-size:2rem;color:var(--gold);line-height:1;}
+.stat-label{font-size:.85rem;color:#AEBCA8;margin-top:.3rem;}
+
+.edit-note{max-width:1180px;margin:0 auto; padding: 0 1.5rem;}
+.edit-note p{font-size:.82rem;color:var(--muted);font-style:italic;margin-top:1.2rem;max-width:70ch;}
+.edit-note .linkedin-link{font-style:normal;font-size:.9rem;}
+.edit-note .linkedin-link a{color:var(--forest-mid);font-weight:600;text-decoration:none;}
+.edit-note .linkedin-link a:hover{text-decoration:underline;}
+
+/* LAYOUT */
+.layout{max-width:1180px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:200px 1fr;gap:3rem;align-items:start;}
+@media (max-width:860px){ .layout{grid-template-columns:1fr;} }
+
+.sidenav{position:sticky;top:0;padding-top:2.5rem;display:flex;flex-direction:column;gap:.1rem;}
+@media (max-width:860px){
+  .sidenav{position:static;flex-direction:row;overflow-x:auto;gap:.4rem;padding:1rem 0;border-bottom:1px solid var(--line);-webkit-overflow-scrolling:touch;}
+}
+.nav-link{font-size:.85rem;color:var(--muted);text-decoration:none;padding:.5em .2em;border-left:2px solid transparent;padding-left:.9em;white-space:nowrap;transition:color .15s, border-color .15s;}
+.nav-link:hover{color:var(--forest);}
+.nav-link.active{color:var(--forest-deep);font-weight:600;border-left-color:var(--gold);}
+@media (max-width:860px){
+  .nav-link{border-left:none;border-bottom:2px solid transparent;padding:.4em .7em;}
+  .nav-link.active{border-bottom-color:var(--gold);}
+}
+
+main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
+
+.section{padding:2.6rem 0;border-bottom:1px solid var(--line);scroll-margin-top:1.2rem;}
+.section:last-child{border-bottom:none;}
+.section-head{margin-bottom:1rem;}
+.pill{display:inline-block;font-size:.74rem;font-weight:600;letter-spacing:.02em;color:#2A1E07;background:var(--gold);padding:.28em .85em;border-radius:999px;margin-bottom:.7rem;}
+.section h2{font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:600;max-width:32ch;}
+.section-intro{margin-top:.9rem;color:var(--ink);}
+.section-intro p{color:var(--ink);}
+
+.subhead{margin:2.2rem 0 1rem;font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--forest-deep);border-top:1px solid var(--line);padding-top:1.6rem;}
+.subhead:first-of-type{border-top:none;padding-top:0;}
+.subhead-intro{font-size:.95rem;color:var(--muted);margin-top:-.4rem;margin-bottom:1.2rem;max-width:72ch;}
+
+/* SHOT GRID */
+.shot-grid{margin-top:1.2rem;display:grid;grid-template-columns:repeat(3, 1fr);gap:1.4rem;}
+@media (max-width:900px){ .shot-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:600px){ .shot-grid{grid-template-columns:1fr;} }
+
+.shot{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;cursor:zoom-in;transition:border-color .15s, transform .15s;}
+.shot:hover, .shot:focus-visible{border-color:var(--forest-mid); transform:translateY(-2px);}
+.shot:focus-visible{outline:2px solid var(--forest-mid); outline-offset:2px;}
+.shot-frame{aspect-ratio:4/3.1;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line);}
+.shot-frame img{width:100%;height:100%;object-fit:contain;}
+.shot figcaption{padding:.85em 1em 1.05em;font-size:.86rem;color:var(--muted);line-height:1.5;}
+
+/* CERT GRID */
+.cert-grid{margin-top:1.4rem;display:grid;grid-template-columns:repeat(4, 1fr);gap:1.2rem;}
+@media (max-width:900px){ .cert-grid{grid-template-columns:repeat(3,1fr);} }
+@media (max-width:600px){ .cert-grid{grid-template-columns:repeat(2,1fr);} }
+.cert-card{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;cursor:zoom-in;transition:border-color .15s, transform .15s;}
+.cert-card:hover, .cert-card:focus-visible{border-color:var(--gold); transform:translateY(-2px);}
+.cert-frame{aspect-ratio:4/2.9;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line);padding:.4rem;}
+.cert-frame img{width:100%;height:100%;object-fit:contain;}
+.cert-card figcaption{padding:.7em .9em .9em;font-size:.78rem;color:var(--muted);display:flex;flex-direction:column;gap:.15em;}
+.cert-card figcaption strong{color:var(--ink);font-size:.86rem;font-weight:600;}
+
+/* DOC LIBRARY */
+.doc-grid{margin-top:1.2rem;display:grid;grid-template-columns:repeat(2, 1fr);gap:1rem;}
+@media (max-width:700px){ .doc-grid{grid-template-columns:1fr;} }
+.doc-card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;}
+.doc-tag{display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--forest-mid);margin-bottom:.4rem;}
+.doc-card h4{font-family:'Inter',sans-serif;font-size:.95rem;font-weight:600;margin:0 0 .4rem;color:var(--ink);}
+.doc-card p{font-size:.85rem;color:var(--muted);margin:0;}
+
+/* TEXT CARDS (workshops etc) */
+.text-card-grid{margin-top:1.2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+@media (max-width:900px){ .text-card-grid{grid-template-columns:1fr;} }
+.text-card{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:4px;padding:1.1rem 1.3rem;}
+.text-card h4{font-family:'Fraunces',serif;font-size:1rem;font-weight:600;margin:0 0 .3rem;color:var(--forest-deep);}
+.text-card-meta{font-size:.78rem;color:var(--muted);margin-bottom:.6rem;}
+.text-card p{font-size:.87rem;color:var(--ink);margin:0;max-width:none;}
+
+/* LINK-OUT TILE */
+.link-tile{display:grid;grid-template-columns:220px 1fr;gap:1.6rem;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:1.2rem;align-items:stretch;}
+@media (max-width:700px){ .link-tile{grid-template-columns:1fr;} }
+.link-tile-img{background:#fff;}
+.link-tile-img img{width:100%;height:100%;object-fit:cover;}
+.link-tile-body{padding:1.4rem 1.6rem 1.4rem 0;display:flex;flex-direction:column;justify-content:center;}
+@media (max-width:700px){ .link-tile-body{padding:0 1.4rem 1.4rem;} }
+.link-tile-body h3{font-size:1.15rem;margin-bottom:.5rem;}
+.link-tile-body p{font-size:.92rem;color:var(--muted);margin-bottom:1rem;}
+.link-tile-cta{display:inline-flex;align-items:center;gap:.4em;font-size:.88rem;font-weight:600;color:var(--forest-deep);text-decoration:none;border-bottom:2px solid var(--gold);width:fit-content;padding-bottom:.1em;}
+.link-tile-cta:hover{color:var(--forest);}
+
+/* UPCOMING TEASER */
+.teaser{margin-top:1.2rem;border:1.5px dashed var(--line);border-radius:6px;padding:2rem 1.8rem;text-align:left;background:repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px);}
+.teaser h3{font-size:1.1rem;color:var(--forest-deep);margin-bottom:.5rem;}
+.teaser p{font-size:.92rem;color:var(--muted);margin:0;}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(10,14,8,.88);display:none;align-items:center;justify-content:center;padding:2rem;z-index:300;}
+.lightbox.open{display:flex;}
+.lightbox img{max-width:100%;max-height:85vh;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.lightbox-close{position:absolute;top:1.2rem;right:1.4rem;background:none;border:none;color:#fff;font-size:1.8rem;line-height:1;cursor:pointer;width:44px;height:44px;}
+.lightbox-cap{position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);color:#E6EBE2;font-size:.9rem;max-width:70ch;text-align:center;padding:0 1rem;}
+
+footer{background:var(--forest-deep);color:#C7D2C2;padding:3rem 1.5rem;}
+footer .footer-inner{max-width:1180px;margin:0 auto;}
+footer h3{color:#fff;font-weight:600;font-size:1.2rem;margin-bottom:.7rem;}
+footer p{color:#C7D2C2;max-width:60ch;}
+footer a{color:var(--gold);}
+footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow-pill">Instructional Design &amp; Training Portfolio</span>
+    <h1>Training Programs, Process Documentation, and Supporting Project Work</h1>
+    <p class="dek">A working archive of certifications, enterprise training programs, and the documentation that supports them &mdash; spanning higher education and industry, built solo and <strong>in collaboration with cross-functional teams</strong>.</p>
+    <p class="byline">Deanna Gilkey Schmuck, MS &middot; Learning Experience Designer</p>
+    <div class="stat-row">
+      <div><div class="stat-num">18</div><div class="stat-label">certifications &amp; badges</div></div>
+      <div><div class="stat-num">3</div><div class="stat-label">major programs</div></div>
+      <div><div class="stat-num">90+</div><div class="stat-label">supporting documents</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="edit-note">
+  <p class="linkedin-link"><a href="https://www.linkedin.com/in/deanna-gilkey-schmuck-ms-70217313" target="_blank" rel="noopener">Connect with me on LinkedIn &rarr;</a></p>
+</div>
+
+<div class="layout">
+  <nav class="sidenav" aria-label="Section navigation">
+          <a class="nav-link" href="#certifications" data-target="certifications">Certifications</a>
+          <a class="nav-link" href="#pitt-edge-course" data-target="pitt-edge-course">Pitt EDGE Course</a>
+          <a class="nav-link" href="#naxt-erp" data-target="naxt-erp">NAXT ERP Program</a>
+          <a class="nav-link" href="#adp-wfm" data-target="adp-wfm">ADP Workforce Mgr</a>
+          <a class="nav-link" href="#pitt-docs" data-target="pitt-docs">Pitt Tech Docs</a>
+          <a class="nav-link" href="#upcoming" data-target="upcoming">Upcoming</a>
+  </nav>
+
+  <main id="main-content">
+
+    <section class="section" id="certifications">
+      <div class="section-head">
+        <span class="pill">Credentials</span>
+        <h2>Certifications &amp; Professional Development</h2>
+      </div>
+      <div class="section-intro">
+        <p>Ongoing coursework and vendor certifications across the tools and practices this work draws on &mdash; platform-specific (Canvas, Lucid), AI and accessibility literacy, and the foundational instructional design theory behind the course and program work shown below.</p>
+      </div>
+      <div class="cert-grid">
+        <figure class="cert-card" data-full="assets/cert-google-educator.png" tabindex="0" role="button" aria-label="Open larger view of Google Certified Educator">
+          <div class="cert-frame"><img src="assets/cert-google-educator.png" alt="Google Certified Educator" loading="lazy"></div>
+          <figcaption><strong>Google Certified Educator</strong><span>Level 2 · Google for Education</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-gemini-faculty.png" tabindex="0" role="button" aria-label="Open larger view of Gemini Certified Faculty">
+          <div class="cert-frame"><img src="assets/cert-gemini-faculty.png" alt="Gemini Certified Faculty" loading="lazy"></div>
+          <figcaption><strong>Gemini Certified Faculty</strong><span>Google for Education</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-canvas-basics.png" tabindex="0" role="button" aria-label="Open larger view of Canvas Basics">
+          <div class="cert-frame"><img src="assets/cert-canvas-basics.png" alt="Canvas Basics" loading="lazy"></div>
+          <figcaption><strong>Canvas Basics</strong><span>Instructure Training Services</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-lucidchart-fundamentals.png" tabindex="0" role="button" aria-label="Open larger view of Lucidchart Fundamentals">
+          <div class="cert-frame"><img src="assets/cert-lucidchart-fundamentals.png" alt="Lucidchart Fundamentals" loading="lazy"></div>
+          <figcaption><strong>Lucidchart Fundamentals</strong><span>Lucid Software</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-lucidchart-basics.png" tabindex="0" role="button" aria-label="Open larger view of Basics in Lucidchart">
+          <div class="cert-frame"><img src="assets/cert-lucidchart-basics.png" alt="Basics in Lucidchart" loading="lazy"></div>
+          <figcaption><strong>Basics in Lucidchart</strong><span>Lucid Software</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-lucidspark-basics.png" tabindex="0" role="button" aria-label="Open larger view of Basics in Lucidspark">
+          <div class="cert-frame"><img src="assets/cert-lucidspark-basics.png" alt="Basics in Lucidspark" loading="lazy"></div>
+          <figcaption><strong>Basics in Lucidspark</strong><span>Lucid Software</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-process-diagrams-lucidchart.png" tabindex="0" role="button" aria-label="Open larger view of Process Diagrams in Lucidchart">
+          <div class="cert-frame"><img src="assets/cert-process-diagrams-lucidchart.png" alt="Process Diagrams in Lucidchart" loading="lazy"></div>
+          <figcaption><strong>Process Diagrams in Lucidchart</strong><span>Lucid Software</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-lucidchart-linkedin.png" tabindex="0" role="button" aria-label="Open larger view of Learning Lucidchart">
+          <div class="cert-frame"><img src="assets/cert-lucidchart-linkedin.png" alt="Learning Lucidchart" loading="lazy"></div>
+          <figcaption><strong>Learning Lucidchart</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-elearning-essentials-id.png" tabindex="0" role="button" aria-label="Open larger view of Elearning Essentials: Instructional Design">
+          <div class="cert-frame"><img src="assets/cert-elearning-essentials-id.png" alt="Elearning Essentials: Instructional Design" loading="lazy"></div>
+          <figcaption><strong>Elearning Essentials: Instructional Design</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-scenario-based-learning.png" tabindex="0" role="button" aria-label="Open larger view of Designing Scenario-Based Learning">
+          <div class="cert-frame"><img src="assets/cert-scenario-based-learning.png" alt="Designing Scenario-Based Learning" loading="lazy"></div>
+          <figcaption><strong>Designing Scenario-Based Learning</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-articulate-storyline.png" tabindex="0" role="button" aria-label="Open larger view of Articulate Storyline Essential Training">
+          <div class="cert-frame"><img src="assets/cert-articulate-storyline.png" alt="Articulate Storyline Essential Training" loading="lazy"></div>
+          <figcaption><strong>Articulate Storyline Essential Training</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-wcag-22.png" tabindex="0" role="button" aria-label="Open larger view of Designing with the WCAG 2.2 Guidelines">
+          <div class="cert-frame"><img src="assets/cert-wcag-22.png" alt="Designing with the WCAG 2.2 Guidelines" loading="lazy"></div>
+          <figcaption><strong>Designing with the WCAG 2.2 Guidelines</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-ai-for-id.png" tabindex="0" role="button" aria-label="Open larger view of Tips for Using AI as an Instructional Designer">
+          <div class="cert-frame"><img src="assets/cert-ai-for-id.png" alt="Tips for Using AI as an Instructional Designer" loading="lazy"></div>
+          <figcaption><strong>Tips for Using AI as an Instructional Designer</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-genai-higher-ed.png" tabindex="0" role="button" aria-label="Open larger view of Strategic Foundations of GenAI for Higher Ed Leaders">
+          <div class="cert-frame"><img src="assets/cert-genai-higher-ed.png" alt="Strategic Foundations of GenAI for Higher Ed Leaders" loading="lazy"></div>
+          <figcaption><strong>Strategic Foundations of GenAI for Higher Ed Leaders</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-build-your-own-training.png" tabindex="0" role="button" aria-label="Open larger view of Build Your Own Professional Training">
+          <div class="cert-frame"><img src="assets/cert-build-your-own-training.png" alt="Build Your Own Professional Training" loading="lazy"></div>
+          <figcaption><strong>Build Your Own Professional Training</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-docusign.png" tabindex="0" role="button" aria-label="Open larger view of Learning DocuSign">
+          <div class="cert-frame"><img src="assets/cert-docusign.png" alt="Learning DocuSign" loading="lazy"></div>
+          <figcaption><strong>Learning DocuSign</strong><span>LinkedIn Learning</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-ferpa-101.png" tabindex="0" role="button" aria-label="Open larger view of FERPA 101: Colleges and Universities">
+          <div class="cert-frame"><img src="assets/cert-ferpa-101.png" alt="FERPA 101: Colleges and Universities" loading="lazy"></div>
+          <figcaption><strong>FERPA 101: Colleges and Universities</strong><span>U.S. Dept. of Education</span></figcaption>
+        </figure>
+
+        <figure class="cert-card" data-full="assets/cert-uci-course-dev.png" tabindex="0" role="button" aria-label="Open larger view of Instructional Design: Course Development">
+          <div class="cert-frame"><img src="assets/cert-uci-course-dev.png" alt="Instructional Design: Course Development" loading="lazy"></div>
+          <figcaption><strong>Instructional Design: Course Development</strong><span>UC Irvine · FutureLearn</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="pitt-edge-course">
+      <div class="section-head">
+        <span class="pill">Featured Course</span>
+        <h2>Pitt EDGE Faculty Training Course</h2>
+      </div>
+      <div class="section-intro">
+        <p>A full 12-module Canvas course training faculty on the complete Pitt EDGE teaching toolkit &mdash; built and documented as its own standalone portfolio site.</p>
+      </div>
+      <a class="link-tile" href="https://deannagilkey.github.io/PittEDGETechTools/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
+        <div class="link-tile-img"><img src="assets/pittedge-course-thumbnail.png" alt="Pitt EDGE course collaboration diagram"></div>
+        <div class="link-tile-body">
+          <h3>Designing a Faculty Onboarding Course for Online Teaching in Canvas</h3>
+          <p>Covers secure testing, interactive H5P content, video and discussion tools, and the peer-review workflow used to keep the course accurate &mdash; twelve modules, ten tools, sixty-plus built activities.</p>
+          <span class="link-tile-cta">View the full course site &rarr;</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="section" id="naxt-erp">
+      <div class="section-head">
+        <span class="pill">Flagship Program &middot; Cleveland Brothers</span>
+        <h2>NAXT ERP Implementation</h2>
+      </div>
+      <div class="section-intro">
+        <p>NAXT is Cleveland Brothers' Microsoft Dynamics 365-based ERP replacing a legacy dealer business system across Parts, Service, and Rental &amp; Sales. This program spans change management, a structured UAT training pilot, process mapping, an LMS evaluation, and the technical documentation that ties it all together &mdash; developed alongside a cross-functional NAXT team.</p>
+      </div>
+
+      <div class="subhead">Program Strategy &amp; Change Management</div>
+      <div class="subhead-intro">The governance layer that made the rest of the program possible: clear ownership, a realistic model of how people actually adopt change, and a way to track progress week to week.</div>
+      <div class="shot-grid">
+          <figure class="shot" data-full="assets/naxt-raci.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-raci.png" alt="A single-slide RACI chart assigning Responsible/Accountable/Consulted across every training phase &amp;mdash; from needs assessment through refresher training &amp;mdash; so no activity had an unclear owner." loading="lazy"></div>
+            <figcaption>A single-slide RACI chart assigning Responsible/Accountable/Consulted across every training phase &mdash; from needs assessment through refresher training &mdash; so no activity had an unclear owner.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-ocm-changejourney.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-ocm-changejourney.png" alt="The change curve used to set expectations with leadership: awareness, understanding, buy-in, and ownership don&#x27;t happen on the same day, and the plan had to account for that." loading="lazy"></div>
+            <figcaption>The change curve used to set expectations with leadership: awareness, understanding, buy-in, and ownership don't happen on the same day, and the plan had to account for that.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-ocm-stakeholders.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-ocm-stakeholders.png" alt="A stakeholder-impact table translating the change initiative into what&#x27;s actually different for each group &amp;mdash; not just that something is changing, but what and when." loading="lazy"></div>
+            <figcaption>A stakeholder-impact table translating the change initiative into what's actually different for each group &mdash; not just that something is changing, but what and when.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-ocm-scope-pillars.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-ocm-scope-pillars.png" alt="The organizational change management scope broken into training and change pillars, so governance, comms, and measurement each had a defined owner." loading="lazy"></div>
+            <figcaption>The organizational change management scope broken into training and change pillars, so governance, comms, and measurement each had a defined owner.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-ocm-nextsteps.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-ocm-nextsteps.png" alt="A short-term action list keeping the OCM workstream concrete week to week, rather than living only as a high-level framework." loading="lazy"></div>
+            <figcaption>A short-term action list keeping the OCM workstream concrete week to week, rather than living only as a high-level framework.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-erp-nextsteps.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-erp-nextsteps.png" alt="The project-level next-steps slide tying training, the soft onboarding program, and support-role vetting back to a single implementation timeline." loading="lazy"></div>
+            <figcaption>The project-level next-steps slide tying training, the soft onboarding program, and support-role vetting back to a single implementation timeline.</figcaption>
+          </figure>
+      </div>
+
+      <div class="subhead">UAT Pilot Training Design</div>
+      <div class="subhead-intro">A three-day pilot with Parts and Service, built around one central instructional design decision: every process guide fades from fully-supported to independent across three deliberate versions.</div>
+      <div class="shot-grid">
+          <figure class="shot" data-full="assets/naxt-uat-title.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-uat-title.png" alt="The opening slide of the three-day UAT pilot &amp;mdash; Parts and Service was the first business stream through the new process before a wider rollout." loading="lazy"></div>
+            <figcaption>The opening slide of the three-day UAT pilot &mdash; Parts and Service was the first business stream through the new process before a wider rollout.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-uat-norms.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-uat-norms.png" alt="Training norms stated as a two-way contract &amp;mdash; what facilitators commit to and what&#x27;s expected of participants &amp;mdash; before any product content starts." loading="lazy"></div>
+            <figcaption>Training norms stated as a two-way contract &mdash; what facilitators commit to and what's expected of participants &mdash; before any product content starts.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-uat-safety.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-uat-safety.png" alt="A safety briefing slide, included because the pilot ran out of a shop environment, not just a training room." loading="lazy"></div>
+            <figcaption>A safety briefing slide, included because the pilot ran out of a shop environment, not just a training room.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-uat-pgversions.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-uat-pgversions.png" alt="The core instructional design decision behind the whole program: every process guide ships in three versions &amp;mdash; Full, Reduced Steps, Scenario Only &amp;mdash; deliberately fading support as learners gain independence." loading="lazy"></div>
+            <figcaption>The core instructional design decision behind the whole program: every process guide ships in three versions &mdash; Full, Reduced Steps, Scenario Only &mdash; deliberately fading support as learners gain independence.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-uat-lessonoverview.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-uat-lessonoverview.png" alt="A lesson-overview slide anchoring new NAXT terminology (ERP, DBS, NAXT itself) before diving into interface navigation." loading="lazy"></div>
+            <figcaption>A lesson-overview slide anchoring new NAXT terminology (ERP, DBS, NAXT itself) before diving into interface navigation.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-uat-navbar.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-uat-navbar.png" alt="Interface orientation broken into named parts &amp;mdash; Home Dashboard, Navigation Pane &amp;mdash; so later instructions can refer to them precisely instead of re-describing the screen each time." loading="lazy"></div>
+            <figcaption>Interface orientation broken into named parts &mdash; Home Dashboard, Navigation Pane &mdash; so later instructions can refer to them precisely instead of re-describing the screen each time.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-uat-actionpane.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-uat-actionpane.png" alt="Each Action Pane control gets its own slide and plain-language explanation, including what it will and won&#x27;t preserve when clicked." loading="lazy"></div>
+            <figcaption>Each Action Pane control gets its own slide and plain-language explanation, including what it will and won't preserve when clicked.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-uat-review.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-uat-review.png" alt="Low-stakes recall checks woven through the deck rather than saved for a single end-of-lesson quiz." loading="lazy"></div>
+            <figcaption>Low-stakes recall checks woven through the deck rather than saved for a single end-of-lesson quiz.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-uat-activity.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-uat-activity.png" alt="A hands-on activity requiring learners to demonstrate navigation three different ways, closing the lesson with doing rather than reading." loading="lazy"></div>
+            <figcaption>A hands-on activity requiring learners to demonstrate navigation three different ways, closing the lesson with doing rather than reading.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-uat-summary.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-uat-summary.png" alt="The course summary restates every objective in outcome language &amp;mdash; what a learner can now do, not just what was covered." loading="lazy"></div>
+            <figcaption>The course summary restates every objective in outcome language &mdash; what a learner can now do, not just what was covered.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-erp-uat-weeks.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-erp-uat-weeks.png" alt="The UAT pilot&#x27;s own place inside the larger rollout timeline, with outstanding considerations (reporting structure, 50% dedication expectations) named explicitly rather than assumed." loading="lazy"></div>
+            <figcaption>The UAT pilot's own place inside the larger rollout timeline, with outstanding considerations (reporting structure, 50% dedication expectations) named explicitly rather than assumed.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-erp-train-the-trainer.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-erp-train-the-trainer.png" alt="The train-the-trainer track that followed the pilot, turning the people who completed UAT into the ones who could run future sessions." loading="lazy"></div>
+            <figcaption>The train-the-trainer track that followed the pilot, turning the people who completed UAT into the ones who could run future sessions.</figcaption>
+          </figure>
+      </div>
+
+      <div class="subhead">Process Mapping &amp; Support Model</div>
+      <div class="subhead-intro">Swimlane maps turning "who handles this" into an answerable question &mdash; for attendance tracking, SME escalation, and front-line support.</div>
+      <div class="shot-grid">
+          <figure class="shot" data-full="assets/naxt-reportingmap-attendance.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-reportingmap-attendance.png" alt="A swimlane map of exactly how attendance gets captured and reconciled across virtual and instructor-led sessions &amp;mdash; built so reporting wouldn&#x27;t rely on memory or spreadsheets after the fact." loading="lazy"></div>
+            <figcaption>A swimlane map of exactly how attendance gets captured and reconciled across virtual and instructor-led sessions &mdash; built so reporting wouldn't rely on memory or spreadsheets after the fact.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-smemap-identification.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-smemap-identification.png" alt="The process for identifying and escalating a Subject Matter Expert into a NAXT Trainer or Ambassador role, with clear handoffs between business stream leads and content SMEs." loading="lazy"></div>
+            <figcaption>The process for identifying and escalating a Subject Matter Expert into a NAXT Trainer or Ambassador role, with clear handoffs between business stream leads and content SMEs.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-smemap-vetting.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-smemap-vetting.png" alt="A support-role vetting workflow, including the project manager checkpoint and candidate questionnaire that precede any final assignment." loading="lazy"></div>
+            <figcaption>A support-role vetting workflow, including the project manager checkpoint and candidate questionnaire that precede any final assignment.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-erp-support-roles.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-erp-support-roles.png" alt="The full support-role hierarchy in one view &amp;mdash; from first-line Ambassador SME up to NAXT Leadership &amp;mdash; so escalation paths were explicit from day one." loading="lazy"></div>
+            <figcaption>The full support-role hierarchy in one view &mdash; from first-line Ambassador SME up to NAXT Leadership &mdash; so escalation paths were explicit from day one.</figcaption>
+          </figure>
+      </div>
+
+      <div class="subhead">LMS Evaluation &amp; Governance (LogicBay)</div>
+      <div class="subhead-intro">Co-led with Erica Knipple: a formal needs analysis (task-by-task, pass/fail tested against real use), a leadership decision log, and defined Campus Administrator and Trainer roles for ongoing ownership.</div>
+      <div class="shot-grid">
+          <figure class="shot" data-full="assets/naxt-logicbay-scenario.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-logicbay-scenario.png" alt="One of two ERP integration scenarios mapped out to test whether LogicBay&#x27;s organization/catalog/course/class structure could actually hold up against CB Mining&#x27;s real org chart." loading="lazy"></div>
+            <figcaption>One of two ERP integration scenarios mapped out to test whether LogicBay's organization/catalog/course/class structure could actually hold up against CB Mining's real org chart.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-lms-readout-proposal.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-lms-readout-proposal.png" alt="A leadership readout laying out two concrete options for LMS user management &amp;mdash; manual vs. scheduled upload &amp;mdash; each with its own risk and benefit list, not just a recommendation." loading="lazy"></div>
+            <figcaption>A leadership readout laying out two concrete options for LMS user management &mdash; manual vs. scheduled upload &mdash; each with its own risk and benefit list, not just a recommendation.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-lms-readout-logistics.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-lms-readout-logistics.png" alt="The logistics side of the same readout: pilot activities, training tool assessment, and a recurring weekly sync cadence with LogicBay." loading="lazy"></div>
+            <figcaption>The logistics side of the same readout: pilot activities, training tool assessment, and a recurring weekly sync cadence with LogicBay.</figcaption>
+          </figure>
+      </div>
+
+      <div class="subhead">Curriculum &amp; Systems Documentation</div>
+      <div class="subhead-intro">The connective tissue between a business process, the lesson that teaches it, and the reference material an employee can return to afterward.</div>
+      <div class="shot-grid">
+          <figure class="shot" data-full="assets/naxt-dbs-framework.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-dbs-framework.png" alt="A business-process-to-curriculum crosswalk mapping specific CB process steps (by process owner and process code) directly to the lesson that teaches them &amp;mdash; the mechanism that kept hundreds of process steps traceable to actual training content." loading="lazy"></div>
+            <figcaption>A business-process-to-curriculum crosswalk mapping specific CB process steps (by process owner and process code) directly to the lesson that teaches them &mdash; the mechanism that kept hundreds of process steps traceable to actual training content.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-storyboard-template.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-storyboard-template.png" alt="The blank storyboard template used to plan a course before building it &amp;mdash; lesson number, slide overview, and narration notes side by side, so scripting happens before production." loading="lazy"></div>
+            <figcaption>The blank storyboard template used to plan a course before building it &mdash; lesson number, slide overview, and narration notes side by side, so scripting happens before production.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-sharepoint-hub.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-sharepoint-hub.png" alt="The NAXT SharePoint Hub&#x27;s pre- and post-go-live states, including who holds admin rights and what moves from &#x27;training materials&#x27; framing to permanent reference." loading="lazy"></div>
+            <figcaption>The NAXT SharePoint Hub's pre- and post-go-live states, including who holds admin rights and what moves from 'training materials' framing to permanent reference.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-emr-guide.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-emr-guide.png" alt="A mobile EMR app guide covering barcode-based equipment scanning for shipping, picking, and receiving &amp;mdash; documentation for the rental and sales side of the same NAXT rollout." loading="lazy"></div>
+            <figcaption>A mobile EMR app guide covering barcode-based equipment scanning for shipping, picking, and receiving &mdash; documentation for the rental and sales side of the same NAXT rollout.</figcaption>
+          </figure>
+      </div>
+    </section>
+
+    <section class="section" id="adp-wfm">
+      <div class="section-head">
+        <span class="pill">Program &middot; Cleveland Brothers</span>
+        <h2>ADP Workforce Manager Rollout</h2>
+      </div>
+      <div class="section-intro">
+        <p>A phased training rollout for ADP's Workforce Manager &mdash; timecards, delegations, and dataviews &mdash; built around a curriculum crosswalk tracing every lesson to its source task guide, three co-facilitated workshops, and a from-scratch employee timeclock guide covering procedures ADP's own documentation didn't include.</p>
+      </div>
+
+      <div class="subhead">Curriculum Design</div>
+      <div class="shot-grid">
+          <figure class="shot" data-full="assets/adp-curriculum-crosswalk.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/adp-curriculum-crosswalk.png" alt="The curriculum crosswalk mapping every lesson back to the official ADP task guide it&#x27;s sourced from &amp;mdash; the backbone that kept 60+ lessons traceable to a single source of truth." loading="lazy"></div>
+            <figcaption>The curriculum crosswalk mapping every lesson back to the official ADP task guide it's sourced from &mdash; the backbone that kept 60+ lessons traceable to a single source of truth.</figcaption>
+          </figure>
+      </div>
+
+      <div class="subhead">Workshop Facilitation</div>
+      <div class="subhead-intro">Co-facilitated with Erica across three sessions, each building on the last.</div>
+      <div class="text-card-grid">
+        <div class="text-card">
+          <h4>Workshop 1 &mdash; Basic Navigation</h4>
+          <div class="text-card-meta">January 14, 2025 &middot; Microsoft Teams</div>
+          <p>Co-facilitated with Erica. Covered login, main menu navigation, the Employee Summary page, and sorting/filtering data, paired with a live demo of timecard and delegation features.</p>
+        </div>
+
+        <div class="text-card">
+          <h4>Workshop 2 &mdash; Timecards and Delegations</h4>
+          <div class="text-card-meta">January 28, 2025 &middot; Microsoft Teams</div>
+          <p>Deep dive on fixing timecard exceptions, editing punches and schedules, approving overtime, and managing manager delegation requests, plus a first look at Dataviews and Charts.</p>
+        </div>
+
+        <div class="text-card">
+          <h4>Workshop 3 &mdash; Dataviews and Charts</h4>
+          <div class="text-card-meta">February 4, 2025 &middot; Microsoft Teams</div>
+          <p>Focused on personalizing and drilling into dataviews, building and managing charts, and setting expectations for the employee-facing training rollout to follow.</p>
+        </div>
+      </div>
+
+      <div class="subhead">Employee Timeclock Guide</div>
+      <div class="subhead-intro">A 47-page guide built in Canva around Cleveland Brothers' own hardware and site-specific procedures.</div>
+      <div class="shot-grid">
+          <figure class="shot" data-full="assets/adp-tc-title.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/adp-tc-title.png" alt="The opening screen of a 47-page employee timeclock guide, built in Canva around Cleveland Brothers&#x27; actual branded hardware rather than generic stock screenshots." loading="lazy"></div>
+            <figcaption>The opening screen of a 47-page employee timeclock guide, built in Canva around Cleveland Brothers' actual branded hardware rather than generic stock screenshots.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/adp-tc-objectives.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/adp-tc-objectives.png" alt="Objectives stated up front in the student&#x27;s own task language &amp;mdash; Shift Start, Lunch Out, Work Rule Transfer &amp;mdash; not ADP&#x27;s internal terminology." loading="lazy"></div>
+            <figcaption>Objectives stated up front in the student's own task language &mdash; Shift Start, Lunch Out, Work Rule Transfer &mdash; not ADP's internal terminology.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/adp-tc-shiftstart.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/adp-tc-shiftstart.png" alt="Each step is a photograph of the real device, not a vendor diagram, so what the employee sees in the guide matches what they&#x27;ll touch on the floor." loading="lazy"></div>
+            <figcaption>Each step is a photograph of the real device, not a vendor diagram, so what the employee sees in the guide matches what they'll touch on the floor.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/adp-tc-lunchout.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/adp-tc-lunchout.png" alt="The same photographed-step pattern repeated for Lunch Out, so employees learn one consistent method across every punch type rather than a new layout each time." loading="lazy"></div>
+            <figcaption>The same photographed-step pattern repeated for Lunch Out, so employees learn one consistent method across every punch type rather than a new layout each time.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/adp-tc-worktransfer.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/adp-tc-worktransfer.png" alt="A site-specific procedure &amp;mdash; the Acting Foreman work-rule transfer &amp;mdash; that doesn&#x27;t exist in ADP&#x27;s own documentation and had to be built from scratch." loading="lazy"></div>
+            <figcaption>A site-specific procedure &mdash; the Acting Foreman work-rule transfer &mdash; that doesn't exist in ADP's own documentation and had to be built from scratch.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/adp-tc-transfer-accepted.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/adp-tc-transfer-accepted.png" alt="Each sequence ends on the exact confirmation screen the employee will see, closing the loop so there&#x27;s no ambiguity about success." loading="lazy"></div>
+            <figcaption>Each sequence ends on the exact confirmation screen the employee will see, closing the loop so there's no ambiguity about success.</figcaption>
+          </figure>
+      </div>
+    </section>
+
+    <section class="section" id="pitt-docs">
+      <div class="section-head">
+        <span class="pill">Documentation Library &middot; University of Pittsburgh</span>
+        <h2>Technology Support Documentation</h2>
+      </div>
+      <div class="section-intro">
+        <p>The written process documentation behind the Pitt EDGE faculty training course &mdash; one short reference guide per tool or task, each built around a stated purpose rather than a generic feature walkthrough.</p>
+      </div>
+      <div class="doc-grid">
+          <div class="doc-card">
+            <span class="doc-tag">BugHerd</span>
+            <h4>BugHerd Overview</h4>
+            <p>Role-and-workflow overview of BugHerd as Pitt EDGE's project-based feedback tool for reviewing Canvas course builds.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">BugHerd</span>
+            <h4>BugHerd Tools</h4>
+            <p>Sidebar-focused walkthrough of the specific tools used to leave feedback directly on a page under review.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">ExamSoft</span>
+            <h4>Foundations of ExamSoft System</h4>
+            <p>Introduces the full ecosystem of tools that work together to support secure digital assessment end to end.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">ExamSoft</span>
+            <h4>ExamSoft: Create Assessments</h4>
+            <p>Guides faculty through the Set Up &rarr; Build &rarr; Deliver workflow for creating a new assessment.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">ExamSoft</span>
+            <h4>ExamSoft: Categories and Tagging</h4>
+            <p>Explains how categories and tagging organize content and support Blueprint exam design and reporting.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">ExamSoft</span>
+            <h4>ExamSoft: Create and Use Rubrics</h4>
+            <p>Covers building a rubric in the rubric editor and attaching it to an exam question for consistent grading.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">ExamSoft</span>
+            <h4>ExamSoft: Examplify Student Perspective</h4>
+            <p>Shows faculty what students actually see inside the locked-down Examplify testing application.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">ExamSoft</span>
+            <h4>ExamSoft Meeting Overview (8/10/26)</h4>
+            <p>Notes from a vendor session mapping the ExamID and ExamMonitor ecosystem for faculty-facing use.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">Harmonize</span>
+            <h4>Create a Graded Discussion with Harmonize in Canvas</h4>
+            <p>Step-by-step setup for configuring a graded Harmonize discussion inside a Canvas course.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">Lucid</span>
+            <h4>Lucid: Overview and Access within Canvas</h4>
+            <p>Orientation to Lucidchart and Lucidspark and how faculty reach them from inside a course.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">Lucid</span>
+            <h4>Lucid Interface: Content Selector</h4>
+            <p>Breaks down the Lucid Content Selector's interface elements for creating and embedding content.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">Lucid</span>
+            <h4>Lucidchart Quick Reference Guide (Basics)</h4>
+            <p>Fast-reference guide to the core Lucidchart features needed to build and share a diagram.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">Panopto</span>
+            <h4>Best Practices for Creating Videos</h4>
+            <p>Audio, slide design, and accessibility guidance for faculty recording their own instructional videos.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">Panopto</span>
+            <h4>Media Asset Tracker and Panopto Workflow</h4>
+            <p>Meeting notes documenting a tracking system built for managing media assets through Panopto.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">Panopto</span>
+            <h4>Pitt EDGE Video Production ID Guide</h4>
+            <p>Internal workflow guide for instructional designers managing the video production pipeline.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">Pitt EDGE</span>
+            <h4>EDGE Software Stack Talking Points</h4>
+            <p>Internal talking points for discussing the Pitt EDGE technology ecosystem with faculty.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">Pitt EDGE</span>
+            <h4>Reverse Image Search</h4>
+            <p>Quick step-by-step guide for verifying image sourcing before reuse in course content.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">PowerPoint</span>
+            <h4>PowerPoint Best Practices</h4>
+            <p>Design guidelines for layout, typography, and color to keep faculty slide decks clear and consistent.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">ReelDx</span>
+            <h4>ReelDx Training Session Summary Notes</h4>
+            <p>Cleaned summary notes from a ReelDx training session, kept for reference and follow-up.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">Respondus</span>
+            <h4>Set Up a Canvas Quiz Requiring LockDown Browser</h4>
+            <p>Step-by-step setup for requiring Respondus LockDown Browser on a Canvas quiz.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">SharePoint</span>
+            <h4>SharePoint Upload: Faculty Guidance</h4>
+            <p>Walks faculty through logging in via Pitt Passport and uploading files to SharePoint.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">TeamDynamix</span>
+            <h4>TDX Workflow</h4>
+            <p>Explains how TeamDynamix is used for time tracking and project visibility across course builds.</p>
+          </div>
+
+          <div class="doc-card">
+            <span class="doc-tag">Vendor Evaluation</span>
+            <h4>Cidi Labs TidyUp: Testing Summary &amp; Purchase Recommendation</h4>
+            <p>A formal usability test &mdash; 5 courses, 4.1/5 usability &mdash; backing a purchase recommendation for a Canvas cleanup tool.</p>
+          </div>
+      </div>
+    </section>
+
+    <section class="section" id="upcoming">
+      <div class="section-head">
+        <span class="pill">In Progress</span>
+        <h2>Up Next</h2>
+      </div>
+      <div class="teaser">
+        <h3>A new course, currently in design</h3>
+        <p>Another course build is underway and will be added here once it's further along. Check back soon.</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <h3>About this portfolio</h3>
+    <p>Every document and screenshot above comes from real project work. Captions describe the decision behind each piece, not just what's on it. Get in touch to walk through any program in more detail.</p>
+    <p class="contact">Deanna Gilkey Schmuck, MS &mdash; <a href="mailto:deannagilkey@comcast.net">deannagilkey@comcast.net</a> &middot; <a href="mailto:deannagilkey@gmail.com">deannagilkey@gmail.com</a> &middot; <a href="tel:+14123029025">412-302-9025</a></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded view">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-cap" id="lightboxCap"></div>
+</div>
+
+<script>
+(function(){
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightboxImg');
+  var lbCap = document.getElementById('lightboxCap');
+  var lbClose = document.getElementById('lightboxClose');
+
+  function openLightbox(src, cap){
+    lbImg.src = src;
+    lbImg.alt = cap;
+    lbCap.textContent = cap;
+    lb.classList.add('open');
+  }
+  function closeLightbox(){
+    lb.classList.remove('open');
+    lbImg.src = '';
+  }
+
+  document.querySelectorAll('.shot, .cert-card').forEach(function(el){
+    el.addEventListener('click', function(){
+      var full = el.getAttribute('data-full');
+      var capEl = el.querySelector('figcaption');
+      var cap = capEl ? capEl.textContent : '';
+      openLightbox(full, cap);
+    });
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        el.click();
+      }
+    });
+  });
+
+  lbClose.addEventListener('click', closeLightbox);
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLightbox(); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeLightbox();
+  });
+
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.section'));
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
+  function onScroll(){
+    var pos = window.scrollY + 140;
+    var current = sections[0] && sections[0].id;
+    sections.forEach(function(s){
+      if (s.offsetTop <= pos) current = s.id;
+    });
+    links.forEach(function(l){
+      l.classList.toggle('active', l.getAttribute('data-target') === current);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
