@@ -129,6 +129,19 @@ img{max-width:100%;display:block;}
 @media (max-width:860px){
   .sidenav{position:static;flex-direction:row;overflow-x:auto;gap:.4rem;padding:1rem 0;border-bottom:1px solid var(--line);-webkit-overflow-scrolling:touch;}
 }
+.nav-group-label{
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  padding:1rem .2em .3em .9em;
+  white-space:nowrap;
+}
+.nav-group-label:first-child{padding-top:0;}
+@media (max-width:860px){
+  .nav-group-label{padding:.4em .7em;border-bottom:none;align-self:center;}
+}
 .nav-link{font-size:.85rem;color:var(--muted);text-decoration:none;padding:.5em .2em;border-left:2px solid transparent;padding-left:.9em;white-space:nowrap;transition:color .15s, border-color .15s;}
 .nav-link:hover{color:var(--forest);}
 .nav-link.active{color:var(--forest-deep);font-weight:600;border-left-color:var(--gold);}
@@ -147,7 +160,54 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .section-intro{margin-top:.9rem;color:var(--ink);}
 .section-intro p{color:var(--ink);}
 
-.subhead{margin:2.2rem 0 1rem;font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--forest-deep);border-top:1px solid var(--line);padding-top:1.6rem;}
+.video-card{
+  margin-top:1.4rem;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:4px;
+  overflow:hidden;
+}
+.video-card video{width:100%;display:block;background:#000;}
+.video-card-cap{padding:.85em 1.1em 1.05em;font-size:.86rem;color:var(--muted);line-height:1.5;}
+
+.feedback-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.8rem;
+  margin-top:1.2rem;
+}
+.feedback-links a{
+  font-size:.85rem;
+  font-weight:600;
+  color:var(--forest-deep);
+  background:var(--panel);
+  border:1px solid var(--gold);
+  padding:.55em 1.1em;
+  border-radius:4px;
+  text-decoration:none;
+}
+.feedback-links a:hover{background:var(--gold);}
+
+.jump-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.6rem;
+  margin:1.4rem 0 .4rem;
+}
+.jump-chips a{
+  font-size:.8rem;
+  font-weight:600;
+  color:var(--forest-deep);
+  background:var(--panel);
+  border:1px solid var(--line);
+  padding:.4em .9em;
+  border-radius:999px;
+  text-decoration:none;
+  transition:border-color .15s, color .15s;
+}
+.jump-chips a:hover{border-color:var(--forest-mid);color:var(--forest-mid);}
+
+.subhead{margin:2.2rem 0 1rem;font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--forest-deep);border-top:1px solid var(--line);padding-top:1.6rem;scroll-margin-top:1.2rem;}
 .subhead:first-of-type{border-top:none;padding-top:0;}
 .subhead-intro{font-size:.95rem;color:var(--muted);margin-top:-.4rem;margin-bottom:1.2rem;max-width:72ch;}
 
@@ -297,12 +357,14 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
 
 <div class="layout">
   <nav class="sidenav" aria-label="Section navigation">
+          <span class="nav-group-label">Profile</span>
           <a class="nav-link" href="#experience" data-target="experience">Experience</a>
-          <a class="nav-link" href="#pitt-edge-course" data-target="pitt-edge-course">Pitt EDGE Course</a>
+          <span class="nav-group-label">Case Studies</span>
+          <a class="nav-link" href="#course-spotlight" data-target="course-spotlight">Course Spotlight</a>
           <a class="nav-link" href="#naxt-erp" data-target="naxt-erp">NAXT ERP Program</a>
           <a class="nav-link" href="#adp-wfm" data-target="adp-wfm">ADP Workforce Mgr</a>
           <a class="nav-link" href="#pitt-docs" data-target="pitt-docs">Pitt Tech Docs</a>
-          <a class="nav-link" href="#id-onboarding" data-target="id-onboarding">ID Onboarding Course</a>
+          <span class="nav-group-label">Credentials</span>
           <a class="nav-link" href="#certifications" data-target="certifications">Certifications</a>
   </nav>
 
@@ -354,20 +416,30 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </ul>
     </section>
 
-    <section class="section" id="pitt-edge-course">
+    <section class="section" id="course-spotlight">
       <div class="section-head">
-        <span class="pill">Featured Course</span>
-        <h2>Pitt EDGE Faculty Training Course</h2>
+        <span class="pill">Spotlight</span>
+        <h2>Course Design &amp; Development Spotlight</h2>
       </div>
       <div class="section-intro">
-        <p>A full 12-module Canvas course training faculty on the complete Pitt EDGE teaching toolkit &mdash; built and documented as its own standalone portfolio site.</p>
+        <p>Two full Canvas courses, each built and documented as its own standalone site &mdash; one a finished faculty training course, one a course still being built in the open.</p>
       </div>
+
       <a class="link-tile" href="https://deannagilkey.github.io/PittEDGETechTools/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
         <div class="link-tile-img"><img src="assets/pittedge-course-thumbnail.png" alt="Pitt EDGE course collaboration diagram"></div>
         <div class="link-tile-body">
           <h3>Designing a Faculty Onboarding Course for Online Teaching in Canvas</h3>
           <p>Covers secure testing, interactive H5P content, video and discussion tools, and the peer-review workflow used to keep the course accurate &mdash; twelve modules, ten tools, sixty-plus built activities.</p>
           <span class="link-tile-cta">View the full course site &rarr;</span>
+        </div>
+      </a>
+
+      <a class="link-tile" href="https://deannagilkey.github.io/pitt-edge-id-onboarding/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;margin-top:1.4rem;">
+        <div class="link-tile-img"><img src="assets/onb-m0-team.png" alt="Pitt EDGE team overview diagram"></div>
+        <div class="link-tile-body">
+          <h3>Onboarding the Next Pitt EDGE Instructional Designer</h3>
+          <p>Modules 0&ndash;4 built out in full so far &mdash; orientation and operations, EDGE's programs and partnerships, the course development lifecycle, project management, and Canvas development &mdash; plus a new Pitt Professional module, with the full course map showing where it's headed.</p>
+          <span class="link-tile-cta">View the in-progress course site &rarr;</span>
         </div>
       </a>
     </section>
@@ -381,7 +453,17 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
         <p>NAXT is Cleveland Brothers' Microsoft Dynamics 365-based ERP replacing a legacy dealer business system across Parts, Service, and Rental &amp; Sales. This program spans change management, a structured UAT training pilot, process mapping, an LMS evaluation, and the technical documentation that ties it all together &mdash; developed alongside a cross-functional NAXT team.</p>
       </div>
 
-      <div class="subhead">Program Strategy &amp; Change Management</div>
+      <div class="jump-chips">
+        <a href="#naxt-strategy">Strategy &amp; Change Mgmt</a>
+        <a href="#naxt-uat">UAT Training</a>
+        <a href="#naxt-ttt">Train the Trainer</a>
+        <a href="#naxt-process">Process Mapping</a>
+        <a href="#naxt-lms">LMS Evaluation</a>
+        <a href="#naxt-curriculum">Curriculum</a>
+        <a href="#naxt-sphub">SharePoint &amp; Hub</a>
+      </div>
+
+      <div class="subhead" id="naxt-strategy">Program Strategy &amp; Change Management</div>
       <div class="subhead-intro">The governance layer that made the rest of the program possible: clear ownership, a realistic model of how people actually adopt change, and a way to track progress week to week.</div>
       <div class="shot-grid">
           <figure class="shot" data-full="assets/naxt-raci.png" tabindex="0" role="button" aria-label="Open larger view">
@@ -415,7 +497,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           </figure>
       </div>
 
-      <div class="subhead">UAT Pilot Training Design</div>
+      <div class="subhead" id="naxt-uat">UAT Pilot Training Design</div>
       <div class="subhead-intro">A three-day pilot with Parts and Service, built around one central instructional design decision: every process guide fades from fully-supported to independent across three deliberate versions.</div>
       <div class="shot-grid">
           <figure class="shot" data-full="assets/naxt-uat-title.png" tabindex="0" role="button" aria-label="Open larger view">
@@ -477,9 +559,133 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <div class="shot-frame"><img src="assets/naxt-erp-train-the-trainer.png" alt="The train-the-trainer track that followed the pilot, turning the people who completed UAT into the ones who could run future sessions." loading="lazy"></div>
             <figcaption>The train-the-trainer track that followed the pilot, turning the people who completed UAT into the ones who could run future sessions.</figcaption>
           </figure>
+
+          <figure class="shot" data-full="assets/naxt-process-guide-p1.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-process-guide-p1.png" alt="A real Full-version process guide (DevOps Test Case #15698), structured as Tell Me / Show Me / Let Me / Help Me &amp;mdash; a scenario with realistic field values, not an abstract description." loading="lazy"></div>
+            <figcaption>A real Full-version process guide (DevOps Test Case #15698), structured as Tell Me / Show Me / Let Me / Help Me &mdash; a scenario with realistic field values, not an abstract description.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-process-guide-p2.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-process-guide-p2.png" alt="Show Me continues into Let Me: the same scenario&#x27;s pertinent details (customer name, account number) carried through so trainees practice with information they already understand, not placeholder text." loading="lazy"></div>
+            <figcaption>Show Me continues into Let Me: the same scenario's pertinent details (customer name, account number) carried through so trainees practice with information they already understand, not placeholder text.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/naxt-process-guide-p3.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/naxt-process-guide-p3.png" alt="Help Me closes every guide with named support contacts. Redacted here for this portfolio, but present in the real document so no trainee is ever stuck without knowing who to ask." loading="lazy"></div>
+            <figcaption>Help Me closes every guide with named support contacts. Redacted here for this portfolio, but present in the real document so no trainee is ever stuck without knowing who to ask.</figcaption>
+          </figure>
       </div>
 
-      <div class="subhead">Process Mapping &amp; Support Model</div>
+      <div class="feedback-links">
+        <a href="https://forms.office.com/r/MDPqvwCy2P" target="_blank" rel="noopener">Learner Feedback Form &rarr;</a>
+        <a href="https://forms.office.com/r/23Wy0Xh7Wc" target="_blank" rel="noopener">Trainer Feedback Form &rarr;</a>
+      </div>
+
+      <div class="subhead" id="naxt-ttt">Train the Trainer</div>
+      <div class="subhead-intro">Co-built with Erica Knipple: once UAT identifies candidates for NAXT Trainer and Ambassador roles, this is the structured, three-qualifier process that decides who's actually ready &mdash; scaled for an assumed 150 candidates.</div>
+      <div class="shot-grid">
+          <figure class="shot" data-full="assets/ttt-vetting-title.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-vetting-title.png" alt="A dedicated readout on one question UAT raised but didn&#x27;t answer: once a Trainer or Ambassador candidate is identified, how do you actually decide if they&#x27;re ready?" loading="lazy"></div>
+            <figcaption>A dedicated readout on one question UAT raised but didn't answer: once a Trainer or Ambassador candidate is identified, how do you actually decide if they're ready?</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-roles-diagram.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-roles-diagram.png" alt="Maps every NAXT support role &amp;mdash; SME, Business Stream Lead, Ambassador SME, Trainer SME &amp;mdash; to who approves it, so &#x27;vetted by Learning Specialists&#x27; means something specific rather than a vague checkpoint." loading="lazy"></div>
+            <figcaption>Maps every NAXT support role &mdash; SME, Business Stream Lead, Ambassador SME, Trainer SME &mdash; to who approves it, so 'vetted by Learning Specialists' means something specific rather than a vague checkpoint.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-vetting-overview.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-vetting-overview.png" alt="States the goal plainly: a structured, multi-step assessment of expertise, communication, preparation, and facilitation skills, built so placement decisions don&#x27;t ride on one person&#x27;s gut feel." loading="lazy"></div>
+            <figcaption>States the goal plainly: a structured, multi-step assessment of expertise, communication, preparation, and facilitation skills, built so placement decisions don't ride on one person's gut feel.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-vetting-process-flow.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-vetting-process-flow.png" alt="The full vetting flow from candidate through Project Manager/Business Stream Leads to Learning Specialists and back to CB/CBM Business &amp;mdash; showing who evaluates versus who decides." loading="lazy"></div>
+            <figcaption>The full vetting flow from candidate through Project Manager/Business Stream Leads to Learning Specialists and back to CB/CBM Business &mdash; showing who evaluates versus who decides.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-candidate-intro.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-candidate-intro.png" alt="The candidate-facing side of vetting: what a candidate actually receives, from role descriptions to a professional-pitch prep guide, before anyone assesses anything." loading="lazy"></div>
+            <figcaption>The candidate-facing side of vetting: what a candidate actually receives, from role descriptions to a professional-pitch prep guide, before anyone assesses anything.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-qualifier1.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-qualifier1.png" alt="Qualifier 1 pulls in the one perspective a candidate can&#x27;t self-report: their direct supervisor&#x27;s read on actual subject-matter expertise and how it&#x27;s applied." loading="lazy"></div>
+            <figcaption>Qualifier 1 pulls in the one perspective a candidate can't self-report: their direct supervisor's read on actual subject-matter expertise and how it's applied.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-qualifier2.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-qualifier2.png" alt="Qualifier 2 shifts to the candidate&#x27;s own voice &amp;mdash; a written questionnaire assessing communication, prior facilitation experience, and comfort with leading and managing conflict." loading="lazy"></div>
+            <figcaption>Qualifier 2 shifts to the candidate's own voice &mdash; a written questionnaire assessing communication, prior facilitation experience, and comfort with leading and managing conflict.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-qualifier3.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-qualifier3.png" alt="Qualifier 3 is a live 2&amp;ndash;4 minute pitch over Teams, assessing presentation skills and basic platform proficiency in a low-stakes, clearly time-boxed format." loading="lazy"></div>
+            <figcaption>Qualifier 3 is a live 2&ndash;4 minute pitch over Teams, assessing presentation skills and basic platform proficiency in a low-stakes, clearly time-boxed format.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-scoring-rubric.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-scoring-rubric.png" alt="All three qualifiers roll up to one scoring rubric, scored for objectivity rather than impression &amp;mdash; with Business Stream Leads retaining final placement authority, not the Learning Specialists who score it." loading="lazy"></div>
+            <figcaption>All three qualifiers roll up to one scoring rubric, scored for objectivity rather than impression &mdash; with Business Stream Leads retaining final placement authority, not the Learning Specialists who score it.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-next-steps.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-next-steps.png" alt="Plans explicitly for scale: an assumption of 150 candidates moving through this same four-step process, not a handful of informal picks." loading="lazy"></div>
+            <figcaption>Plans explicitly for scale: an assumption of 150 candidates moving through this same four-step process, not a handful of informal picks.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-score-sheet.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-score-sheet.png" alt="The blank score sheet every candidate is actually scored against &amp;mdash; every rubric item from the readout translated into a fillable 1-2-3 scale with a running total and proficiency band." loading="lazy"></div>
+            <figcaption>The blank score sheet every candidate is actually scored against &mdash; every rubric item from the readout translated into a fillable 1-2-3 scale with a running total and proficiency band.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-intro-letter-p1.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-intro-letter-p1.png" alt="The actual letter a candidate receives: a plain-language welcome, the same roles diagram reused from the readout, and a signed note from both Learning Specialists &amp;mdash; not a form letter." loading="lazy"></div>
+            <figcaption>The actual letter a candidate receives: a plain-language welcome, the same roles diagram reused from the readout, and a signed note from both Learning Specialists &mdash; not a form letter.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-intro-letter-p2.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-intro-letter-p2.png" alt="Includes a full professional-pitch prep guide inside the candidate&#x27;s own letter &amp;mdash; timing, outline, and a practice recommendation &amp;mdash; so no one walks into Qualifier 3 unprepared." loading="lazy"></div>
+            <figcaption>Includes a full professional-pitch prep guide inside the candidate's own letter &mdash; timing, outline, and a practice recommendation &mdash; so no one walks into Qualifier 3 unprepared.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-tracker-timeline.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-tracker-timeline.png" alt="The operational timeline behind the whole pilot, week by week, including the unglamorous realities (Labor Day, makeup sessions, an explicit 150-candidates-at-5-per-session capacity math)." loading="lazy"></div>
+            <figcaption>The operational timeline behind the whole pilot, week by week, including the unglamorous realities (Labor Day, makeup sessions, an explicit 150-candidates-at-5-per-session capacity math).</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-tracker-meetgreet.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-tracker-meetgreet.png" alt="The actual Meet &amp; Greet scheduling grid used to book candidates into sessions &amp;mdash; color-coded for booked and make-up slots, built for a Learning Specialist to manage in real time." loading="lazy"></div>
+            <figcaption>The actual Meet & Greet scheduling grid used to book candidates into sessions &mdash; color-coded for booked and make-up slots, built for a Learning Specialist to manage in real time.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-handbook-cover.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-handbook-cover.png" alt="The vetting process formalized into a standalone handbook, with its own feedback email &amp;mdash; signaling this was built to outlive the pilot, not a one-off slide deck." loading="lazy"></div>
+            <figcaption>The vetting process formalized into a standalone handbook, with its own feedback email &mdash; signaling this was built to outlive the pilot, not a one-off slide deck.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-handbook-timeline.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-handbook-timeline.png" alt="The same four-step process from the readout, now with explicit calendar dates and a named deliverable per step, so the handbook functions as a reference, not just an explainer." loading="lazy"></div>
+            <figcaption>The same four-step process from the readout, now with explicit calendar dates and a named deliverable per step, so the handbook functions as a reference, not just an explainer.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-handbook-roles.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-handbook-roles.png" alt="Pairs the roles diagram with the Step 2 qualifier table in one place, so a reader doesn&#x27;t have to flip between &#x27;who does this role&#x27; and &#x27;how do we assess them.&#x27;" loading="lazy"></div>
+            <figcaption>Pairs the roles diagram with the Step 2 qualifier table in one place, so a reader doesn't have to flip between 'who does this role' and 'how do we assess them.'</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-handbook-rubric.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-handbook-rubric.png" alt="A sample of the full three-point rubric language &amp;mdash; every score level written out in behavioral terms, not just a number, so two different evaluators would score the same candidate the same way." loading="lazy"></div>
+            <figcaption>A sample of the full three-point rubric language &mdash; every score level written out in behavioral terms, not just a number, so two different evaluators would score the same candidate the same way.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/ttt-handbook-scoresheet.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/ttt-handbook-scoresheet.png" alt="The handbook&#x27;s own copy of the score sheet, placed at the back as a ready-to-use appendix rather than a separate document someone has to go find." loading="lazy"></div>
+            <figcaption>The handbook's own copy of the score sheet, placed at the back as a ready-to-use appendix rather than a separate document someone has to go find.</figcaption>
+          </figure>
+      </div>
+
+      <div class="subhead" id="naxt-process">Process Mapping &amp; Support Model</div>
       <div class="subhead-intro">Swimlane maps turning "who handles this" into an answerable question &mdash; for attendance tracking, SME escalation, and front-line support.</div>
       <div class="shot-grid">
           <figure class="shot" data-full="assets/naxt-reportingmap-attendance.png" tabindex="0" role="button" aria-label="Open larger view">
@@ -503,7 +709,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           </figure>
       </div>
 
-      <div class="subhead">LMS Evaluation &amp; Governance (LogicBay)</div>
+      <div class="subhead" id="naxt-lms">LMS Evaluation &amp; Governance (LogicBay)</div>
       <div class="subhead-intro">Co-led with Erica Knipple: a formal needs analysis (task-by-task, pass/fail tested against real use), a leadership decision log, and defined Campus Administrator and Trainer roles for ongoing ownership.</div>
       <div class="shot-grid">
           <figure class="shot" data-full="assets/naxt-logicbay-scenario.png" tabindex="0" role="button" aria-label="Open larger view">
@@ -522,7 +728,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           </figure>
       </div>
 
-      <div class="subhead">Curriculum &amp; Systems Documentation</div>
+      <div class="subhead" id="naxt-curriculum">Curriculum &amp; Systems Documentation</div>
       <div class="subhead-intro">The connective tissue between a business process, the lesson that teaches it, and the reference material an employee can return to afterward.</div>
       <div class="shot-grid">
           <figure class="shot" data-full="assets/naxt-dbs-framework.png" tabindex="0" role="button" aria-label="Open larger view">
@@ -543,6 +749,35 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           <figure class="shot" data-full="assets/naxt-emr-guide.png" tabindex="0" role="button" aria-label="Open larger view">
             <div class="shot-frame"><img src="assets/naxt-emr-guide.png" alt="A mobile EMR app guide covering barcode-based equipment scanning for shipping, picking, and receiving &amp;mdash; documentation for the rental and sales side of the same NAXT rollout." loading="lazy"></div>
             <figcaption>A mobile EMR app guide covering barcode-based equipment scanning for shipping, picking, and receiving &mdash; documentation for the rental and sales side of the same NAXT rollout.</figcaption>
+          </figure>
+      </div>
+
+      <div class="subhead" id="naxt-sphub">SharePoint Site &amp; Hub Planning</div>
+      <div class="subhead-intro">Co-built with Erica Knipple: planning for the NAXT Hub's two lives &mdash; a pre-launch landing page that becomes a permanent, permissioned reference site the moment NAXT goes live.</div>
+      <div class="shot-grid">
+          <figure class="shot" data-full="assets/sp-hub-title.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/sp-hub-title.png" alt="A planning deck for the NAXT SharePoint presence, built around a single idea: the Hub&#x27;s purpose and content change the moment the system goes live." loading="lazy"></div>
+            <figcaption>A planning deck for the NAXT SharePoint presence, built around a single idea: the Hub's purpose and content change the moment the system goes live.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/sp-hub-pregolive.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/sp-hub-pregolive.png" alt="Pre-Go-Live: what has to exist before UAT starts, including a specific go-live checklist and who holds admin rights on the new site in the meantime." loading="lazy"></div>
+            <figcaption>Pre-Go-Live: what has to exist before UAT starts, including a specific go-live checklist and who holds admin rights on the new site in the meantime.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/sp-hub-postgolive.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/sp-hub-postgolive.png" alt="Post-Go-Live needs exactly one documented change &amp;mdash; replacing a single homepage link &amp;mdash; proof that the pre-launch planning anticipated the transition instead of improvising it." loading="lazy"></div>
+            <figcaption>Post-Go-Live needs exactly one documented change &mdash; replacing a single homepage link &mdash; proof that the pre-launch planning anticipated the transition instead of improvising it.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/sp-hub-landingpage.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/sp-hub-landingpage.png" alt="Maps the NAXT Landing Page&#x27;s real structure: training materials organized by stream and job role, with permissioned SME and Learning Specialist pages kept separate from public content." loading="lazy"></div>
+            <figcaption>Maps the NAXT Landing Page's real structure: training materials organized by stream and job role, with permissioned SME and Learning Specialist pages kept separate from public content.</figcaption>
+          </figure>
+
+          <figure class="shot" data-full="assets/sp-hub-forwardfocus.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/sp-hub-forwardfocus.png" alt="NAXT Forward Focus is the public-facing piece &amp;mdash; FAQs, terms, and a parking-lot-fed knowledge base &amp;mdash; built so answers compound over time instead of being re-answered in every session." loading="lazy"></div>
+            <figcaption>NAXT Forward Focus is the public-facing piece &mdash; FAQs, terms, and a parking-lot-fed knowledge base &mdash; built so answers compound over time instead of being re-answered in every session.</figcaption>
           </figure>
       </div>
     </section>
@@ -629,275 +864,258 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       <div class="section-intro">
         <p>The written process documentation behind the Pitt EDGE faculty training course &mdash; one short reference guide per tool or task, each built around a stated purpose rather than a generic feature walkthrough.</p>
       </div>
+
+      <div class="subhead">Accredible</div>
       <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-accredible-department-description.png" tabindex="0" role="button" aria-label="Open larger view of Customizing Your Department Description in Accredible">
               <div class="doc-shot-frame"><img src="assets/doc-accredible-department-description.png" alt="Customizing Your Department Description in Accredible" loading="lazy"></div>
               <figcaption class="doc-shot-caption">Customizing Your Department Description in Accredible</figcaption>
             </figure>
-            <span class="doc-tag">Accredible</span>
             <h4>Customizing Your Department Description in Accredible</h4>
             <p>Step-by-step instructions for departments to personalize their Accredible credentialing page &mdash; description, formatting, and social media links &mdash; on the platform Pitt EDGE uses to issue digital badges and certificates.</p>
           </div>
+      </div>
 
+      <div class="subhead">BugHerd</div>
+      <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-bugherd-overview.png" tabindex="0" role="button" aria-label="Open larger view of BugHerd Overview">
               <div class="doc-shot-frame"><img src="assets/doc-bugherd-overview.png" alt="BugHerd Overview" loading="lazy"></div>
               <figcaption class="doc-shot-caption">BugHerd Overview</figcaption>
             </figure>
-            <span class="doc-tag">BugHerd</span>
             <h4>BugHerd Overview</h4>
             <p>Role-and-workflow overview of BugHerd as Pitt EDGE's project-based feedback tool for reviewing Canvas course builds.</p>
           </div>
-
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-bugherd-tools.png" tabindex="0" role="button" aria-label="Open larger view of BugHerd Tools">
               <div class="doc-shot-frame"><img src="assets/doc-bugherd-tools.png" alt="BugHerd Tools" loading="lazy"></div>
               <figcaption class="doc-shot-caption">BugHerd Tools</figcaption>
             </figure>
-            <span class="doc-tag">BugHerd</span>
             <h4>BugHerd Tools</h4>
             <p>Sidebar-focused walkthrough of the specific tools used to leave feedback directly on a page under review.</p>
           </div>
+      </div>
 
+      <div class="subhead">ExamSoft</div>
+      <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-examsoft-foundations.png" tabindex="0" role="button" aria-label="Open larger view of Foundations of ExamSoft System">
               <div class="doc-shot-frame"><img src="assets/doc-examsoft-foundations.png" alt="Foundations of ExamSoft System" loading="lazy"></div>
               <figcaption class="doc-shot-caption">Foundations of ExamSoft System</figcaption>
             </figure>
-            <span class="doc-tag">ExamSoft</span>
             <h4>Foundations of ExamSoft System</h4>
             <p>Introduces the full ecosystem of tools that work together to support secure digital assessment end to end.</p>
           </div>
-
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-examsoft-create-assessments.png" tabindex="0" role="button" aria-label="Open larger view of ExamSoft: Create Assessments">
               <div class="doc-shot-frame"><img src="assets/doc-examsoft-create-assessments.png" alt="ExamSoft: Create Assessments" loading="lazy"></div>
               <figcaption class="doc-shot-caption">ExamSoft: Create Assessments</figcaption>
             </figure>
-            <span class="doc-tag">ExamSoft</span>
             <h4>ExamSoft: Create Assessments</h4>
             <p>Guides faculty through the Set Up &rarr; Build &rarr; Deliver workflow for creating a new assessment.</p>
           </div>
-
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-examsoft-categories.png" tabindex="0" role="button" aria-label="Open larger view of ExamSoft: Categories and Tagging">
               <div class="doc-shot-frame"><img src="assets/doc-examsoft-categories.png" alt="ExamSoft: Categories and Tagging" loading="lazy"></div>
               <figcaption class="doc-shot-caption">ExamSoft: Categories and Tagging</figcaption>
             </figure>
-            <span class="doc-tag">ExamSoft</span>
             <h4>ExamSoft: Categories and Tagging</h4>
             <p>Explains how categories and tagging organize content and support Blueprint exam design and reporting.</p>
           </div>
-
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-examsoft-rubrics.png" tabindex="0" role="button" aria-label="Open larger view of ExamSoft: Create and Use Rubrics">
               <div class="doc-shot-frame"><img src="assets/doc-examsoft-rubrics.png" alt="ExamSoft: Create and Use Rubrics" loading="lazy"></div>
               <figcaption class="doc-shot-caption">ExamSoft: Create and Use Rubrics</figcaption>
             </figure>
-            <span class="doc-tag">ExamSoft</span>
             <h4>ExamSoft: Create and Use Rubrics</h4>
             <p>Covers building a rubric in the rubric editor and attaching it to an exam question for consistent grading.</p>
           </div>
-
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-examsoft-examplify.png" tabindex="0" role="button" aria-label="Open larger view of ExamSoft: Examplify Student Perspective">
               <div class="doc-shot-frame"><img src="assets/doc-examsoft-examplify.png" alt="ExamSoft: Examplify Student Perspective" loading="lazy"></div>
               <figcaption class="doc-shot-caption">ExamSoft: Examplify Student Perspective</figcaption>
             </figure>
-            <span class="doc-tag">ExamSoft</span>
             <h4>ExamSoft: Examplify Student Perspective</h4>
             <p>Shows faculty what students actually see inside the locked-down Examplify testing application.</p>
           </div>
-
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-examsoft-meeting.png" tabindex="0" role="button" aria-label="Open larger view of ExamSoft Meeting Overview (8/10/26)">
               <div class="doc-shot-frame"><img src="assets/doc-examsoft-meeting.png" alt="ExamSoft Meeting Overview (8/10/26)" loading="lazy"></div>
               <figcaption class="doc-shot-caption">ExamSoft Meeting Overview (8/10/26)</figcaption>
             </figure>
-            <span class="doc-tag">ExamSoft</span>
             <h4>ExamSoft Meeting Overview (8/10/26)</h4>
             <p>Notes from a vendor session mapping the ExamID and ExamMonitor ecosystem for faculty-facing use.</p>
           </div>
+      </div>
 
+      <div class="subhead">Harmonize</div>
+      <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-harmonize-discussion.png" tabindex="0" role="button" aria-label="Open larger view of Create a Graded Discussion with Harmonize in Canvas">
               <div class="doc-shot-frame"><img src="assets/doc-harmonize-discussion.png" alt="Create a Graded Discussion with Harmonize in Canvas" loading="lazy"></div>
               <figcaption class="doc-shot-caption">Create a Graded Discussion with Harmonize in Canvas</figcaption>
             </figure>
-            <span class="doc-tag">Harmonize</span>
             <h4>Create a Graded Discussion with Harmonize in Canvas</h4>
             <p>Step-by-step setup for configuring a graded Harmonize discussion inside a Canvas course.</p>
           </div>
+      </div>
 
+      <div class="subhead">Lucid</div>
+      <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-lucid-overview.png" tabindex="0" role="button" aria-label="Open larger view of Lucid: Overview and Access within Canvas">
               <div class="doc-shot-frame"><img src="assets/doc-lucid-overview.png" alt="Lucid: Overview and Access within Canvas" loading="lazy"></div>
               <figcaption class="doc-shot-caption">Lucid: Overview and Access within Canvas</figcaption>
             </figure>
-            <span class="doc-tag">Lucid</span>
             <h4>Lucid: Overview and Access within Canvas</h4>
             <p>Orientation to Lucidchart and Lucidspark and how faculty reach them from inside a course.</p>
           </div>
-
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-lucid-interface.png" tabindex="0" role="button" aria-label="Open larger view of Lucid Interface: Content Selector">
               <div class="doc-shot-frame"><img src="assets/doc-lucid-interface.png" alt="Lucid Interface: Content Selector" loading="lazy"></div>
               <figcaption class="doc-shot-caption">Lucid Interface: Content Selector</figcaption>
             </figure>
-            <span class="doc-tag">Lucid</span>
             <h4>Lucid Interface: Content Selector</h4>
             <p>Breaks down the Lucid Content Selector's interface elements for creating and embedding content.</p>
           </div>
-
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-lucidchart-qrg.png" tabindex="0" role="button" aria-label="Open larger view of Lucidchart Quick Reference Guide (Basics)">
               <div class="doc-shot-frame"><img src="assets/doc-lucidchart-qrg.png" alt="Lucidchart Quick Reference Guide (Basics)" loading="lazy"></div>
               <figcaption class="doc-shot-caption">Lucidchart Quick Reference Guide (Basics)</figcaption>
             </figure>
-            <span class="doc-tag">Lucid</span>
             <h4>Lucidchart Quick Reference Guide (Basics)</h4>
             <p>Fast-reference guide to the core Lucidchart features needed to build and share a diagram.</p>
           </div>
+      </div>
 
+      <div class="subhead">Panopto</div>
+      <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-panopto-best-practices.png" tabindex="0" role="button" aria-label="Open larger view of Best Practices for Creating Videos">
               <div class="doc-shot-frame"><img src="assets/doc-panopto-best-practices.png" alt="Best Practices for Creating Videos" loading="lazy"></div>
               <figcaption class="doc-shot-caption">Best Practices for Creating Videos</figcaption>
             </figure>
-            <span class="doc-tag">Panopto</span>
             <h4>Best Practices for Creating Videos</h4>
             <p>Audio, slide design, and accessibility guidance for faculty recording their own instructional videos.</p>
           </div>
-
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-panopto-media-tracker.png" tabindex="0" role="button" aria-label="Open larger view of Media Asset Tracker and Panopto Workflow">
               <div class="doc-shot-frame"><img src="assets/doc-panopto-media-tracker.png" alt="Media Asset Tracker and Panopto Workflow" loading="lazy"></div>
               <figcaption class="doc-shot-caption">Media Asset Tracker and Panopto Workflow</figcaption>
             </figure>
-            <span class="doc-tag">Panopto</span>
             <h4>Media Asset Tracker and Panopto Workflow</h4>
             <p>Meeting notes documenting a tracking system built for managing media assets through Panopto.</p>
           </div>
-
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-panopto-video-id-guide.png" tabindex="0" role="button" aria-label="Open larger view of Pitt EDGE Video Production ID Guide">
               <div class="doc-shot-frame"><img src="assets/doc-panopto-video-id-guide.png" alt="Pitt EDGE Video Production ID Guide" loading="lazy"></div>
               <figcaption class="doc-shot-caption">Pitt EDGE Video Production ID Guide</figcaption>
             </figure>
-            <span class="doc-tag">Panopto</span>
             <h4>Pitt EDGE Video Production ID Guide</h4>
             <p>Internal workflow guide for instructional designers managing the video production pipeline.</p>
           </div>
+      </div>
 
+      <div class="subhead">Pitt EDGE</div>
+      <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-pittedge-techstack.png" tabindex="0" role="button" aria-label="Open larger view of EDGE Teaching, Learning &amp;amp; Assessment Tech Stack">
               <div class="doc-shot-frame"><img src="assets/doc-pittedge-techstack.png" alt="EDGE Teaching, Learning &amp;amp; Assessment Tech Stack" loading="lazy"></div>
               <figcaption class="doc-shot-caption">EDGE Teaching, Learning &amp; Assessment Tech Stack</figcaption>
             </figure>
-            <span class="doc-tag">Pitt EDGE</span>
             <h4>EDGE Teaching, Learning &amp; Assessment Tech Stack</h4>
             <p>A one-slide map of the full Pitt EDGE software ecosystem &mdash; ten platforms, each with a one-line purpose, built as the single reference faculty and staff point to first.</p>
           </div>
-
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-pittedge-talking-points.png" tabindex="0" role="button" aria-label="Open larger view of EDGE Software Stack Talking Points">
               <div class="doc-shot-frame"><img src="assets/doc-pittedge-talking-points.png" alt="EDGE Software Stack Talking Points" loading="lazy"></div>
               <figcaption class="doc-shot-caption">EDGE Software Stack Talking Points</figcaption>
             </figure>
-            <span class="doc-tag">Pitt EDGE</span>
             <h4>EDGE Software Stack Talking Points</h4>
             <p>Internal talking points for discussing the Pitt EDGE technology ecosystem with faculty.</p>
           </div>
-
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-pittedge-reverse-image.png" tabindex="0" role="button" aria-label="Open larger view of Reverse Image Search">
               <div class="doc-shot-frame"><img src="assets/doc-pittedge-reverse-image.png" alt="Reverse Image Search" loading="lazy"></div>
               <figcaption class="doc-shot-caption">Reverse Image Search</figcaption>
             </figure>
-            <span class="doc-tag">Pitt EDGE</span>
             <h4>Reverse Image Search</h4>
             <p>Quick step-by-step guide for verifying image sourcing before reuse in course content.</p>
           </div>
+      </div>
 
+      <div class="subhead">PowerPoint</div>
+      <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-powerpoint-best-practices.png" tabindex="0" role="button" aria-label="Open larger view of PowerPoint Best Practices">
               <div class="doc-shot-frame"><img src="assets/doc-powerpoint-best-practices.png" alt="PowerPoint Best Practices" loading="lazy"></div>
               <figcaption class="doc-shot-caption">PowerPoint Best Practices</figcaption>
             </figure>
-            <span class="doc-tag">PowerPoint</span>
             <h4>PowerPoint Best Practices</h4>
             <p>Design guidelines for layout, typography, and color to keep faculty slide decks clear and consistent.</p>
           </div>
+      </div>
 
+      <div class="subhead">ReelDx</div>
+      <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-reeldx-summary.png" tabindex="0" role="button" aria-label="Open larger view of ReelDx Training Session Summary Notes">
               <div class="doc-shot-frame"><img src="assets/doc-reeldx-summary.png" alt="ReelDx Training Session Summary Notes" loading="lazy"></div>
               <figcaption class="doc-shot-caption">ReelDx Training Session Summary Notes</figcaption>
             </figure>
-            <span class="doc-tag">ReelDx</span>
             <h4>ReelDx Training Session Summary Notes</h4>
             <p>Cleaned summary notes from a ReelDx training session, kept for reference and follow-up.</p>
           </div>
+      </div>
 
+      <div class="subhead">Respondus</div>
+      <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-respondus-setup.png" tabindex="0" role="button" aria-label="Open larger view of Set Up a Canvas Quiz Requiring LockDown Browser">
               <div class="doc-shot-frame"><img src="assets/doc-respondus-setup.png" alt="Set Up a Canvas Quiz Requiring LockDown Browser" loading="lazy"></div>
               <figcaption class="doc-shot-caption">Set Up a Canvas Quiz Requiring LockDown Browser</figcaption>
             </figure>
-            <span class="doc-tag">Respondus</span>
             <h4>Set Up a Canvas Quiz Requiring LockDown Browser</h4>
             <p>Step-by-step setup for requiring Respondus LockDown Browser on a Canvas quiz.</p>
           </div>
+      </div>
 
+      <div class="subhead">SharePoint</div>
+      <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-sharepoint-upload.png" tabindex="0" role="button" aria-label="Open larger view of SharePoint Upload: Faculty Guidance">
               <div class="doc-shot-frame"><img src="assets/doc-sharepoint-upload.png" alt="SharePoint Upload: Faculty Guidance" loading="lazy"></div>
               <figcaption class="doc-shot-caption">SharePoint Upload: Faculty Guidance</figcaption>
             </figure>
-            <span class="doc-tag">SharePoint</span>
             <h4>SharePoint Upload: Faculty Guidance</h4>
             <p>Walks faculty through logging in via Pitt Passport and uploading files to SharePoint.</p>
           </div>
+      </div>
 
+      <div class="subhead">TeamDynamix</div>
+      <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-tdx-workflow.png" tabindex="0" role="button" aria-label="Open larger view of TDX Workflow">
               <div class="doc-shot-frame"><img src="assets/doc-tdx-workflow.png" alt="TDX Workflow" loading="lazy"></div>
               <figcaption class="doc-shot-caption">TDX Workflow</figcaption>
             </figure>
-            <span class="doc-tag">TeamDynamix</span>
             <h4>TDX Workflow</h4>
             <p>Explains how TeamDynamix is used for time tracking and project visibility across course builds.</p>
           </div>
+      </div>
 
+      <div class="subhead">Vendor Evaluation</div>
+      <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-tidyup-summary.png" tabindex="0" role="button" aria-label="Open larger view of Cidi Labs TidyUp: Testing Summary &amp;amp; Purchase Recommendation">
               <div class="doc-shot-frame"><img src="assets/doc-tidyup-summary.png" alt="Cidi Labs TidyUp: Testing Summary &amp;amp; Purchase Recommendation" loading="lazy"></div>
               <figcaption class="doc-shot-caption">Cidi Labs TidyUp: Testing Summary &amp; Purchase Recommendation</figcaption>
             </figure>
-            <span class="doc-tag">Vendor Evaluation</span>
             <h4>Cidi Labs TidyUp: Testing Summary &amp; Purchase Recommendation</h4>
             <p>A formal usability test &mdash; 5 courses, 4.1/5 usability &mdash; backing a purchase recommendation for a Canvas cleanup tool.</p>
           </div>
       </div>
-    </section>
-
-    <section class="section" id="id-onboarding">
-      <div class="section-head">
-        <span class="pill">In Progress &middot; University of Pittsburgh</span>
-        <h2>Pitt EDGE Instructional Designer Onboarding Course</h2>
-      </div>
-      <div class="section-intro">
-        <p>A Canvas course built to onboard new Pitt EDGE instructional designers and serve as an ongoing performance-support resource &mdash; built and documented as its own standalone site, the same way the Tech Tools course is.</p>
-      </div>
-      <a class="link-tile" href="https://deannagilkey.github.io/pitt-edge-id-onboarding/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
-        <div class="link-tile-img"><img src="assets/onb-m0-team.png" alt="Pitt EDGE team overview diagram"></div>
-        <div class="link-tile-body">
-          <h3>Onboarding the Next Pitt EDGE Instructional Designer</h3>
-          <p>Modules 0&ndash;4 built out in full so far &mdash; orientation and operations, EDGE's programs and partnerships, the course development lifecycle, project management, and Canvas development &mdash; plus a new Pitt Professional module, with the full course map showing where it's headed.</p>
-          <span class="link-tile-cta">View the in-progress course site &rarr;</span>
-        </div>
-      </a>
     </section>
 
     <section class="section" id="certifications">
@@ -908,92 +1126,93 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       <div class="section-intro">
         <p>Ongoing coursework and vendor certifications across the tools and practices this work draws on &mdash; platform-specific (Canvas, Lucid), AI and accessibility literacy, and the foundational instructional design theory behind the course and program work shown above.</p>
       </div>
+
+      <div class="subhead">Google for Education</div>
       <div class="cert-grid">
         <figure class="cert-card" data-full="assets/cert-google-educator.png" tabindex="0" role="button" aria-label="Open larger view of Google Certified Educator">
           <div class="cert-frame"><img src="assets/cert-google-educator.png" alt="Google Certified Educator" loading="lazy"></div>
-          <figcaption><strong>Google Certified Educator</strong><span>Level 2 · Google for Education</span></figcaption>
+          <figcaption><strong>Google Certified Educator</strong><span>Level 2</span></figcaption>
         </figure>
-
         <figure class="cert-card" data-full="assets/cert-gemini-faculty.png" tabindex="0" role="button" aria-label="Open larger view of Gemini Certified Faculty">
           <div class="cert-frame"><img src="assets/cert-gemini-faculty.png" alt="Gemini Certified Faculty" loading="lazy"></div>
           <figcaption><strong>Gemini Certified Faculty</strong><span>Google for Education</span></figcaption>
         </figure>
+      </div>
 
-        <figure class="cert-card" data-full="assets/cert-canvas-basics.png" tabindex="0" role="button" aria-label="Open larger view of Canvas Basics">
-          <div class="cert-frame"><img src="assets/cert-canvas-basics.png" alt="Canvas Basics" loading="lazy"></div>
-          <figcaption><strong>Canvas Basics</strong><span>Instructure Training Services</span></figcaption>
-        </figure>
-
+      <div class="subhead">Lucid Software</div>
+      <div class="cert-grid">
         <figure class="cert-card" data-full="assets/cert-lucidchart-fundamentals.png" tabindex="0" role="button" aria-label="Open larger view of Lucidchart Fundamentals">
           <div class="cert-frame"><img src="assets/cert-lucidchart-fundamentals.png" alt="Lucidchart Fundamentals" loading="lazy"></div>
           <figcaption><strong>Lucidchart Fundamentals</strong><span>Lucid Software</span></figcaption>
         </figure>
-
         <figure class="cert-card" data-full="assets/cert-lucidchart-basics.png" tabindex="0" role="button" aria-label="Open larger view of Basics in Lucidchart">
           <div class="cert-frame"><img src="assets/cert-lucidchart-basics.png" alt="Basics in Lucidchart" loading="lazy"></div>
           <figcaption><strong>Basics in Lucidchart</strong><span>Lucid Software</span></figcaption>
         </figure>
-
         <figure class="cert-card" data-full="assets/cert-lucidspark-basics.png" tabindex="0" role="button" aria-label="Open larger view of Basics in Lucidspark">
           <div class="cert-frame"><img src="assets/cert-lucidspark-basics.png" alt="Basics in Lucidspark" loading="lazy"></div>
           <figcaption><strong>Basics in Lucidspark</strong><span>Lucid Software</span></figcaption>
         </figure>
-
         <figure class="cert-card" data-full="assets/cert-process-diagrams-lucidchart.png" tabindex="0" role="button" aria-label="Open larger view of Process Diagrams in Lucidchart">
           <div class="cert-frame"><img src="assets/cert-process-diagrams-lucidchart.png" alt="Process Diagrams in Lucidchart" loading="lazy"></div>
           <figcaption><strong>Process Diagrams in Lucidchart</strong><span>Lucid Software</span></figcaption>
         </figure>
+      </div>
 
+      <div class="subhead">Instructure</div>
+      <div class="cert-grid">
+        <figure class="cert-card" data-full="assets/cert-canvas-basics.png" tabindex="0" role="button" aria-label="Open larger view of Canvas Basics">
+          <div class="cert-frame"><img src="assets/cert-canvas-basics.png" alt="Canvas Basics" loading="lazy"></div>
+          <figcaption><strong>Canvas Basics</strong><span>Instructure Training Services</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="subhead">LinkedIn Learning</div>
+      <div class="cert-grid">
         <figure class="cert-card" data-full="assets/cert-lucidchart-linkedin.png" tabindex="0" role="button" aria-label="Open larger view of Learning Lucidchart">
           <div class="cert-frame"><img src="assets/cert-lucidchart-linkedin.png" alt="Learning Lucidchart" loading="lazy"></div>
           <figcaption><strong>Learning Lucidchart</strong><span>LinkedIn Learning</span></figcaption>
         </figure>
-
         <figure class="cert-card" data-full="assets/cert-elearning-essentials-id.png" tabindex="0" role="button" aria-label="Open larger view of Elearning Essentials: Instructional Design">
           <div class="cert-frame"><img src="assets/cert-elearning-essentials-id.png" alt="Elearning Essentials: Instructional Design" loading="lazy"></div>
           <figcaption><strong>Elearning Essentials: Instructional Design</strong><span>LinkedIn Learning</span></figcaption>
         </figure>
-
         <figure class="cert-card" data-full="assets/cert-scenario-based-learning.png" tabindex="0" role="button" aria-label="Open larger view of Designing Scenario-Based Learning">
           <div class="cert-frame"><img src="assets/cert-scenario-based-learning.png" alt="Designing Scenario-Based Learning" loading="lazy"></div>
           <figcaption><strong>Designing Scenario-Based Learning</strong><span>LinkedIn Learning</span></figcaption>
         </figure>
-
         <figure class="cert-card" data-full="assets/cert-articulate-storyline.png" tabindex="0" role="button" aria-label="Open larger view of Articulate Storyline Essential Training">
           <div class="cert-frame"><img src="assets/cert-articulate-storyline.png" alt="Articulate Storyline Essential Training" loading="lazy"></div>
           <figcaption><strong>Articulate Storyline Essential Training</strong><span>LinkedIn Learning</span></figcaption>
         </figure>
-
         <figure class="cert-card" data-full="assets/cert-wcag-22.png" tabindex="0" role="button" aria-label="Open larger view of Designing with the WCAG 2.2 Guidelines">
           <div class="cert-frame"><img src="assets/cert-wcag-22.png" alt="Designing with the WCAG 2.2 Guidelines" loading="lazy"></div>
           <figcaption><strong>Designing with the WCAG 2.2 Guidelines</strong><span>LinkedIn Learning</span></figcaption>
         </figure>
-
         <figure class="cert-card" data-full="assets/cert-ai-for-id.png" tabindex="0" role="button" aria-label="Open larger view of Tips for Using AI as an Instructional Designer">
           <div class="cert-frame"><img src="assets/cert-ai-for-id.png" alt="Tips for Using AI as an Instructional Designer" loading="lazy"></div>
           <figcaption><strong>Tips for Using AI as an Instructional Designer</strong><span>LinkedIn Learning</span></figcaption>
         </figure>
-
         <figure class="cert-card" data-full="assets/cert-genai-higher-ed.png" tabindex="0" role="button" aria-label="Open larger view of Strategic Foundations of GenAI for Higher Ed Leaders">
           <div class="cert-frame"><img src="assets/cert-genai-higher-ed.png" alt="Strategic Foundations of GenAI for Higher Ed Leaders" loading="lazy"></div>
           <figcaption><strong>Strategic Foundations of GenAI for Higher Ed Leaders</strong><span>LinkedIn Learning</span></figcaption>
         </figure>
-
         <figure class="cert-card" data-full="assets/cert-build-your-own-training.png" tabindex="0" role="button" aria-label="Open larger view of Build Your Own Professional Training">
           <div class="cert-frame"><img src="assets/cert-build-your-own-training.png" alt="Build Your Own Professional Training" loading="lazy"></div>
           <figcaption><strong>Build Your Own Professional Training</strong><span>LinkedIn Learning</span></figcaption>
         </figure>
-
         <figure class="cert-card" data-full="assets/cert-docusign.png" tabindex="0" role="button" aria-label="Open larger view of Learning DocuSign">
           <div class="cert-frame"><img src="assets/cert-docusign.png" alt="Learning DocuSign" loading="lazy"></div>
           <figcaption><strong>Learning DocuSign</strong><span>LinkedIn Learning</span></figcaption>
         </figure>
+      </div>
 
+      <div class="subhead">Academic & Compliance</div>
+      <div class="cert-grid">
         <figure class="cert-card" data-full="assets/cert-ferpa-101.png" tabindex="0" role="button" aria-label="Open larger view of FERPA 101: Colleges and Universities">
           <div class="cert-frame"><img src="assets/cert-ferpa-101.png" alt="FERPA 101: Colleges and Universities" loading="lazy"></div>
           <figcaption><strong>FERPA 101: Colleges and Universities</strong><span>U.S. Dept. of Education</span></figcaption>
         </figure>
-
         <figure class="cert-card" data-full="assets/cert-uci-course-dev.png" tabindex="0" role="button" aria-label="Open larger view of Instructional Design: Course Development">
           <div class="cert-frame"><img src="assets/cert-uci-course-dev.png" alt="Instructional Design: Course Development" loading="lazy"></div>
           <figcaption><strong>Instructional Design: Course Development</strong><span>UC Irvine · FutureLearn</span></figcaption>
