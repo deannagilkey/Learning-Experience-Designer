@@ -304,8 +304,7 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .text-card-grid{margin-top:1.2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
 @media (max-width:900px){ .text-card-grid{grid-template-columns:1fr;} }
 .award-pill{display:inline-flex;align-items:center;gap:.4em;font-size:.74rem;font-weight:600;letter-spacing:.02em;color:#2A1E07;background:var(--gold);padding:.28em .85em;border-radius:999px;margin-bottom:.7rem;}
-.metric-grid{margin-top:1.4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
-@media (max-width:700px){ .metric-grid{grid-template-columns:1fr;} }
+.metric-grid{margin-top:1.4rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.2rem;}
 .metric-card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1.2rem 1.3rem;text-align:center;}
 .metric-card .metric-label{font-size:.82rem;color:var(--muted);margin-bottom:.6rem;}
 .metric-card .metric-values{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600;color:var(--forest-deep);}
@@ -565,7 +564,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
 
         <div class="cs-block">
           <h4 class="cs-head">Results</h4>
-          <p>Administrative accounts dropped from 22 to 9 &mdash; a 59% reduction in privileged access &mdash; while total accounts decreased by 24%, all without losing operational coverage. The team grew by 25% to take on the newly distributed ownership model.</p>
+          <p>Administrative accounts dropped from 22 to 9 &mdash; a 59% reduction in privileged access &mdash; while total accounts decreased by 24%, all without losing operational coverage.</p>
           <div class="metric-grid">
             <div class="metric-card">
               <div class="metric-label">Total accounts</div>
@@ -576,11 +575,6 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
               <div class="metric-label">Administrative accounts</div>
               <div class="metric-values">22 <span class="arrow">&rarr;</span> 9</div>
               <div class="metric-change">&minus;59%</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">Team members</div>
-              <div class="metric-values">16 <span class="arrow">&rarr;</span> 20</div>
-              <div class="metric-change">+25%</div>
             </div>
           </div>
         </div>
@@ -916,17 +910,10 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
         <p>A phased training rollout for ADP's Workforce Manager &mdash; timecards, delegations, and dataviews &mdash; built around a curriculum crosswalk tracing every lesson to its source task guide, three co-facilitated workshops, and a from-scratch employee timeclock guide covering procedures ADP's own documentation didn't include.</p>
       </div>
 
-      <div class="subhead">Curriculum Design</div>
-      <div class="shot-grid">
-          <figure class="shot" data-full="assets/adp-curriculum-crosswalk.png" tabindex="0" role="button" aria-label="Open larger view">
-            <div class="shot-frame"><img src="assets/adp-curriculum-crosswalk.png" alt="The curriculum crosswalk mapping every lesson back to the official ADP task guide it&#x27;s sourced from &amp;mdash; the backbone that kept 60+ lessons traceable to a single source of truth." loading="lazy"></div>
-            <figcaption>The curriculum crosswalk mapping every lesson back to the official ADP task guide it's sourced from &mdash; the backbone that kept 60+ lessons traceable to a single source of truth.</figcaption>
-          </figure>
-      </div>
-
-      <div class="subhead">Workshop Facilitation</div>
-      <div class="subhead-intro">Co-facilitated with Erica across three sessions, each building on the last.</div>
-      <div class="text-card-grid">
+      <details class="cert-group" open>
+        <summary class="cert-group-summary"><span>Workshop Facilitation</span><span class="cert-group-meta">3 workshops<i class="cert-chevron"></i></span></summary>
+        <div class="subhead-intro">Co-facilitated with Erica across three sessions, each building on the last.</div>
+        <div class="text-card-grid">
         <div class="text-card">
           <h4>Workshop 1 &mdash; Basic Navigation</h4>
           <div class="text-card-meta">January 14, 2025 &middot; Microsoft Teams</div>
@@ -944,11 +931,13 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           <div class="text-card-meta">February 4, 2025 &middot; Microsoft Teams</div>
           <p>Focused on personalizing and drilling into dataviews, building and managing charts, and setting expectations for the employee-facing training rollout to follow.</p>
         </div>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">Employee Timeclock Guide</div>
-      <div class="subhead-intro">A 47-page guide built in Canva around Cleveland Brothers' own hardware and site-specific procedures.</div>
-      <div class="shot-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>Employee Timeclock Guide</span><span class="cert-group-meta">6 pages<i class="cert-chevron"></i></span></summary>
+        <div class="subhead-intro">A 47-page guide built in Canva around Cleveland Brothers' own hardware and site-specific procedures.</div>
+        <div class="shot-grid">
           <figure class="shot" data-full="assets/adp-tc-title.png" tabindex="0" role="button" aria-label="Open larger view">
             <div class="shot-frame"><img src="assets/adp-tc-title.png" alt="The opening screen of a 47-page employee timeclock guide, built in Canva around Cleveland Brothers&#x27; actual branded hardware rather than generic stock screenshots." loading="lazy"></div>
             <figcaption>The opening screen of a 47-page employee timeclock guide, built in Canva around Cleveland Brothers' actual branded hardware rather than generic stock screenshots.</figcaption>
@@ -978,7 +967,18 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <div class="shot-frame"><img src="assets/adp-tc-transfer-accepted.png" alt="Each sequence ends on the exact confirmation screen the employee will see, closing the loop so there&#x27;s no ambiguity about success." loading="lazy"></div>
             <figcaption>Each sequence ends on the exact confirmation screen the employee will see, closing the loop so there's no ambiguity about success.</figcaption>
           </figure>
-      </div>
+        </div>
+      </details>
+
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>Curriculum Design</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <div class="shot-grid">
+          <figure class="shot" data-full="assets/adp-curriculum-crosswalk.png" tabindex="0" role="button" aria-label="Open larger view">
+            <div class="shot-frame"><img src="assets/adp-curriculum-crosswalk.png" alt="The curriculum crosswalk mapping every lesson back to the official ADP task guide it&#x27;s sourced from &amp;mdash; the backbone that kept 60+ lessons traceable to a single source of truth." loading="lazy"></div>
+            <figcaption>The curriculum crosswalk mapping every lesson back to the official ADP task guide it's sourced from &mdash; the backbone that kept 60+ lessons traceable to a single source of truth.</figcaption>
+          </figure>
+        </div>
+      </details>
     </section>
 
     <section class="section" id="pitt-docs">
