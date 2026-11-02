@@ -303,6 +303,14 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 /* TEXT CARDS (workshops etc) */
 .text-card-grid{margin-top:1.2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
 @media (max-width:900px){ .text-card-grid{grid-template-columns:1fr;} }
+.award-pill{display:inline-flex;align-items:center;gap:.4em;font-size:.74rem;font-weight:600;letter-spacing:.02em;color:#2A1E07;background:var(--gold);padding:.28em .85em;border-radius:999px;margin-bottom:.7rem;}
+.metric-grid{margin-top:1.4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+@media (max-width:700px){ .metric-grid{grid-template-columns:1fr;} }
+.metric-card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1.2rem 1.3rem;text-align:center;}
+.metric-card .metric-label{font-size:.82rem;color:var(--muted);margin-bottom:.6rem;}
+.metric-card .metric-values{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600;color:var(--forest-deep);}
+.metric-card .metric-values .arrow{color:var(--muted);font-weight:400;margin:0 .3em;}
+.metric-card .metric-change{font-size:.88rem;font-weight:600;color:var(--gold-deep);margin-top:.4rem;}
 .text-card{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:4px;padding:1.1rem 1.3rem;}
 .text-card h4{font-family:'Fraunces',serif;font-size:1rem;font-weight:600;margin:0 0 .3rem;color:var(--forest-deep);}
 .text-card-meta{font-size:.78rem;color:var(--muted);margin-bottom:.6rem;}
@@ -348,7 +356,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
   <div class="hero-inner">
     <span class="eyebrow-pill">Instructional Design &amp; Training Portfolio</span>
     <h1>Training Programs, Process Documentation, and Supporting Project Work</h1>
-    <p class="dek">A working collection and archive of instructional design projects, professional learning programs, certifications, and development resources showcasing experience leading initiatives independently and <strong>collaborating with cross-functional teams</strong> across higher education and industry.</p>
+    <p class="dek">A working collection and archive of instructional design projects, professional learning programs, certifications, and development resources showcasing experience leading initiatives independently and collaborating with cross-functional teams across higher education and industry.</p>
     <p class="byline">Deanna Gilkey Schmuck, MS &middot; Learning Experience Designer</p>
     <div class="tag-row">
       <span>Instructional Design</span>
@@ -380,6 +388,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           <span class="nav-group-label">Case Studies</span>
           <a class="nav-link" href="#course-spotlight" data-target="course-spotlight">Course Spotlight</a>
           <a class="nav-link" href="#conference" data-target="conference">Conference Workshop</a>
+          <a class="nav-link" href="#accredible-migration" data-target="accredible-migration">Accredible Migration</a>
           <a class="nav-link" href="#naxt-erp" data-target="naxt-erp">NAXT ERP Program</a>
           <a class="nav-link" href="#adp-wfm" data-target="adp-wfm">ADP Workforce Mgr</a>
           <a class="nav-link" href="#pitt-docs" data-target="pitt-docs">Pitt Tech Docs</a>
@@ -441,7 +450,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
         <h2>Course Design &amp; Development Spotlight</h2>
       </div>
       <div class="section-intro">
-        <p>Two full Canvas courses, each built and documented as its own standalone site &mdash; one a finished faculty training course, one a course still being built in the open.</p>
+        <p>Two full Canvas courses, each built and documented as its own standalone site &mdash; one a finished faculty training course, one a complete 12-module onboarding course for incoming instructional designers.</p>
       </div>
 
       <a class="link-tile" href="https://deannagilkey.github.io/PittEDGETechTools/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
@@ -525,6 +534,46 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <figcaption>Resource Group 4 &mdash; the design frameworks and references underpinning the sessions, including the OSCQR Rubric and High-Impact Design for Online Courses.</figcaption>
           </figure>
       </div>
+    </section>
+
+    <section class="section" id="accredible-migration">
+      <div class="section-head">
+        <span class="award-pill">&#9733; Nominated &middot; Digital Transformation Award</span>
+        <h2>Accredible Enterprise Migration &amp; Governance Transformation</h2>
+      </div>
+      <div class="section-intro">
+        <p>University of Pittsburgh &middot; Pitt EDGE &middot; 2026. A comprehensive transformation of Pitt EDGE's Accredible digital credential ecosystem &mdash; moving from a centralized credentialing model to an enterprise-wide governance framework that distributed ownership across academic and administrative units while improving security, scalability, and operational sustainability. Led by a small team, nominated for a Digital Transformation Award for this work.</p>
+      </div>
+
+      <div class="subhead">The Challenge</div>
+      <div class="subhead-intro">The platform supported 33,121 issued credentials, 15,583 recipients, and 759 credential groups. Growing adoption had outpaced the original governance model, creating permissions, ownership, and scalability challenges that needed a more sustainable operational structure.</div>
+
+      <div class="subhead">Role &amp; Approach</div>
+      <div class="subhead-intro">Led governance review activities, user-access audits, migration tracking, stakeholder coordination, validation workflows, and quality assurance for the migration initiative &mdash; implementing a governance redesign, building Airtable and Excel migration-tracking processes, supporting the reorganization of credential groups, and helping establish a distributed ownership model across eleven institutional units.</div>
+
+      <div class="subhead">Results</div>
+      <div class="subhead-intro">Administrative accounts dropped from 22 to 9 &mdash; a 59% reduction in privileged access &mdash; while total accounts decreased by 24%, all without losing operational coverage. The team grew by 25% to take on the newly distributed ownership model.</div>
+
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-label">Total accounts</div>
+          <div class="metric-values">38 <span class="arrow">&rarr;</span> 29</div>
+          <div class="metric-change">&minus;24%</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Administrative accounts</div>
+          <div class="metric-values">22 <span class="arrow">&rarr;</span> 9</div>
+          <div class="metric-change">&minus;59%</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Team members</div>
+          <div class="metric-values">16 <span class="arrow">&rarr;</span> 20</div>
+          <div class="metric-change">+25%</div>
+        </div>
+      </div>
+
+      <div class="subhead">Key Takeaways</div>
+      <div class="subhead-intro">The project demonstrates leadership in digital transformation, governance design, change management, stakeholder engagement, enterprise platform administration, and scalable technology operations.</div>
     </section>
 
     <section class="section" id="naxt-erp">
@@ -928,8 +977,9 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
         <p>The written process documentation behind the Pitt EDGE faculty training course &mdash; one short reference guide per tool or task, each built around a stated purpose rather than a generic feature walkthrough.</p>
       </div>
 
-      <div class="subhead">Accredible</div>
-      <div class="doc-grid">
+      <details class="cert-group" open>
+        <summary class="cert-group-summary"><span>Accredible</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-accredible-department-description.png" tabindex="0" role="button" aria-label="Open larger view of Customizing Your Department Description in Accredible">
               <div class="doc-shot-frame"><img src="assets/doc-accredible-department-description.png" alt="Customizing Your Department Description in Accredible" loading="lazy"></div>
@@ -938,10 +988,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <h4>Customizing Your Department Description in Accredible</h4>
             <p>Step-by-step instructions for departments to personalize their Accredible credentialing page &mdash; description, formatting, and social media links &mdash; on the platform Pitt EDGE uses to issue digital badges and certificates.</p>
           </div>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">BugHerd</div>
-      <div class="doc-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>BugHerd</span><span class="cert-group-meta">2 documents<i class="cert-chevron"></i></span></summary>
+        <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-bugherd-overview.png" tabindex="0" role="button" aria-label="Open larger view of BugHerd Overview">
               <div class="doc-shot-frame"><img src="assets/doc-bugherd-overview.png" alt="BugHerd Overview" loading="lazy"></div>
@@ -958,10 +1010,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <h4>BugHerd Tools</h4>
             <p>Sidebar-focused walkthrough of the specific tools used to leave feedback directly on a page under review.</p>
           </div>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">ExamSoft</div>
-      <div class="doc-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>ExamSoft</span><span class="cert-group-meta">6 documents<i class="cert-chevron"></i></span></summary>
+        <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-examsoft-foundations.png" tabindex="0" role="button" aria-label="Open larger view of Foundations of ExamSoft System">
               <div class="doc-shot-frame"><img src="assets/doc-examsoft-foundations.png" alt="Foundations of ExamSoft System" loading="lazy"></div>
@@ -1010,10 +1064,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <h4>ExamSoft Meeting Overview (8/10/26)</h4>
             <p>Notes from a vendor session mapping the ExamID and ExamMonitor ecosystem for faculty-facing use.</p>
           </div>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">Harmonize</div>
-      <div class="doc-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>Harmonize</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-harmonize-discussion.png" tabindex="0" role="button" aria-label="Open larger view of Create a Graded Discussion with Harmonize in Canvas">
               <div class="doc-shot-frame"><img src="assets/doc-harmonize-discussion.png" alt="Create a Graded Discussion with Harmonize in Canvas" loading="lazy"></div>
@@ -1022,10 +1078,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <h4>Create a Graded Discussion with Harmonize in Canvas</h4>
             <p>Step-by-step setup for configuring a graded Harmonize discussion inside a Canvas course.</p>
           </div>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">Lucid</div>
-      <div class="doc-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>Lucid</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
+        <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-lucid-overview.png" tabindex="0" role="button" aria-label="Open larger view of Lucid: Overview and Access within Canvas">
               <div class="doc-shot-frame"><img src="assets/doc-lucid-overview.png" alt="Lucid: Overview and Access within Canvas" loading="lazy"></div>
@@ -1050,10 +1108,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <h4>Lucidchart Quick Reference Guide (Basics)</h4>
             <p>Fast-reference guide to the core Lucidchart features needed to build and share a diagram.</p>
           </div>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">Panopto</div>
-      <div class="doc-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>Panopto</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
+        <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-panopto-best-practices.png" tabindex="0" role="button" aria-label="Open larger view of Best Practices for Creating Videos">
               <div class="doc-shot-frame"><img src="assets/doc-panopto-best-practices.png" alt="Best Practices for Creating Videos" loading="lazy"></div>
@@ -1078,10 +1138,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <h4>Pitt EDGE Video Production ID Guide</h4>
             <p>Internal workflow guide for instructional designers managing the video production pipeline.</p>
           </div>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">Pitt EDGE</div>
-      <div class="doc-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>Pitt EDGE</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
+        <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-pittedge-techstack.png" tabindex="0" role="button" aria-label="Open larger view of EDGE Teaching, Learning &amp;amp; Assessment Tech Stack">
               <div class="doc-shot-frame"><img src="assets/doc-pittedge-techstack.png" alt="EDGE Teaching, Learning &amp;amp; Assessment Tech Stack" loading="lazy"></div>
@@ -1106,10 +1168,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <h4>Reverse Image Search</h4>
             <p>Quick step-by-step guide for verifying image sourcing before reuse in course content.</p>
           </div>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">PowerPoint</div>
-      <div class="doc-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>PowerPoint</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-powerpoint-best-practices.png" tabindex="0" role="button" aria-label="Open larger view of PowerPoint Best Practices">
               <div class="doc-shot-frame"><img src="assets/doc-powerpoint-best-practices.png" alt="PowerPoint Best Practices" loading="lazy"></div>
@@ -1118,10 +1182,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <h4>PowerPoint Best Practices</h4>
             <p>Design guidelines for layout, typography, and color to keep faculty slide decks clear and consistent.</p>
           </div>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">ReelDx</div>
-      <div class="doc-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>ReelDx</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-reeldx-summary.png" tabindex="0" role="button" aria-label="Open larger view of ReelDx Training Session Summary Notes">
               <div class="doc-shot-frame"><img src="assets/doc-reeldx-summary.png" alt="ReelDx Training Session Summary Notes" loading="lazy"></div>
@@ -1130,10 +1196,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <h4>ReelDx Training Session Summary Notes</h4>
             <p>Cleaned summary notes from a ReelDx training session, kept for reference and follow-up.</p>
           </div>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">Respondus</div>
-      <div class="doc-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>Respondus</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-respondus-setup.png" tabindex="0" role="button" aria-label="Open larger view of Set Up a Canvas Quiz Requiring LockDown Browser">
               <div class="doc-shot-frame"><img src="assets/doc-respondus-setup.png" alt="Set Up a Canvas Quiz Requiring LockDown Browser" loading="lazy"></div>
@@ -1142,10 +1210,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <h4>Set Up a Canvas Quiz Requiring LockDown Browser</h4>
             <p>Step-by-step setup for requiring Respondus LockDown Browser on a Canvas quiz.</p>
           </div>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">SharePoint</div>
-      <div class="doc-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>SharePoint</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-sharepoint-upload.png" tabindex="0" role="button" aria-label="Open larger view of SharePoint Upload: Faculty Guidance">
               <div class="doc-shot-frame"><img src="assets/doc-sharepoint-upload.png" alt="SharePoint Upload: Faculty Guidance" loading="lazy"></div>
@@ -1154,10 +1224,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <h4>SharePoint Upload: Faculty Guidance</h4>
             <p>Walks faculty through logging in via Pitt Passport and uploading files to SharePoint.</p>
           </div>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">TeamDynamix</div>
-      <div class="doc-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>TeamDynamix</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-tdx-workflow.png" tabindex="0" role="button" aria-label="Open larger view of TDX Workflow">
               <div class="doc-shot-frame"><img src="assets/doc-tdx-workflow.png" alt="TDX Workflow" loading="lazy"></div>
@@ -1166,10 +1238,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <h4>TDX Workflow</h4>
             <p>Explains how TeamDynamix is used for time tracking and project visibility across course builds.</p>
           </div>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">Vendor Evaluation</div>
-      <div class="doc-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>Vendor Evaluation</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-tidyup-summary.png" tabindex="0" role="button" aria-label="Open larger view of Cidi Labs TidyUp: Testing Summary &amp;amp; Purchase Recommendation">
               <div class="doc-shot-frame"><img src="assets/doc-tidyup-summary.png" alt="Cidi Labs TidyUp: Testing Summary &amp;amp; Purchase Recommendation" loading="lazy"></div>
@@ -1178,7 +1252,8 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <h4>Cidi Labs TidyUp: Testing Summary &amp; Purchase Recommendation</h4>
             <p>A formal usability test &mdash; 5 courses, 4.1/5 usability &mdash; backing a purchase recommendation for a Canvas cleanup tool.</p>
           </div>
-      </div>
+        </div>
+      </details>
     </section>
 
     <section class="section" id="certifications">
