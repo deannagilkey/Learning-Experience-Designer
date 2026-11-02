@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -227,7 +228,15 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .shot figcaption{padding:.85em 1em 1.05em;font-size:.86rem;color:var(--muted);line-height:1.5;}
 
 /* CERT GRID */
-.cert-grid{margin-top:1.4rem;display:grid;grid-template-columns:repeat(4, 1fr);gap:1.2rem;}
+.cert-group{border-top:1px solid var(--line);}
+.cert-group:first-of-type{margin-top:1.4rem;}
+.cert-group-summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 0;font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--forest-deep);}
+.cert-group-summary::-webkit-details-marker{display:none;}
+.cert-group-summary:focus-visible{outline:2px solid var(--forest-mid); outline-offset:2px;}
+.cert-group-meta{display:flex;align-items:center;gap:.6rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:400;color:var(--muted);}
+.cert-chevron{width:.55rem;height:.55rem;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .15s;}
+.cert-group[open] .cert-chevron{transform:rotate(-135deg);}
+.cert-grid{margin:0 0 1.4rem;display:grid;grid-template-columns:repeat(4, 1fr);gap:1.2rem;}
 @media (max-width:900px){ .cert-grid{grid-template-columns:repeat(3,1fr);} }
 @media (max-width:600px){ .cert-grid{grid-template-columns:repeat(2,1fr);} }
 .cert-card{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;cursor:zoom-in;transition:border-color .15s, transform .15s, box-shadow .15s;}
@@ -1181,8 +1190,9 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
         <p>Ongoing coursework and vendor certifications across the tools and practices this work draws on &mdash; platform-specific (Canvas, Lucid), AI and accessibility literacy, and the foundational instructional design theory behind the course and program work shown above.</p>
       </div>
 
-      <div class="subhead">Google for Education</div>
-      <div class="cert-grid">
+      <details class="cert-group" open>
+        <summary class="cert-group-summary"><span>Google for Education</span><span class="cert-group-meta">3 certifications<i class="cert-chevron"></i></span></summary>
+        <div class="cert-grid">
         <figure class="cert-card" data-full="assets/cert-google-educator.png" tabindex="0" role="button" aria-label="Open larger view of Google Certified Educator">
           <div class="cert-frame"><img src="assets/cert-google-educator.png" alt="Google Certified Educator" loading="lazy"></div>
           <figcaption><strong>Google Certified Educator</strong><span>Level 2</span></figcaption>
@@ -1195,10 +1205,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           <div class="cert-frame"><img src="assets/cert-gemini-educator.png" alt="Gemini Certified Educator" loading="lazy"></div>
           <figcaption><strong>Gemini Certified Educator</strong><span>Google for Education</span></figcaption>
         </figure>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">D2L / Quality Matters</div>
-      <div class="cert-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>D2L / Quality Matters</span><span class="cert-group-meta">2 certifications<i class="cert-chevron"></i></span></summary>
+        <div class="cert-grid">
         <figure class="cert-card" data-full="assets/cert-d2l-quality-matters.png" tabindex="0" role="button" aria-label="Open larger view of Quality Learning with Quality Matters">
           <div class="cert-frame"><img src="assets/cert-d2l-quality-matters.png" alt="Quality Learning with Quality Matters" loading="lazy"></div>
           <figcaption><strong>Quality Learning with Quality Matters</strong><span>D2L Master Class</span></figcaption>
@@ -1207,18 +1219,22 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           <div class="cert-frame"><img src="assets/cert-quality-matters.png" alt="Elements of Quality Matters: Deliver on Your Online Promise" loading="lazy"></div>
           <figcaption><strong>Elements of Quality Matters: Deliver on Your Online Promise</strong><span>Quality Matters</span></figcaption>
         </figure>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">IBM SkillsBuild</div>
-      <div class="cert-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>IBM SkillsBuild</span><span class="cert-group-meta">1 certification<i class="cert-chevron"></i></span></summary>
+        <div class="cert-grid">
         <figure class="cert-card" data-full="assets/cert-ibm-applied-ai.png" tabindex="0" role="button" aria-label="Open larger view of Applied AI in the Classroom">
           <div class="cert-frame"><img src="assets/cert-ibm-applied-ai.png" alt="Applied AI in the Classroom" loading="lazy"></div>
           <figcaption><strong>Applied AI in the Classroom</strong><span>IBM SkillsBuild &middot; verified via Credly</span></figcaption>
         </figure>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">Canva Design School</div>
-      <div class="cert-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>Canva Design School</span><span class="cert-group-meta">2 certifications<i class="cert-chevron"></i></span></summary>
+        <div class="cert-grid">
         <figure class="cert-card" data-full="assets/cert-canva-ai-essentials.png" tabindex="0" role="button" aria-label="Open larger view of AI Essentials 2026">
           <div class="cert-frame"><img src="assets/cert-canva-ai-essentials.png" alt="AI Essentials 2026" loading="lazy"></div>
           <figcaption><strong>AI Essentials 2026</strong><span>Canva Design School</span></figcaption>
@@ -1227,10 +1243,30 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           <div class="cert-frame"><img src="assets/cert-canva-essentials.png" alt="Canva Essentials" loading="lazy"></div>
           <figcaption><strong>Canva Essentials</strong><span>Canva Design School</span></figcaption>
         </figure>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">Lucid Software</div>
-      <div class="cert-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>Claude Academy</span><span class="cert-group-meta">3 certifications<i class="cert-chevron"></i></span></summary>
+        <div class="cert-grid">
+        <figure class="cert-card" data-full="assets/cert-claude-101.png" tabindex="0" role="button" aria-label="Open larger view of Claude 101">
+          <div class="cert-frame"><img src="assets/cert-claude-101.png" alt="Claude 101" loading="lazy"></div>
+          <figcaption><strong>Claude 101</strong><span>Claude Academy</span></figcaption>
+        </figure>
+        <figure class="cert-card" data-full="assets/cert-claude-code-101.png" tabindex="0" role="button" aria-label="Open larger view of Claude Code 101">
+          <div class="cert-frame"><img src="assets/cert-claude-code-101.png" alt="Claude Code 101" loading="lazy"></div>
+          <figcaption><strong>Claude Code 101</strong><span>Claude Academy</span></figcaption>
+        </figure>
+        <figure class="cert-card" data-full="assets/cert-claude-cowork.png" tabindex="0" role="button" aria-label="Open larger view of Introduction to Claude Cowork">
+          <div class="cert-frame"><img src="assets/cert-claude-cowork.png" alt="Introduction to Claude Cowork" loading="lazy"></div>
+          <figcaption><strong>Introduction to Claude Cowork</strong><span>Claude Academy</span></figcaption>
+        </figure>
+        </div>
+      </details>
+
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>Lucid Software</span><span class="cert-group-meta">4 certifications<i class="cert-chevron"></i></span></summary>
+        <div class="cert-grid">
         <figure class="cert-card" data-full="assets/cert-lucidchart-fundamentals.png" tabindex="0" role="button" aria-label="Open larger view of Lucidchart Fundamentals">
           <div class="cert-frame"><img src="assets/cert-lucidchart-fundamentals.png" alt="Lucidchart Fundamentals" loading="lazy"></div>
           <figcaption><strong>Lucidchart Fundamentals</strong><span>Lucid Software</span></figcaption>
@@ -1247,18 +1283,22 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           <div class="cert-frame"><img src="assets/cert-process-diagrams-lucidchart.png" alt="Process Diagrams in Lucidchart" loading="lazy"></div>
           <figcaption><strong>Process Diagrams in Lucidchart</strong><span>Lucid Software</span></figcaption>
         </figure>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">Instructure</div>
-      <div class="cert-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>Instructure</span><span class="cert-group-meta">1 certification<i class="cert-chevron"></i></span></summary>
+        <div class="cert-grid">
         <figure class="cert-card" data-full="assets/cert-canvas-basics.png" tabindex="0" role="button" aria-label="Open larger view of Canvas Basics">
           <div class="cert-frame"><img src="assets/cert-canvas-basics.png" alt="Canvas Basics" loading="lazy"></div>
           <figcaption><strong>Canvas Basics</strong><span>Instructure Training Services</span></figcaption>
         </figure>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">LinkedIn Learning</div>
-      <div class="cert-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>LinkedIn Learning</span><span class="cert-group-meta">9 certifications<i class="cert-chevron"></i></span></summary>
+        <div class="cert-grid">
         <figure class="cert-card" data-full="assets/cert-lucidchart-linkedin.png" tabindex="0" role="button" aria-label="Open larger view of Learning Lucidchart">
           <div class="cert-frame"><img src="assets/cert-lucidchart-linkedin.png" alt="Learning Lucidchart" loading="lazy"></div>
           <figcaption><strong>Learning Lucidchart</strong><span>LinkedIn Learning</span></figcaption>
@@ -1295,10 +1335,12 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           <div class="cert-frame"><img src="assets/cert-docusign.png" alt="Learning DocuSign" loading="lazy"></div>
           <figcaption><strong>Learning DocuSign</strong><span>LinkedIn Learning</span></figcaption>
         </figure>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead">Academic & Compliance</div>
-      <div class="cert-grid">
+      <details class="cert-group">
+        <summary class="cert-group-summary"><span>Academic & Compliance</span><span class="cert-group-meta">2 certifications<i class="cert-chevron"></i></span></summary>
+        <div class="cert-grid">
         <figure class="cert-card" data-full="assets/cert-ferpa-101.png" tabindex="0" role="button" aria-label="Open larger view of FERPA 101: Colleges and Universities">
           <div class="cert-frame"><img src="assets/cert-ferpa-101.png" alt="FERPA 101: Colleges and Universities" loading="lazy"></div>
           <figcaption><strong>FERPA 101: Colleges and Universities</strong><span>U.S. Dept. of Education</span></figcaption>
@@ -1307,7 +1349,8 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           <div class="cert-frame"><img src="assets/cert-uci-course-dev.png" alt="Instructional Design: Course Development" loading="lazy"></div>
           <figcaption><strong>Instructional Design: Course Development</strong><span>UC Irvine · FutureLearn</span></figcaption>
         </figure>
-      </div>
+        </div>
+      </details>
     </section>
 
   </main>
