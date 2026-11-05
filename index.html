@@ -144,16 +144,24 @@ img{max-width:100%;display:block;}
   .nav-group-label{padding:.4em .7em;border-bottom:none;align-self:center;}
 }
 .nav-subgroup-label{
-  font-size:.72rem;
-  font-weight:600;
-  letter-spacing:.02em;
-  color:var(--ink);
-  padding:.8rem .2em .2em 1.3em;
-  white-space:nowrap;
-  opacity:.75;
+  display:block;
+  font-size:.66rem;
+  font-weight:700;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  color:var(--forest-mid);
+  padding:.8rem .4em .35em .9em;
+  margin-top:.5rem;
+  border-top:1px solid var(--line);
+  white-space:normal;
+  overflow-wrap:break-word;
+  line-height:1.35;
+  max-width:170px;
 }
+.nav-link-sub{padding-left:1.7em;}
 @media (max-width:860px){
-  .nav-subgroup-label{padding:.4em .7em;border-bottom:none;align-self:center;}
+  .nav-subgroup-label{padding:.4em .7em;border-top:none;border-left:1px solid var(--line);align-self:center;max-width:none;white-space:nowrap;margin-top:0;}
+  .nav-link-sub{padding-left:.9em;}
 }
 .nav-link{font-size:.85rem;color:var(--muted);text-decoration:none;padding:.5em .2em;border-left:2px solid transparent;padding-left:.9em;white-space:nowrap;transition:color .15s, border-color .15s;}
 .nav-link:hover{color:var(--forest);}
@@ -406,14 +414,14 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           <a class="nav-link" href="#experience" data-target="experience">Experience</a>
           <span class="nav-group-label">Featured Projects</span>
           <span class="nav-subgroup-label">Learning Experience Design</span>
-          <a class="nav-link" href="#course-spotlight" data-target="course-spotlight">Course Spotlight</a>
-          <a class="nav-link" href="#conference" data-target="conference">Conference Workshop</a>
+          <a class="nav-link nav-link-sub" href="#course-spotlight" data-target="course-spotlight">Course Spotlight</a>
+          <a class="nav-link nav-link-sub" href="#conference" data-target="conference">Conference Workshop</a>
           <span class="nav-subgroup-label">Digital Transformation &amp; Systems Adoption</span>
-          <a class="nav-link" href="#accredible-migration" data-target="accredible-migration">Accredible Migration</a>
-          <a class="nav-link" href="#naxt-erp" data-target="naxt-erp">NAXT ERP Program</a>
-          <a class="nav-link" href="#adp-wfm" data-target="adp-wfm">ADP Workforce Mgr</a>
+          <a class="nav-link nav-link-sub" href="#accredible-migration" data-target="accredible-migration">Accredible Migration</a>
+          <a class="nav-link nav-link-sub" href="#naxt-erp" data-target="naxt-erp">NAXT ERP Program</a>
+          <a class="nav-link nav-link-sub" href="#adp-wfm" data-target="adp-wfm">ADP Workforce Mgr</a>
           <span class="nav-subgroup-label">Knowledge Management &amp; Performance Support</span>
-          <a class="nav-link" href="#pitt-docs" data-target="pitt-docs">Pitt Tech Docs</a>
+          <a class="nav-link nav-link-sub" href="#pitt-docs" data-target="pitt-docs">Pitt Tech Docs</a>
           <span class="nav-group-label">Credentials</span>
           <a class="nav-link" href="#certifications" data-target="certifications">Certifications</a>
   </nav>
