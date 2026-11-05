@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -143,6 +142,18 @@ img{max-width:100%;display:block;}
 .nav-group-label:first-child{padding-top:0;}
 @media (max-width:860px){
   .nav-group-label{padding:.4em .7em;border-bottom:none;align-self:center;}
+}
+.nav-subgroup-label{
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.02em;
+  color:var(--ink);
+  padding:.8rem .2em .2em 1.3em;
+  white-space:nowrap;
+  opacity:.75;
+}
+@media (max-width:860px){
+  .nav-subgroup-label{padding:.4em .7em;border-bottom:none;align-self:center;}
 }
 .nav-link{font-size:.85rem;color:var(--muted);text-decoration:none;padding:.5em .2em;border-left:2px solid transparent;padding-left:.9em;white-space:nowrap;transition:color .15s, border-color .15s;}
 .nav-link:hover{color:var(--forest);}
@@ -393,12 +404,15 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
   <nav class="sidenav" aria-label="Section navigation">
           <span class="nav-group-label">Profile</span>
           <a class="nav-link" href="#experience" data-target="experience">Experience</a>
-          <span class="nav-group-label">Case Studies</span>
+          <span class="nav-group-label">Featured Projects</span>
+          <span class="nav-subgroup-label">Learning Experience Design</span>
           <a class="nav-link" href="#course-spotlight" data-target="course-spotlight">Course Spotlight</a>
-          <a class="nav-link" href="#accredible-migration" data-target="accredible-migration">Accredible Migration</a>
           <a class="nav-link" href="#conference" data-target="conference">Conference Workshop</a>
+          <span class="nav-subgroup-label">Digital Transformation &amp; Systems Adoption</span>
+          <a class="nav-link" href="#accredible-migration" data-target="accredible-migration">Accredible Migration</a>
           <a class="nav-link" href="#naxt-erp" data-target="naxt-erp">NAXT ERP Program</a>
           <a class="nav-link" href="#adp-wfm" data-target="adp-wfm">ADP Workforce Mgr</a>
+          <span class="nav-subgroup-label">Knowledge Management &amp; Performance Support</span>
           <a class="nav-link" href="#pitt-docs" data-target="pitt-docs">Pitt Tech Docs</a>
           <span class="nav-group-label">Credentials</span>
           <a class="nav-link" href="#certifications" data-target="certifications">Certifications</a>
@@ -480,47 +494,6 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </a>
     </section>
 
-    <section class="section" id="accredible-migration">
-      <div class="section-head">
-        <span class="award-pill"><span class="star">&#9733;</span> Nominated &middot; Digital Transformation Award</span>
-        <h2>Accredible Enterprise Migration &amp; Governance Transformation</h2>
-      </div>
-      <div class="section-intro">
-        <p>University of Pittsburgh &middot; Pitt EDGE &middot; 2026. A comprehensive transformation of Pitt EDGE's Accredible digital credential ecosystem &mdash; moving from a centralized credentialing model to an enterprise-wide governance framework that distributed ownership across academic and administrative units while improving security, scalability, and operational sustainability. Led by a small team, nominated for a Digital Transformation Award for this work.</p>
-      </div>
-
-      <div class="case-study-card">
-        <div class="cs-block">
-          <h4 class="cs-head">The Challenge</h4>
-          <p>The platform supported 33,121 issued credentials, 15,583 recipients, and 759 credential groups. Growing adoption had outpaced the original governance model, creating permissions, ownership, and scalability challenges that needed a more sustainable operational structure.</p>
-        </div>
-
-        <div class="cs-block">
-          <h4 class="cs-head">My Role</h4>
-          <p>Led governance review activities, user-access audits, migration tracking, stakeholder coordination, validation workflows, and quality assurance for the migration initiative &mdash; implementing a governance redesign, building Airtable and Excel migration-tracking processes, supporting the reorganization of credential groups, and helping establish a distributed ownership model across eleven institutional units.</p>
-        </div>
-
-        <div class="cs-block">
-          <h4 class="cs-head">Results</h4>
-          <p>Administrative accounts dropped from 22 to 9 &mdash; a 59% reduction in privileged access &mdash; while total accounts decreased by 24%, all without losing operational coverage.</p>
-          <div class="metric-grid">
-            <div class="metric-card">
-              <div class="metric-label">Total accounts</div>
-              <div class="metric-values">38 <span class="arrow">&rarr;</span> 29</div>
-              <div class="metric-change">&minus;24%</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">Administrative accounts</div>
-              <div class="metric-values">22 <span class="arrow">&rarr;</span> 9</div>
-              <div class="metric-change">&minus;59%</div>
-            </div>
-          </div>
-        </div>
-
-        <p class="cs-takeaway"><strong>Key takeaways:</strong> the project demonstrates leadership in digital transformation, governance design, change management, stakeholder engagement, enterprise platform administration, and scalable technology operations.</p>
-      </div>
-    </section>
-
     <section class="section" id="conference">
       <div class="section-head">
         <span class="pill">Conference &amp; Workshop Facilitation &middot; U.S.-RAR</span>
@@ -585,6 +558,47 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </div>
     </section>
 
+    <section class="section" id="accredible-migration">
+      <div class="section-head">
+        <span class="award-pill"><span class="star">&#9733;</span> Nominated &middot; Digital Transformation Award</span>
+        <h2>Accredible Enterprise Migration &amp; Governance Transformation</h2>
+      </div>
+      <div class="section-intro">
+        <p>University of Pittsburgh &middot; Pitt EDGE &middot; 2026. A comprehensive transformation of Pitt EDGE's Accredible digital credential ecosystem &mdash; moving from a centralized credentialing model to an enterprise-wide governance framework that distributed ownership across academic and administrative units while improving security, scalability, and operational sustainability. Led by a small team, nominated for a Digital Transformation Award for this work.</p>
+      </div>
+
+      <div class="case-study-card">
+        <div class="cs-block">
+          <h4 class="cs-head">The Challenge</h4>
+          <p>The platform supported 33,121 issued credentials, 15,583 recipients, and 759 credential groups. Growing adoption had outpaced the original governance model, creating permissions, ownership, and scalability challenges that needed a more sustainable operational structure.</p>
+        </div>
+
+        <div class="cs-block">
+          <h4 class="cs-head">My Role</h4>
+          <p>Led governance review activities, user-access audits, migration tracking, stakeholder coordination, validation workflows, and quality assurance for the migration initiative &mdash; implementing a governance redesign, building Airtable and Excel migration-tracking processes, supporting the reorganization of credential groups, and helping establish a distributed ownership model across eleven institutional units.</p>
+        </div>
+
+        <div class="cs-block">
+          <h4 class="cs-head">Results</h4>
+          <p>Administrative accounts dropped from 22 to 9 &mdash; a 59% reduction in privileged access &mdash; while total accounts decreased by 24%, all without losing operational coverage.</p>
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">Total accounts</div>
+              <div class="metric-values">38 <span class="arrow">&rarr;</span> 29</div>
+              <div class="metric-change">&minus;24%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Administrative accounts</div>
+              <div class="metric-values">22 <span class="arrow">&rarr;</span> 9</div>
+              <div class="metric-change">&minus;59%</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="cs-takeaway"><strong>Key takeaways:</strong> the project demonstrates leadership in digital transformation, governance design, change management, stakeholder engagement, enterprise platform administration, and scalable technology operations.</p>
+      </div>
+    </section>
+
     <section class="section" id="naxt-erp">
       <div class="section-head">
         <span class="pill">Flagship Program &middot; Cleveland Brothers</span>
@@ -604,9 +618,10 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
         <a href="#naxt-sphub">SharePoint &amp; Hub</a>
       </div>
 
-      <div class="subhead" id="naxt-strategy">Program Strategy &amp; Change Management</div>
-      <div class="subhead-intro">The governance layer that made the rest of the program possible: clear ownership, a realistic model of how people actually adopt change, and a way to track progress week to week.</div>
-      <div class="shot-grid">
+      <details class="cert-group" id="naxt-strategy" open>
+        <summary class="cert-group-summary"><span>Program Strategy &amp; Change Management</span><span class="cert-group-meta">6 items<i class="cert-chevron"></i></span></summary>
+        <div class="subhead-intro">The governance layer that made the rest of the program possible: clear ownership, a realistic model of how people actually adopt change, and a way to track progress week to week.</div>
+        <div class="shot-grid">
           <figure class="shot" data-full="assets/naxt-raci.png" tabindex="0" role="button" aria-label="Open larger view">
             <div class="shot-frame"><img src="assets/naxt-raci.png" alt="A single-slide RACI chart assigning Responsible/Accountable/Consulted across every training phase &amp;mdash; from needs assessment through refresher training &amp;mdash; so no activity had an unclear owner." loading="lazy"></div>
             <figcaption>A single-slide RACI chart assigning Responsible/Accountable/Consulted across every training phase &mdash; from needs assessment through refresher training &mdash; so no activity had an unclear owner.</figcaption>
@@ -636,11 +651,13 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <div class="shot-frame"><img src="assets/naxt-erp-nextsteps.png" alt="The project-level next-steps slide tying training, the soft onboarding program, and support-role vetting back to a single implementation timeline." loading="lazy"></div>
             <figcaption>The project-level next-steps slide tying training, the soft onboarding program, and support-role vetting back to a single implementation timeline.</figcaption>
           </figure>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead" id="naxt-uat">UAT Pilot Training Design</div>
-      <div class="subhead-intro">A three-day pilot with Parts and Service, built around one central instructional design decision: every process guide fades from fully-supported to independent across three deliberate versions.</div>
-      <div class="shot-grid">
+      <details class="cert-group" id="naxt-uat">
+        <summary class="cert-group-summary"><span>UAT Pilot Training Design</span><span class="cert-group-meta">15 items<i class="cert-chevron"></i></span></summary>
+        <div class="subhead-intro">A three-day pilot with Parts and Service, built around one central instructional design decision: every process guide fades from fully-supported to independent across three deliberate versions.</div>
+        <div class="shot-grid">
           <figure class="shot" data-full="assets/naxt-uat-title.png" tabindex="0" role="button" aria-label="Open larger view">
             <div class="shot-frame"><img src="assets/naxt-uat-title.png" alt="The opening slide of the three-day UAT pilot &amp;mdash; Parts and Service was the first business stream through the new process before a wider rollout." loading="lazy"></div>
             <figcaption>The opening slide of the three-day UAT pilot &mdash; Parts and Service was the first business stream through the new process before a wider rollout.</figcaption>
@@ -715,11 +732,13 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <div class="shot-frame"><img src="assets/naxt-process-guide-p3.png" alt="Help Me closes every guide with named support contacts. Redacted here for this portfolio, but present in the real document so no trainee is ever stuck without knowing who to ask." loading="lazy"></div>
             <figcaption>Help Me closes every guide with named support contacts. Redacted here for this portfolio, but present in the real document so no trainee is ever stuck without knowing who to ask.</figcaption>
           </figure>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead" id="naxt-ttt">Train the Trainer</div>
-      <div class="subhead-intro">Co-built with Erica Knipple: once UAT identifies candidates for NAXT Trainer and Ambassador roles, this is the structured, three-qualifier process that decides who's actually ready &mdash; scaled for an assumed 150 candidates.</div>
-      <div class="shot-grid">
+      <details class="cert-group" id="naxt-ttt">
+        <summary class="cert-group-summary"><span>Train the Trainer</span><span class="cert-group-meta">17 items<i class="cert-chevron"></i></span></summary>
+        <div class="subhead-intro">Co-built with Erica Knipple: once UAT identifies candidates for NAXT Trainer and Ambassador roles, this is the structured, three-qualifier process that decides who's actually ready &mdash; scaled for an assumed 150 candidates.</div>
+        <div class="shot-grid">
           <figure class="shot" data-full="assets/ttt-vetting-title.png" tabindex="0" role="button" aria-label="Open larger view">
             <div class="shot-frame"><img src="assets/ttt-vetting-title.png" alt="A dedicated readout on one question UAT raised but didn&#x27;t answer: once a Trainer or Ambassador candidate is identified, how do you actually decide if they&#x27;re ready?" loading="lazy"></div>
             <figcaption>A dedicated readout on one question UAT raised but didn't answer: once a Trainer or Ambassador candidate is identified, how do you actually decide if they're ready?</figcaption>
@@ -804,11 +823,13 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <div class="shot-frame"><img src="assets/ttt-handbook-rubric.png" alt="A sample of the full three-point rubric language &amp;mdash; every score level written out in behavioral terms, not just a number, so two different evaluators would score the same candidate the same way." loading="lazy"></div>
             <figcaption>A sample of the full three-point rubric language &mdash; every score level written out in behavioral terms, not just a number, so two different evaluators would score the same candidate the same way.</figcaption>
           </figure>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead" id="naxt-process">Process Mapping &amp; Support Model</div>
-      <div class="subhead-intro">Swimlane maps turning "who handles this" into an answerable question &mdash; for attendance tracking, SME escalation, and front-line support.</div>
-      <div class="shot-grid">
+      <details class="cert-group" id="naxt-process">
+        <summary class="cert-group-summary"><span>Process Mapping &amp; Support Model</span><span class="cert-group-meta">4 items<i class="cert-chevron"></i></span></summary>
+        <div class="subhead-intro">Swimlane maps turning "who handles this" into an answerable question &mdash; for attendance tracking, SME escalation, and front-line support.</div>
+        <div class="shot-grid">
           <figure class="shot" data-full="assets/naxt-reportingmap-attendance.png" tabindex="0" role="button" aria-label="Open larger view">
             <div class="shot-frame"><img src="assets/naxt-reportingmap-attendance.png" alt="A swimlane map of exactly how attendance gets captured and reconciled across virtual and instructor-led sessions &amp;mdash; built so reporting wouldn&#x27;t rely on memory or spreadsheets after the fact." loading="lazy"></div>
             <figcaption>A swimlane map of exactly how attendance gets captured and reconciled across virtual and instructor-led sessions &mdash; built so reporting wouldn't rely on memory or spreadsheets after the fact.</figcaption>
@@ -828,11 +849,13 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <div class="shot-frame"><img src="assets/naxt-erp-support-roles.png" alt="The full support-role hierarchy in one view &amp;mdash; from first-line Ambassador SME up to NAXT Leadership &amp;mdash; so escalation paths were explicit from day one." loading="lazy"></div>
             <figcaption>The full support-role hierarchy in one view &mdash; from first-line Ambassador SME up to NAXT Leadership &mdash; so escalation paths were explicit from day one.</figcaption>
           </figure>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead" id="naxt-lms">LMS Evaluation &amp; Governance (LogicBay)</div>
-      <div class="subhead-intro">Co-led with Erica Knipple: a formal needs analysis (task-by-task, pass/fail tested against real use), a leadership decision log, and defined Campus Administrator and Trainer roles for ongoing ownership.</div>
-      <div class="shot-grid">
+      <details class="cert-group" id="naxt-lms">
+        <summary class="cert-group-summary"><span>LMS Evaluation &amp; Governance (LogicBay)</span><span class="cert-group-meta">3 items<i class="cert-chevron"></i></span></summary>
+        <div class="subhead-intro">Co-led with Erica Knipple: a formal needs analysis (task-by-task, pass/fail tested against real use), a leadership decision log, and defined Campus Administrator and Trainer roles for ongoing ownership.</div>
+        <div class="shot-grid">
           <figure class="shot" data-full="assets/naxt-logicbay-scenario.png" tabindex="0" role="button" aria-label="Open larger view">
             <div class="shot-frame"><img src="assets/naxt-logicbay-scenario.png" alt="One of two ERP integration scenarios mapped out to test whether LogicBay&#x27;s organization/catalog/course/class structure could actually hold up against CB Mining&#x27;s real org chart." loading="lazy"></div>
             <figcaption>One of two ERP integration scenarios mapped out to test whether LogicBay's organization/catalog/course/class structure could actually hold up against CB Mining's real org chart.</figcaption>
@@ -847,11 +870,13 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <div class="shot-frame"><img src="assets/naxt-lms-readout-logistics.png" alt="The logistics side of the same readout: pilot activities, training tool assessment, and a recurring weekly sync cadence with LogicBay." loading="lazy"></div>
             <figcaption>The logistics side of the same readout: pilot activities, training tool assessment, and a recurring weekly sync cadence with LogicBay.</figcaption>
           </figure>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead" id="naxt-curriculum">Curriculum &amp; Systems Documentation</div>
-      <div class="subhead-intro">The connective tissue between a business process, the lesson that teaches it, and the reference material an employee can return to afterward.</div>
-      <div class="shot-grid">
+      <details class="cert-group" id="naxt-curriculum">
+        <summary class="cert-group-summary"><span>Curriculum &amp; Systems Documentation</span><span class="cert-group-meta">4 items<i class="cert-chevron"></i></span></summary>
+        <div class="subhead-intro">The connective tissue between a business process, the lesson that teaches it, and the reference material an employee can return to afterward.</div>
+        <div class="shot-grid">
           <figure class="shot" data-full="assets/naxt-dbs-framework.png" tabindex="0" role="button" aria-label="Open larger view">
             <div class="shot-frame"><img src="assets/naxt-dbs-framework.png" alt="A business-process-to-curriculum crosswalk mapping specific CB process steps (by process owner and process code) directly to the lesson that teaches them &amp;mdash; the mechanism that kept hundreds of process steps traceable to actual training content." loading="lazy"></div>
             <figcaption>A business-process-to-curriculum crosswalk mapping specific CB process steps (by process owner and process code) directly to the lesson that teaches them &mdash; the mechanism that kept hundreds of process steps traceable to actual training content.</figcaption>
@@ -871,11 +896,13 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <div class="shot-frame"><img src="assets/naxt-emr-guide.png" alt="A mobile EMR app guide covering barcode-based equipment scanning for shipping, picking, and receiving &amp;mdash; documentation for the rental and sales side of the same NAXT rollout." loading="lazy"></div>
             <figcaption>A mobile EMR app guide covering barcode-based equipment scanning for shipping, picking, and receiving &mdash; documentation for the rental and sales side of the same NAXT rollout.</figcaption>
           </figure>
-      </div>
+        </div>
+      </details>
 
-      <div class="subhead" id="naxt-sphub">SharePoint Site &amp; Hub Planning</div>
-      <div class="subhead-intro">Co-built with Erica Knipple: planning for the NAXT Hub's two lives &mdash; a pre-launch landing page that becomes a permanent, permissioned reference site the moment NAXT goes live.</div>
-      <div class="shot-grid">
+      <details class="cert-group" id="naxt-sphub">
+        <summary class="cert-group-summary"><span>SharePoint Site &amp; Hub Planning</span><span class="cert-group-meta">5 items<i class="cert-chevron"></i></span></summary>
+        <div class="subhead-intro">Co-built with Erica Knipple: planning for the NAXT Hub's two lives &mdash; a pre-launch landing page that becomes a permanent, permissioned reference site the moment NAXT goes live.</div>
+        <div class="shot-grid">
           <figure class="shot" data-full="assets/sp-hub-title.png" tabindex="0" role="button" aria-label="Open larger view">
             <div class="shot-frame"><img src="assets/sp-hub-title.png" alt="A planning deck for the NAXT SharePoint presence, built around a single idea: the Hub&#x27;s purpose and content change the moment the system goes live." loading="lazy"></div>
             <figcaption>A planning deck for the NAXT SharePoint presence, built around a single idea: the Hub's purpose and content change the moment the system goes live.</figcaption>
@@ -900,7 +927,8 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
             <div class="shot-frame"><img src="assets/sp-hub-forwardfocus.png" alt="NAXT Forward Focus is the public-facing piece &amp;mdash; FAQs, terms, and a parking-lot-fed knowledge base &amp;mdash; built so answers compound over time instead of being re-answered in every session." loading="lazy"></div>
             <figcaption>NAXT Forward Focus is the public-facing piece &mdash; FAQs, terms, and a parking-lot-fed knowledge base &mdash; built so answers compound over time instead of being re-answered in every session.</figcaption>
           </figure>
-      </div>
+        </div>
+      </details>
     </section>
 
     <section class="section" id="adp-wfm">
