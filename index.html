@@ -219,6 +219,11 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .pill{display:inline-block;font-size:.74rem;font-weight:600;letter-spacing:.02em;color:#2A1E07;background:var(--gold);padding:.28em .85em;border-radius:999px;margin-bottom:.7rem;}
 .section h2{font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:600;max-width:32ch;}
 .section-intro{margin-top:.9rem;color:var(--ink);}
+.philosophy{display:grid;grid-template-columns:1fr 1.4fr;gap:1.8rem;max-width:900px;margin:0 0 3rem;align-items:start;}
+.philosophy-lead{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:var(--forest-deep);line-height:1.4;border-left:2px solid var(--gold);padding-left:1rem;margin:0;}
+.philosophy-body p{font-size:1rem;color:var(--ink);line-height:1.7;margin:0 0 1rem;}
+.philosophy-body p:last-child{margin-bottom:0;}
+@media (max-width:700px){ .philosophy{grid-template-columns:1fr;} }
 .section-intro p{color:var(--ink);}
 
 .video-card{
@@ -477,6 +482,14 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
   </nav>
 
   <main id="main-content">
+
+    <div class="philosophy">
+      <p class="philosophy-lead">Learning experiences should remove barriers, not create them.</p>
+      <div class="philosophy-body">
+        <p>My work sits at the intersection of learning, technology, and change. I specialize in translating complex systems, processes, and emerging technologies into experiences that people can understand, adopt, and use successfully. Whether supporting faculty, employees, or adult learners, I design with empathy, accessibility, and performance in mind.</p>
+        <p>Great learning experiences create clarity and help people move forward with confidence.</p>
+      </div>
+    </div>
 
     <section class="section" id="experience">
       <div class="section-head">
