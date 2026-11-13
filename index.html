@@ -89,9 +89,23 @@ img{max-width:100%;display:block;}
   color:#D3DDCE;
 }
 .hero .dek strong{color:#fff;font-weight:600;}
+.byline-row{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  margin-top:1.3rem;
+  flex-wrap:wrap;
+}
+.headshot{
+  width:68px;
+  height:68px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--gold);
+  flex-shrink:0;
+}
 .byline{
   display:inline-block;
-  margin-top:1.3rem;
   font-size:1.6rem;
   font-family:'Fraunces',serif;
   font-weight:600;
@@ -399,7 +413,10 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
     <span class="eyebrow-pill">Instructional Design &amp; Training Portfolio</span>
     <h1>Training Programs, Process Documentation, and Supporting Project Work</h1>
     <p class="dek">A working collection and archive of instructional design projects, professional learning programs, certifications, and development resources showcasing experience leading initiatives independently and collaborating with cross-functional teams across higher education and industry.</p>
-    <p class="byline">Deanna Gilkey Schmuck, MS &middot; Learning Experience Designer</p>
+    <div class="byline-row">
+      <img class="headshot" src="assets/headshot.jpg" alt="Portrait of Deanna Gilkey Schmuck">
+      <p class="byline">Deanna Gilkey Schmuck, MS &middot; Learning Experience Designer</p>
+    </div>
     <div class="tag-row">
       <span>Instructional Design</span>
       <span>Learning Experience Design (LXD)</span>
