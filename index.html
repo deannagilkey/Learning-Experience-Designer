@@ -96,11 +96,9 @@ img{max-width:100%;display:block;}
   font-family:'Fraunces',serif;
   font-weight:600;
   letter-spacing:.01em;
-  color:var(--gold);
-  text-shadow:0 0 1px rgba(255,255,255,.55), 0 2px 6px rgba(0,0,0,.35);
-  background:rgba(0,0,0,.22);
-  padding:.35em .7em;
-  border-radius:8px;
+  color:#FFFFFF;
+  border-bottom:3px solid var(--gold);
+  padding-bottom:.25em;
 }
 .tag-row{
   display:flex;
@@ -255,6 +253,8 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .cert-group{border-top:1px solid var(--line);}
 .cert-group:first-of-type{margin-top:1.4rem;}
 .cert-group-summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 0;font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--forest-deep);}
+.cert-group-label{display:flex;align-items:center;gap:.65em;}
+.cat-logo{height:22px;width:auto;max-width:72px;object-fit:contain;flex-shrink:0;}
 .cert-group-summary::-webkit-details-marker{display:none;}
 .cert-group-summary:focus-visible{outline:2px solid var(--forest-mid); outline-offset:2px;}
 .cert-group-meta{display:flex;align-items:center;gap:.6rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:400;color:var(--muted);}
@@ -336,6 +336,15 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .metric-card .metric-values .arrow{color:var(--muted);font-weight:400;margin:0 .3em;}
 .metric-card .metric-change{font-size:.88rem;font-weight:600;color:var(--gold-deep);margin-top:.4rem;}
 .case-study-card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:1.7rem 1.9rem;margin-top:1.4rem;}
+.team-spotlight{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--forest-mid);border-radius:4px;padding:1.4rem 1.7rem;margin:3rem 0 2.6rem;}
+.team-spotlight-divider{border:none;border-top:1px solid var(--line);margin:3.5rem 0 0;}
+.team-spotlight .ts-logo{display:block;height:34px;width:auto;margin-bottom:.9rem;}
+.team-spotlight .ts-eyebrow{display:block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--forest-mid);margin-bottom:.5rem;}
+.team-spotlight h3{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;margin:0 0 .6rem;line-height:1.35;}
+.team-spotlight p{font-size:.93rem;color:var(--muted);line-height:1.6;max-width:70ch;margin:0 0 .6rem;}
+.team-spotlight .ts-disclosure{font-size:.82rem;font-style:italic;color:var(--muted);margin:.4rem 0 .8rem;}
+.team-spotlight a.ts-link{font-size:.88rem;font-weight:600;color:var(--forest-mid);text-decoration:none;}
+.team-spotlight a.ts-link:hover{text-decoration:underline;}
 .cs-block{margin-bottom:1.4rem;}
 .cs-head{font-family:'Fraunces',serif;font-size:1rem;font-weight:600;color:var(--forest-deep);margin:0 0 .5rem;}
 .cs-block p{color:var(--muted);font-size:.95rem;line-height:1.6;max-width:72ch;margin:0;}
@@ -425,7 +434,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
           <a class="nav-link nav-link-sub" href="#naxt-erp" data-target="naxt-erp">NAXT ERP Program</a>
           <a class="nav-link nav-link-sub" href="#adp-wfm" data-target="adp-wfm">ADP Workforce Mgr</a>
           <span class="nav-subgroup-label">Knowledge Management &amp; Performance Support</span>
-          <a class="nav-link nav-link-sub" href="#pitt-docs" data-target="pitt-docs">Pitt Tech Docs</a>
+          <a class="nav-link nav-link-sub" href="#pitt-docs" data-target="pitt-docs">Pitt EDGE Tech Docs</a>
           <span class="nav-group-label">Credentials</span>
           <a class="nav-link" href="#certifications" data-target="certifications">Certifications</a>
   </nav>
@@ -1140,7 +1149,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </div>
 
       <details class="cert-group" open>
-        <summary class="cert-group-summary"><span>Accredible</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-accredible.png" alt="" loading="lazy">Accredible</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-accredible-department-description.png" tabindex="0" role="button" aria-label="Open larger view of Customizing Your Department Description in Accredible">
@@ -1154,7 +1163,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span>BugHerd</span><span class="cert-group-meta">2 documents<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-bugherd.png" alt="" loading="lazy">BugHerd</span><span class="cert-group-meta">2 documents<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-bugherd-overview.png" tabindex="0" role="button" aria-label="Open larger view of BugHerd Overview">
@@ -1176,7 +1185,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span>Canvas</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-canvas.png" alt="" loading="lazy">Canvas</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-canvas-new-quizzes-reporting.png" tabindex="0" role="button" aria-label="Open larger view of Canvas New Quizzes: Data Reporting and Analysis">
@@ -1190,7 +1199,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span>ExamSoft</span><span class="cert-group-meta">7 documents<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-examsoft.png" alt="" loading="lazy">ExamSoft</span><span class="cert-group-meta">7 documents<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-examsoft-foundations.png" tabindex="0" role="button" aria-label="Open larger view of Foundations of ExamSoft System">
@@ -1252,7 +1261,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span>Harmonize</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-harmonize.png" alt="" loading="lazy">Harmonize</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-harmonize-discussion.png" tabindex="0" role="button" aria-label="Open larger view of Create a Graded Discussion with Harmonize in Canvas">
@@ -1266,7 +1275,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span>Lucid</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-lucid.png" alt="" loading="lazy">Lucid</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-lucid-overview.png" tabindex="0" role="button" aria-label="Open larger view of Lucid: Overview and Access within Canvas">
@@ -1296,7 +1305,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span>Panopto</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-panopto.png" alt="" loading="lazy">Panopto</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-panopto-best-practices.png" tabindex="0" role="button" aria-label="Open larger view of Best Practices for Creating Videos">
@@ -1326,7 +1335,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span>Pitt EDGE</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/pitt-edge-logo.png" alt="" loading="lazy">Pitt EDGE</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-pittedge-techstack.png" tabindex="0" role="button" aria-label="Open larger view of EDGE Teaching, Learning &amp;amp; Assessment Tech Stack">
@@ -1356,7 +1365,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span>PowerPoint</span><span class="cert-group-meta">2 documents<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-powerpoint.png" alt="" loading="lazy">PowerPoint</span><span class="cert-group-meta">2 documents<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-powerpoint-best-practices.png" tabindex="0" role="button" aria-label="Open larger view of PowerPoint Best Practices">
@@ -1378,7 +1387,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span>ReelDx</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-reeldx.png" alt="" loading="lazy">ReelDx</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-reeldx-summary.png" tabindex="0" role="button" aria-label="Open larger view of ReelDx Training Session Summary Notes">
@@ -1392,7 +1401,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span>Respondus</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-respondus.png" alt="" loading="lazy">Respondus</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-respondus-setup.png" tabindex="0" role="button" aria-label="Open larger view of Set Up a Canvas Quiz Requiring LockDown Browser">
@@ -1406,7 +1415,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span>SharePoint</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-sharepoint.png" alt="" loading="lazy">SharePoint</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-sharepoint-upload.png" tabindex="0" role="button" aria-label="Open larger view of SharePoint Upload: Faculty Guidance">
@@ -1420,7 +1429,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span>TeamDynamix</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-teamdynamix.png" alt="" loading="lazy">TeamDynamix</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-tdx-workflow.png" tabindex="0" role="button" aria-label="Open larger view of TDX Workflow">
@@ -1434,7 +1443,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span>Vendor Evaluation</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label">Vendor Evaluation</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-tidyup-summary.png" tabindex="0" role="button" aria-label="Open larger view of Cidi Labs TidyUp: Testing Summary &amp;amp; Purchase Recommendation">
@@ -1641,6 +1650,16 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
         </div>
       </details>
     </section>
+
+    <hr class="team-spotlight-divider">
+    <div class="team-spotlight">
+      <img class="ts-logo" src="assets/pitt-edge-logo.png" alt="University of Pittsburgh Center for Excellence in Digital Education (Pitt EDGE)">
+      <span class="ts-eyebrow">Pitt EDGE Team Spotlight</span>
+      <p class="ts-disclosure">Shown here to reflect my team's broader innovation work, though I was not involved in building this tool.</p>
+      <h3>From Hours to Minutes: Pitt CIC Builds an AI Reviewer for Online Course Quality</h3>
+      <p>Pitt EDGE partnered with the University of Pittsburgh Cloud Innovation Center (CIC), powered by AWS, to build Canvas OLC Insights &mdash; a tool that reads a full Canvas course and returns a complete 50-objective OLC Quality Scorecard review in under three minutes, down from two to four hours of manual review. Led by Rae Mancilla (Pitt EDGE) and built by CIC student developer Avi Kottakota, it pairs AI-generated scoring and evidence with a human reviewer who confirms or overrides each result before it's finalized.</p>
+      <a class="ts-link" href="https://www.digital.pitt.edu/news/success-stories/hours-minutes-pitt-cic-builds-ai-reviewer-online-course-quality" target="_blank" rel="noopener">Read the full story on Pitt Digital &rarr;</a>
+    </div>
 
   </main>
 </div>
