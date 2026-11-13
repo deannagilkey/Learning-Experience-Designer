@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -253,8 +254,10 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .cert-group{border-top:1px solid var(--line);}
 .cert-group:first-of-type{margin-top:1.4rem;}
 .cert-group-summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 0;font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--forest-deep);}
-.cert-group-label{display:flex;align-items:center;gap:.65em;}
-.cat-logo{height:22px;width:auto;max-width:72px;object-fit:contain;flex-shrink:0;}
+.cert-group-label{display:flex;align-items:center;gap:.7em;}
+.cat-logo-badge{display:flex;align-items:center;justify-content:center;width:30px;height:30px;background:#fff;border:1px solid var(--line);border-radius:6px;padding:4px;flex-shrink:0;box-sizing:border-box;}
+.cat-logo{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;}
+.cat-logo-fallback{color:var(--muted);}
 .cert-group-summary::-webkit-details-marker{display:none;}
 .cert-group-summary:focus-visible{outline:2px solid var(--forest-mid); outline-offset:2px;}
 .cert-group-meta{display:flex;align-items:center;gap:.6rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:400;color:var(--muted);}
@@ -338,7 +341,7 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .case-study-card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:1.7rem 1.9rem;margin-top:1.4rem;}
 .team-spotlight{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--forest-mid);border-radius:4px;padding:1.4rem 1.7rem;margin:3rem 0 2.6rem;}
 .team-spotlight-divider{border:none;border-top:1px solid var(--line);margin:3.5rem 0 0;}
-.team-spotlight .ts-logo{display:block;height:34px;width:auto;margin-bottom:.9rem;}
+.team-spotlight .ts-logo{display:block;height:46px;width:auto;margin-bottom:.9rem;}
 .team-spotlight .ts-eyebrow{display:block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--forest-mid);margin-bottom:.5rem;}
 .team-spotlight h3{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;margin:0 0 .6rem;line-height:1.35;}
 .team-spotlight p{font-size:.93rem;color:var(--muted);line-height:1.6;max-width:70ch;margin:0 0 .6rem;}
@@ -1149,7 +1152,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </div>
 
       <details class="cert-group" open>
-        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-accredible.png" alt="" loading="lazy">Accredible</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-accredible.png" alt="" loading="lazy"></span>Accredible</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-accredible-department-description.png" tabindex="0" role="button" aria-label="Open larger view of Customizing Your Department Description in Accredible">
@@ -1163,7 +1166,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-bugherd.png" alt="" loading="lazy">BugHerd</span><span class="cert-group-meta">2 documents<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-bugherd.png" alt="" loading="lazy"></span>BugHerd</span><span class="cert-group-meta">2 documents<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-bugherd-overview.png" tabindex="0" role="button" aria-label="Open larger view of BugHerd Overview">
@@ -1185,7 +1188,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-canvas.png" alt="" loading="lazy">Canvas</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-canvas.png" alt="" loading="lazy"></span>Canvas</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-canvas-new-quizzes-reporting.png" tabindex="0" role="button" aria-label="Open larger view of Canvas New Quizzes: Data Reporting and Analysis">
@@ -1199,7 +1202,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-examsoft.png" alt="" loading="lazy">ExamSoft</span><span class="cert-group-meta">7 documents<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-examsoft.png" alt="" loading="lazy"></span>ExamSoft</span><span class="cert-group-meta">7 documents<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-examsoft-foundations.png" tabindex="0" role="button" aria-label="Open larger view of Foundations of ExamSoft System">
@@ -1261,7 +1264,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-harmonize.png" alt="" loading="lazy">Harmonize</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-harmonize.png" alt="" loading="lazy"></span>Harmonize</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-harmonize-discussion.png" tabindex="0" role="button" aria-label="Open larger view of Create a Graded Discussion with Harmonize in Canvas">
@@ -1275,7 +1278,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-lucid.png" alt="" loading="lazy">Lucid</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-lucid.png" alt="" loading="lazy"></span>Lucid</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-lucid-overview.png" tabindex="0" role="button" aria-label="Open larger view of Lucid: Overview and Access within Canvas">
@@ -1305,7 +1308,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-panopto.png" alt="" loading="lazy">Panopto</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-panopto.png" alt="" loading="lazy"></span>Panopto</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-panopto-best-practices.png" tabindex="0" role="button" aria-label="Open larger view of Best Practices for Creating Videos">
@@ -1335,7 +1338,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/pitt-edge-logo.png" alt="" loading="lazy">Pitt EDGE</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-pitt-edge-shield.png" alt="" loading="lazy"></span>Pitt EDGE</span><span class="cert-group-meta">3 documents<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-pittedge-techstack.png" tabindex="0" role="button" aria-label="Open larger view of EDGE Teaching, Learning &amp;amp; Assessment Tech Stack">
@@ -1365,7 +1368,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-powerpoint.png" alt="" loading="lazy">PowerPoint</span><span class="cert-group-meta">2 documents<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-powerpoint.png" alt="" loading="lazy"></span>PowerPoint</span><span class="cert-group-meta">2 documents<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-powerpoint-best-practices.png" tabindex="0" role="button" aria-label="Open larger view of PowerPoint Best Practices">
@@ -1387,7 +1390,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-reeldx.png" alt="" loading="lazy">ReelDx</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-reeldx.png" alt="" loading="lazy"></span>ReelDx</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-reeldx-summary.png" tabindex="0" role="button" aria-label="Open larger view of ReelDx Training Session Summary Notes">
@@ -1401,7 +1404,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-respondus.png" alt="" loading="lazy">Respondus</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-respondus.png" alt="" loading="lazy"></span>Respondus</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-respondus-setup.png" tabindex="0" role="button" aria-label="Open larger view of Set Up a Canvas Quiz Requiring LockDown Browser">
@@ -1415,7 +1418,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-sharepoint.png" alt="" loading="lazy">SharePoint</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-sharepoint.png" alt="" loading="lazy"></span>SharePoint</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-sharepoint-upload.png" tabindex="0" role="button" aria-label="Open larger view of SharePoint Upload: Faculty Guidance">
@@ -1429,7 +1432,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span class="cert-group-label"><img class="cat-logo" src="assets/logo-teamdynamix.png" alt="" loading="lazy">TeamDynamix</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-teamdynamix.png" alt="" loading="lazy"></span>TeamDynamix</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-tdx-workflow.png" tabindex="0" role="button" aria-label="Open larger view of TDX Workflow">
@@ -1443,7 +1446,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       </details>
 
       <details class="cert-group">
-        <summary class="cert-group-summary"><span class="cert-group-label">Vendor Evaluation</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
+        <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge cat-logo-fallback"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 3h6a1 1 0 0 1 1 1v1H8V4a1 1 0 0 1 1-1z"></path><path d="M8.5 12.5l2 2 4-4.5"></path></svg></span>Vendor Evaluation</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
             <figure class="doc-shot shot" data-full="assets/doc-tidyup-summary.png" tabindex="0" role="button" aria-label="Open larger view of Cidi Labs TidyUp: Testing Summary &amp;amp; Purchase Recommendation">
