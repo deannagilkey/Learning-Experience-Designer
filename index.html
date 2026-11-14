@@ -9,17 +9,17 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
-<meta name="description" content="18+ years designing learning experiences across higher education and industry. Instructional design, digital transformation, systems adoption, and faculty development case studies, documentation, and certifications.">
+<meta name="description" content="Designing learning experiences across higher education and industry. Instructional design, digital transformation, systems adoption, and faculty development case studies, documentation, and certifications.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://deannagilkey.github.io/Learning-Experience-Designer/">
 <meta property="og:title" content="Deanna Gilkey Schmuck, MS | Learning Experience Designer">
-<meta property="og:description" content="18+ years designing learning experiences across higher education and industry. Instructional design, digital transformation, systems adoption, and faculty development case studies, documentation, and certifications.">
+<meta property="og:description" content="Designing learning experiences across higher education and industry. Instructional design, digital transformation, systems adoption, and faculty development case studies, documentation, and certifications.">
 <meta property="og:image" content="https://deannagilkey.github.io/Learning-Experience-Designer/assets/og-social-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Deanna Gilkey Schmuck, MS | Learning Experience Designer">
-<meta name="twitter:description" content="18+ years designing learning experiences across higher education and industry.">
+<meta name="twitter:description" content="Designing learning experiences across higher education and industry.">
 <meta name="twitter:image" content="https://deannagilkey.github.io/Learning-Experience-Designer/assets/og-social-card.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,10 +75,25 @@ img{max-width:100%;display:block;}
 
 /* HERO */
 .hero{
+  position:relative;
+  overflow:hidden;
   background:linear-gradient(165deg, var(--forest-deep) 0%, var(--forest) 100%);
   color:#F3F6F1;
   padding:4.5rem 1.5rem 3.5rem;
 }
+.hero::before{
+  content:"";
+  position:absolute;
+  top:2.2rem;
+  right:2.2rem;
+  width:150px;
+  height:100px;
+  background-image:radial-gradient(circle, var(--gold) 1.6px, transparent 1.6px);
+  background-size:22px 22px;
+  opacity:.3;
+  pointer-events:none;
+}
+@media (max-width:860px){ .hero::before{display:none;} }
 .hero-inner{max-width:1180px;margin:0 auto;}
 .eyebrow-pill{
   display:inline-block;
@@ -447,7 +462,7 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
 <header class="hero">
   <div class="hero-inner">
     <span class="eyebrow-pill">Instructional Design &amp; Training Portfolio</span>
-    <h1>18+ years designing learning experiences across higher ed and industry</h1>
+    <h1>Designing learning experiences across higher education and industry</h1>
     <p class="dek">A working collection and archive of instructional design projects, professional learning programs, certifications, and development resources showcasing experience leading initiatives independently and collaborating with cross-functional teams across higher education and industry.</p>
     <div class="byline-row">
       <img class="headshot" src="assets/headshot.jpg" alt="Portrait of Deanna Gilkey Schmuck">
