@@ -217,6 +217,7 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .section:last-child{border-bottom:none;}
 .section-head{margin-bottom:1rem;}
 .pill{display:inline-block;font-size:.74rem;font-weight:600;letter-spacing:.02em;color:#2A1E07;background:var(--gold);padding:.28em .85em;border-radius:999px;margin-bottom:.7rem;}
+.cert-total{font-size:.88rem;color:var(--muted);margin:.5rem 0 0;}
 .section h2{font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:600;max-width:32ch;}
 .section-intro{margin-top:.9rem;color:var(--ink);}
 .philosophy{display:grid;grid-template-columns:1fr 1.4fr;gap:1.8rem;max-width:900px;margin:0 0 3rem;align-items:start;}
@@ -305,9 +306,10 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .cert-group-meta{display:flex;align-items:center;gap:.6rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:400;color:var(--muted);}
 .cert-chevron{width:.55rem;height:.55rem;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .15s;}
 .cert-group[open] .cert-chevron{transform:rotate(-135deg);}
-.cert-grid{margin:0 0 1.4rem;display:grid;grid-template-columns:repeat(4, 1fr);gap:1.2rem;}
-@media (max-width:900px){ .cert-grid{grid-template-columns:repeat(3,1fr);} }
-@media (max-width:600px){ .cert-grid{grid-template-columns:repeat(2,1fr);} }
+.cert-grid{margin:0 0 1.4rem;display:grid;grid-template-columns:repeat(6, 1fr);gap:.9rem;}
+@media (max-width:1000px){ .cert-grid{grid-template-columns:repeat(4,1fr);} }
+@media (max-width:700px){ .cert-grid{grid-template-columns:repeat(3,1fr);} }
+@media (max-width:460px){ .cert-grid{grid-template-columns:repeat(2,1fr);} }
 .cert-card{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;cursor:zoom-in;transition:border-color .15s, transform .15s, box-shadow .15s;}
 .cert-card:hover, .cert-card:focus-visible{border-color:var(--gold); transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,.12);}
 .cert-frame{position:relative;aspect-ratio:4/2.9;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line);padding:.4rem;}
@@ -1204,7 +1206,7 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
         <p>The written process documentation behind the Pitt EDGE faculty training course &mdash; one short reference guide per tool or task, each built around a stated purpose rather than a generic feature walkthrough.</p>
       </div>
 
-      <details class="cert-group" open>
+      <details class="cert-group">
         <summary class="cert-group-summary"><span class="cert-group-label"><span class="cat-logo-badge"><img class="cat-logo" src="assets/logo-accredible.png" alt="" loading="lazy"></span>Accredible</span><span class="cert-group-meta">1 document<i class="cert-chevron"></i></span></summary>
         <div class="doc-grid">
           <div class="doc-card">
@@ -1525,12 +1527,13 @@ footer .contact{margin-top:1.2rem;font-size:.9rem;color:#DCE4D8;font-weight:500;
       <div class="section-head">
         <span class="pill">Credentials</span>
         <h2>Certifications &amp; Professional Development</h2>
+        <p class="cert-total">31 certifications and badges across 10 issuers</p>
       </div>
       <div class="section-intro">
         <p>Ongoing coursework and vendor certifications across the tools and practices this work draws on &mdash; platform-specific (Canvas, Lucid), AI and accessibility literacy, and the foundational instructional design theory behind the course and program work shown above.</p>
       </div>
 
-      <details class="cert-group" open>
+      <details class="cert-group">
         <summary class="cert-group-summary"><span>Google for Education</span><span class="cert-group-meta">5 certifications<i class="cert-chevron"></i></span></summary>
         <div class="cert-grid">
         <figure class="cert-card" data-full="assets/cert-google-educator.png" tabindex="0" role="button" aria-label="Open larger view of Google Certified Educator">
