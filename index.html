@@ -440,13 +440,11 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 /* LINK-OUT TILE */
 .link-tile{display:grid;grid-template-columns:220px 1fr;gap:1.6rem;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:1.2rem;align-items:stretch;}
 @media (max-width:700px){ .link-tile{grid-template-columns:1fr;} }
-.link-tile-stacked{display:grid;grid-template-columns:220px 1fr;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:1.4rem;}
-.link-tile-stacked .link-tile-img{background:#fff;}
-.link-tile-stacked .link-tile-body{padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:center;}
-.resource-panel-bottom{margin:0;grid-column:1 / -1;background:#fafaf7;border-top:1px solid var(--line);padding:1.3rem 1.5rem;cursor:zoom-in;display:grid;grid-template-columns:1fr 1.7fr;gap:1.6rem;align-items:center;}
-.resource-panel-caption{font-size:.84rem;color:var(--ink);line-height:1.6;margin:0;border-left:3px solid var(--gold);padding-left:.9rem;}
-.resource-panel-bottom img{width:100%;height:auto;display:block;}
-@media (max-width:700px){ .resource-panel-bottom{grid-template-columns:1fr;} .resource-panel-caption{order:2;} .resource-panel-bottom img{order:1;} }
+.hub-trigger{margin:.8rem 0 0;display:inline-flex;align-items:center;gap:.4em;cursor:zoom-in;}
+.hub-trigger-label{font-size:.88rem;font-weight:600;color:var(--forest-mid);}
+.hub-trigger:hover .hub-trigger-label{text-decoration:underline;}
+.hub-trigger:focus-visible{outline:2px solid var(--forest-mid);outline-offset:3px;}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
 @media (max-width:700px){ .link-tile-stacked{grid-template-columns:1fr;} }
 .link-tile-img{background:#fff;}
 .link-tile-img img{width:100%;height:100%;object-fit:cover;}
@@ -604,20 +602,19 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
         </div>
       </a>
 
-      <div class="link-tile-stacked">
-        <a href="https://deannagilkey.github.io/pitt-edge-id-onboarding/" target="_blank" rel="noopener" style="display:contents;text-decoration:none;color:inherit;">
-          <div class="link-tile-img"><img src="assets/onb-m0-team.png" alt="Pitt EDGE team overview diagram"></div>
-          <div class="link-tile-body">
-            <h3>Onboarding the Next Pitt EDGE Instructional Designer</h3>
-            <p>A complete 12-module onboarding course, built from the ground up &mdash; orientation and operations through the course development lifecycle, project management, Canvas development, assessment, quality assurance, course maintenance, and a role-specific module on Pitt Professional &mdash; closing with a knowledge check and completion certificate. Alongside the course, built and maintain a companion resource hub consolidating every template, guide, and reference link used across it into one searchable repository, so a new designer has a single source of truth instead of nine different places to look.</p>
-            <span class="link-tile-cta">View the full course site &rarr;</span>
-          </div>
-        </a>
-        <figure class="resource-panel-bottom" data-full="assets/onb-resource-hub-structure.png" tabindex="0" role="button" aria-label="Open larger view of resource hub structure">
-          <p class="resource-panel-caption">Built alongside the Instructional Designer Onboarding course to give every template, guide, and reference link it uses a single home &mdash; category names and counts shown here, the actual files and internal links stay inside the course itself.</p>
-          <img src="assets/onb-resource-hub-structure.png" alt="Resource hub structure: 193 resources across 9 categories">
-        </figure>
-      </div>
+      <a class="link-tile" href="https://deannagilkey.github.io/pitt-edge-id-onboarding/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;margin-top:1.4rem;">
+        <div class="link-tile-img"><img src="assets/onb-m0-team.png" alt="Pitt EDGE team overview diagram"></div>
+        <div class="link-tile-body">
+          <h3>Onboarding the Next Pitt EDGE Instructional Designer</h3>
+          <p>A complete 12-module onboarding course, built from the ground up &mdash; orientation and operations through the course development lifecycle, project management, Canvas development, assessment, quality assurance, course maintenance, and a role-specific module on Pitt Professional &mdash; closing with a knowledge check and completion certificate. Alongside the course, built and maintain a companion resource hub consolidating every template, guide, and reference link used across it into one searchable repository, so a new designer has a single source of truth instead of nine different places to look.</p>
+          <span class="link-tile-cta">View the full course site &rarr;</span>
+        </div>
+      </a>
+
+      <figure class="hub-trigger" data-full="assets/onb-resource-hub-structure.png" tabindex="0" role="button" aria-label="Open resource hub structure in a larger view">
+        <span class="hub-trigger-label">View resource hub structure (193 resources, 9 categories) &rarr;</span>
+        <figcaption class="sr-only">Built alongside the Instructional Designer Onboarding course to give every template, guide, and reference link it uses a single home.</figcaption>
+      </figure>
     </section>
 
     <section class="section" id="conference">
@@ -1847,7 +1844,7 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
     lbImg.src = '';
   }
 
-  document.querySelectorAll('.shot, .cert-card').forEach(function(el){
+  document.querySelectorAll('.shot, .cert-card, .hub-trigger').forEach(function(el){
     el.addEventListener('click', function(){
       var full = el.getAttribute('data-full');
       var capEl = el.querySelector('figcaption');
