@@ -443,9 +443,10 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .link-tile-stacked{display:grid;grid-template-columns:220px 1fr;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:1.4rem;}
 .link-tile-stacked .link-tile-img{background:#fff;}
 .link-tile-stacked .link-tile-body{padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:center;}
-.resource-panel-bottom{margin:0;grid-column:1 / -1;background:#fafaf7;border-top:1px solid var(--line);padding:1.1rem 1.4rem;cursor:zoom-in;}
-.resource-panel-bottom img{width:100%;max-width:520px;height:auto;display:block;margin:0 auto;}
-.resource-panel-bottom figcaption{font-size:.78rem;color:var(--muted);margin-top:.6rem;max-width:520px;margin-left:auto;margin-right:auto;}
+.resource-panel-bottom{margin:0;grid-column:1 / -1;background:#fafaf7;border-top:1px solid var(--line);padding:1.3rem 1.5rem;cursor:zoom-in;display:grid;grid-template-columns:1fr 1.7fr;gap:1.6rem;align-items:center;}
+.resource-panel-caption{font-size:.84rem;color:var(--ink);line-height:1.6;margin:0;border-left:3px solid var(--gold);padding-left:.9rem;}
+.resource-panel-bottom img{width:100%;height:auto;display:block;}
+@media (max-width:700px){ .resource-panel-bottom{grid-template-columns:1fr;} .resource-panel-caption{order:2;} .resource-panel-bottom img{order:1;} }
 @media (max-width:700px){ .link-tile-stacked{grid-template-columns:1fr;} }
 .link-tile-img{background:#fff;}
 .link-tile-img img{width:100%;height:100%;object-fit:cover;}
@@ -613,8 +614,8 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
           </div>
         </a>
         <figure class="resource-panel-bottom" data-full="assets/onb-resource-hub-structure.png" tabindex="0" role="button" aria-label="Open larger view of resource hub structure">
+          <p class="resource-panel-caption">Built alongside the Instructional Designer Onboarding course to give every template, guide, and reference link it uses a single home &mdash; category names and counts shown here, the actual files and internal links stay inside the course itself.</p>
           <img src="assets/onb-resource-hub-structure.png" alt="Resource hub structure: 193 resources across 9 categories">
-          <figcaption>Built alongside the onboarding course above to give every template, guide, and reference link it uses a single home &mdash; category names and counts shown here, the actual files and internal links stay inside the course itself.</figcaption>
         </figure>
       </div>
     </section>
