@@ -440,6 +440,13 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 /* LINK-OUT TILE */
 .link-tile{display:grid;grid-template-columns:220px 1fr;gap:1.6rem;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:1.2rem;align-items:stretch;}
 @media (max-width:700px){ .link-tile{grid-template-columns:1fr;} }
+.link-tile-stacked{display:grid;grid-template-columns:220px 1fr;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:1.4rem;}
+.link-tile-stacked .link-tile-img{background:#fff;}
+.link-tile-stacked .link-tile-body{padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:center;}
+.resource-panel-bottom{margin:0;grid-column:1 / -1;background:#fafaf7;border-top:1px solid var(--line);padding:1.3rem 1.6rem;cursor:zoom-in;}
+.resource-panel-bottom img{width:100%;max-width:640px;height:auto;display:block;margin:0 auto;}
+.resource-panel-bottom figcaption{font-size:.82rem;color:var(--muted);margin-top:.7rem;max-width:640px;margin-left:auto;margin-right:auto;}
+@media (max-width:700px){ .link-tile-stacked{grid-template-columns:1fr;} }
 .link-tile-img{background:#fff;}
 .link-tile-img img{width:100%;height:100%;object-fit:cover;}
 .link-tile-body{padding:1.4rem 1.6rem 1.4rem 0;display:flex;flex-direction:column;justify-content:center;}
@@ -596,19 +603,20 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
         </div>
       </a>
 
-      <a class="link-tile" href="https://deannagilkey.github.io/pitt-edge-id-onboarding/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;margin-top:1.4rem;">
-        <div class="link-tile-img"><img src="assets/onb-m0-team.png" alt="Pitt EDGE team overview diagram"></div>
-        <div class="link-tile-body">
-          <h3>Onboarding the Next Pitt EDGE Instructional Designer</h3>
-          <p>A complete 12-module onboarding course, built from the ground up &mdash; orientation and operations through the course development lifecycle, project management, Canvas development, assessment, quality assurance, course maintenance, and a role-specific module on Pitt Professional &mdash; closing with a knowledge check and completion certificate. Alongside the course, built and maintain a companion resource hub consolidating every template, guide, and reference link used across it into one searchable repository &mdash; 193 resources organized into 9 categories, so a new designer has a single source of truth instead of nine different places to look.</p>
-          <span class="link-tile-cta">View the full course site &rarr;</span>
-        </div>
-      </a>
-
-      <figure class="shot" data-full="assets/onb-resource-hub-structure.png" tabindex="0" role="button" aria-label="Open larger view" style="margin-top:1.2rem;max-width:480px;">
-        <div class="shot-frame"><img src="assets/onb-resource-hub-structure.png" alt="Pitt EDGE Onboarding Resource Hub structure: 193 resources across 9 categories" loading="lazy"></div>
-        <figcaption>The resource hub's structure &mdash; category names and counts shown; the actual templates, guides, and internal links stay inside the course itself.</figcaption>
-      </figure>
+      <div class="link-tile-stacked">
+        <a href="https://deannagilkey.github.io/pitt-edge-id-onboarding/" target="_blank" rel="noopener" style="display:contents;text-decoration:none;color:inherit;">
+          <div class="link-tile-img"><img src="assets/onb-m0-team.png" alt="Pitt EDGE team overview diagram"></div>
+          <div class="link-tile-body">
+            <h3>Onboarding the Next Pitt EDGE Instructional Designer</h3>
+            <p>A complete 12-module onboarding course, built from the ground up &mdash; orientation and operations through the course development lifecycle, project management, Canvas development, assessment, quality assurance, course maintenance, and a role-specific module on Pitt Professional &mdash; closing with a knowledge check and completion certificate. Alongside the course, built and maintain a companion resource hub consolidating every template, guide, and reference link used across it into one searchable repository, so a new designer has a single source of truth instead of nine different places to look.</p>
+            <span class="link-tile-cta">View the full course site &rarr;</span>
+          </div>
+        </a>
+        <figure class="resource-panel-bottom" data-full="assets/onb-resource-hub-structure.png" tabindex="0" role="button" aria-label="Open larger view of resource hub structure">
+          <img src="assets/onb-resource-hub-structure.png" alt="Resource hub structure: 193 resources across 9 categories">
+          <figcaption>The resource hub's structure &mdash; category names and counts shown; the actual templates, guides, and internal links stay inside the course itself.</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="section" id="conference">
