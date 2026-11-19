@@ -440,7 +440,8 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 /* LINK-OUT TILE */
 .link-tile{display:grid;grid-template-columns:220px 1fr;gap:1.6rem;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:1.2rem;align-items:stretch;}
 @media (max-width:700px){ .link-tile{grid-template-columns:1fr;} }
-.hub-trigger{margin:.8rem 0 0;display:inline-flex;align-items:center;gap:.4em;cursor:zoom-in;}
+.hub-trigger-row{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:.8rem;}
+.hub-trigger{margin:0;display:inline-flex;align-items:center;gap:.4em;cursor:zoom-in;}
 .hub-trigger-label{font-size:.88rem;font-weight:600;color:var(--forest-mid);}
 .hub-trigger:hover .hub-trigger-label{text-decoration:underline;}
 .hub-trigger:focus-visible{outline:2px solid var(--forest-mid);outline-offset:3px;}
@@ -611,10 +612,16 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
         </div>
       </a>
 
-      <figure class="hub-trigger" data-full="assets/onb-resource-hub-structure.png" tabindex="0" role="button" aria-label="Open resource hub structure in a larger view">
-        <span class="hub-trigger-label">View resource hub structure (193 resources, 9 categories) &rarr;</span>
-        <figcaption class="sr-only">Built alongside the Instructional Designer Onboarding course to give every template, guide, and reference link it uses a single home.</figcaption>
-      </figure>
+      <div class="hub-trigger-row">
+        <figure class="hub-trigger" data-full="assets/onb-resource-hub-structure.png" tabindex="0" role="button" aria-label="Open resource hub structure in a larger view">
+          <span class="hub-trigger-label">View resource hub structure (195 resources, 9 categories) &rarr;</span>
+          <figcaption class="sr-only">Built alongside the Instructional Designer Onboarding course to give every template, guide, and reference link it uses a single home.</figcaption>
+        </figure>
+        <figure class="hub-trigger" data-full="assets/onb-resource-hub-design-sample.png" tabindex="0" role="button" aria-label="Open design sample in a larger view">
+          <span class="hub-trigger-label">View design sample &rarr;</span>
+          <figcaption class="sr-only">An illustrative design sample showing the resource hub's formatting &mdash; fictional resource names, same navy, gold, and badge styling used across all 9 categories.</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="section" id="conference">
