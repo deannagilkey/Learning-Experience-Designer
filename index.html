@@ -344,6 +344,10 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .workshop-intro{font-size:.9rem;color:var(--ink);line-height:1.6;margin:0 0 1rem;}
 .workshop-list{list-style:none;margin:0 0 1.2rem;padding:0;border-top:1px solid var(--line);}
 .workshop-list li{display:flex;align-items:center;gap:.6em;padding:.6em 0;border-bottom:1px solid var(--line);}
+.workshop-list li.workshop-item-expanded{flex-direction:column;align-items:stretch;gap:.3em;}
+.workshop-row{display:flex;align-items:center;gap:.6em;}
+.workshop-note{font-size:.82rem;font-style:italic;color:var(--muted);margin:0 0 0 1.5em;}
+.workshop-item-expanded .hub-trigger{margin:.2em 0 0 1.5em;}
 .workshop-check{color:var(--gold-deep);font-weight:700;flex-shrink:0;}
 .workshop-name{font-size:.9rem;color:var(--ink);flex:1;}
 .workshop-date{font-size:.82rem;color:var(--muted);flex-shrink:0;}
@@ -564,7 +568,7 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
             <span class="exp-dates">04/2026&ndash;Present</span>
           </div>
           <div class="exp-role">Instructional Technologist</div>
-          <p>Created the Pitt EDGE Technology Tools Canvas course shown on this site and built a complete 12-module onboarding program for incoming instructional designers, covering design methodology, project workflows, and departmental standards. Partners with faculty and the EDGE team to design, develop, and improve Canvas courses across online, hybrid, and face-to-face delivery, and serves as Canvas Sub-Account Administrator overseeing permissions, course governance, and troubleshooting. Consults on the full EDGE technology stack &mdash; Harmonize, Lucid, Respondus, ExamSoft, Accredible, Airtable, Microsoft 365, Copilot, and Google Gemini &mdash; while designing faculty development workshops, job aids, and self-paced learning content, and supporting accessibility, UDL, and digital credentialing initiatives.</p>
+          <p>Created the Pitt EDGE Technology Tools Canvas course shown on this site and built a complete 12-module onboarding program for incoming instructional designers, covering design methodology, project workflows, and departmental standards. Partners with faculty and the EDGE team to design, develop, and improve Canvas courses across online, hybrid, and face-to-face delivery, and serves as Canvas Sub-Account Administrator overseeing permissions, course governance, and troubleshooting. Consults on the full EDGE technology stack &mdash; Harmonize, Lucid, Respondus, ExamSoft, Accredible, Airtable, Microsoft 365, Copilot, and Google Gemini &mdash; while designing faculty development workshops, job aids, and self-paced learning content, and supporting accessibility, UDL, and digital credentialing initiatives. Actively disseminates AI-literacy learning to the team, turning university AI training sessions into shared takeaways and practical guidance the team can use.</p>
         </div>
 
         <div class="exp-card">
@@ -1821,7 +1825,14 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
         <summary class="cert-group-summary"><span>University of Pittsburgh Workshops</span><span class="cert-group-meta">7 workshops<i class="cert-chevron"></i></span></summary>
         <p class="workshop-intro">I actively participate in Pitt's ongoing staff development workshops as they're offered &mdash; recent sessions have covered AI literacy, cultural competency, data literacy, and digital accessibility.</p>
         <ul class="workshop-list">
-          <li><span class="workshop-check" aria-hidden="true">&#10003;</span><span class="workshop-name">Choosing and Using Pitt's AI Tools</span><span class="workshop-date">11/20/2026</span></li>
+          <li class="workshop-item-expanded">
+            <div class="workshop-row"><span class="workshop-check" aria-hidden="true">&#10003;</span><span class="workshop-name">Choosing and Using Pitt's AI Tools</span><span class="workshop-date">11/20/2026</span></div>
+            <p class="workshop-note">Shared key takeaways with the Pitt EDGE team afterward.</p>
+            <figure class="hub-trigger" data-full="assets/workshop-ai-toolkit-takeaways.png" tabindex="0" role="button" aria-label="Open what I took back to the team">
+              <span class="hub-trigger-label">View what I took back to the team &rarr;</span>
+              <figcaption class="sr-only">Five takeaways and resources I shared with my team after attending this workshop &mdash; not the presenter's slide content.</figcaption>
+            </figure>
+          </li>
           <li><span class="workshop-check" aria-hidden="true">&#10003;</span><span class="workshop-name">Cultural Stories</span><span class="workshop-date">11/10/2026</span></li>
           <li><span class="workshop-check" aria-hidden="true">&#10003;</span><span class="workshop-name">Cross Cultural Communication</span><span class="workshop-date">10/30/2026</span></li>
           <li><span class="workshop-check" aria-hidden="true">&#10003;</span><span class="workshop-name">Intercultural Competency Basics</span><span class="workshop-date">6/11/2026</span></li>
