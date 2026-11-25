@@ -244,7 +244,8 @@ img{max-width:100%;display:block;}
 
 main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 
-.section{padding:2.6rem 0;border-bottom:1px solid var(--line);scroll-margin-top:1.2rem;}
+.section{padding:2.6rem 0;border-top:3px solid var(--forest-deep);border-bottom:1px solid var(--line);scroll-margin-top:1.2rem;}
+.section-org-label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:0 0 .6rem;}
 .section:last-child{border-bottom:none;}
 .section-head{margin-bottom:1rem;}
 .pill{display:inline-block;font-size:.74rem;font-weight:600;letter-spacing:.02em;color:#2A1E07;background:var(--gold);padding:.28em .85em;border-radius:999px;margin-bottom:.7rem;}
@@ -433,6 +434,9 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .metric-card .metric-values .arrow{color:var(--muted);font-weight:400;margin:0 .3em;}
 .metric-card .metric-change{font-size:.88rem;font-weight:600;color:var(--gold-deep);margin-top:.4rem;}
 .case-study-card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:1.7rem 1.9rem;margin-top:1.4rem;}
+.case-study-card-collapsible{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:0 1.9rem 1.7rem;margin-top:1.4rem;}
+.case-study-card-collapsible .cert-group-summary{margin:0 -1.9rem;padding:1.1rem 1.9rem;}
+.case-study-card-collapsible[open] .cert-group-summary{border-bottom:1px solid var(--line);margin-bottom:1.3rem;}
 .team-spotlight{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--forest-mid);border-radius:4px;padding:1.4rem 1.7rem;margin:3rem 0 2.6rem;}
 .spotlight-dots{text-align:center;color:var(--gold-deep);font-size:1.1rem;letter-spacing:1em;margin:3.5rem 0 0;padding-left:1em;}
 .team-spotlight .ts-logo{display:block;height:46px;width:auto;margin-bottom:.9rem;}
@@ -605,6 +609,7 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
 
     <section class="section" id="course-spotlight">
       <div class="section-head">
+        <span class="section-org-label">Pitt EDGE</span>
         <span class="pill">Spotlight</span>
         <h2>Course Design &amp; Development Spotlight</h2>
       </div>
@@ -713,6 +718,7 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
 
     <section class="section" id="accredible-migration">
       <div class="section-head">
+        <span class="section-org-label">Pitt EDGE</span>
         <span class="award-tag-small"><span class="star">&#9733;</span> Nominated &middot; Digital Transformation Award</span>
         <h2>Accredible Enterprise Migration &amp; Governance Transformation</h2>
       </div>
@@ -761,22 +767,27 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
         <p>No established workflow existed for moving a new program from idea to a live, credentialed listing in Pitt Professional &mdash; the university's non-credit Canvas platform. Working with the broader Pitt Professional team, helped build the process from scratch: an Airtable intake system collecting the program and course details needed downstream, feeding into Canvas Catalog listing creation and Accredible digital badge and credential setup &mdash; three systems that previously had no defined handoff between them.</p>
       </div>
 
-      <div class="case-study-card">
-        <h3>My Role</h3>
-        <p>Designed and built the Airtable intake system &mdash; both the structured request form and the underlying base tracking course listings and program proposals &mdash; as part of the team's broader effort to establish repeatable governance for a platform that had been run ad hoc.</p>
-      </div>
+      <details class="cert-group case-study-card-collapsible">
+        <summary class="cert-group-summary"><span>Read about my role and the workflow behind it</span><i class="cert-chevron"></i></summary>
+        <div class="cs-block">
+          <h4 class="cs-head">My Role</h4>
+          <p>Designed and built the Airtable intake system &mdash; both the structured request form and the underlying base tracking course listings and program proposals &mdash; as part of the team's broader effort to establish repeatable governance for a platform that had been run ad hoc.</p>
+        </div>
 
-      <div class="shot-grid" style="margin-top:1.4rem;">
-        <figure class="shot" data-full="assets/pp-ops-program-request-form.png" tabindex="0" role="button" aria-label="Open larger view">
-          <div class="shot-frame"><img src="assets/pp-ops-program-request-form.png" alt="Pitt Professional New Program Request Form" loading="lazy"></div>
-          <figcaption>The New Program Request Form &mdash; registration info and program overview, the first step in getting a new program into the pipeline.</figcaption>
-        </figure>
-        <figure class="shot" data-full="assets/pp-ops-course-listing-form.png" tabindex="0" role="button" aria-label="Open larger view">
-          <div class="shot-frame"><img src="assets/pp-ops-course-listing-form.png" alt="Pitt Professional Course Listing Form, technical details section" loading="lazy"></div>
-          <figcaption>The companion Course Listing form &mdash; stage breakdown, format, certificate/CEU details, registration fee, and the catalog card image, all captured up front for Canvas Catalog.</figcaption>
-        </figure>
-      </div>
-
+        <div class="cs-block">
+          <h4 class="cs-head">The Forms</h4>
+          <div class="shot-grid">
+            <figure class="shot" data-full="assets/pp-ops-program-request-form.png" tabindex="0" role="button" aria-label="Open larger view">
+              <div class="shot-frame"><img src="assets/pp-ops-program-request-form.png" alt="Pitt Professional New Program Request Form" loading="lazy"></div>
+              <figcaption>The New Program Request Form &mdash; registration info and program overview, the first step in getting a new program into the pipeline.</figcaption>
+            </figure>
+            <figure class="shot" data-full="assets/pp-ops-course-listing-form.png" tabindex="0" role="button" aria-label="Open larger view">
+              <div class="shot-frame"><img src="assets/pp-ops-course-listing-form.png" alt="Pitt Professional Course Listing Form, technical details section" loading="lazy"></div>
+              <figcaption>The companion Course Listing form &mdash; stage breakdown, format, certificate/CEU details, registration fee, and the catalog card image, all captured up front for Canvas Catalog.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </details>
     </section>
 
     <section class="section" id="naxt-erp">
