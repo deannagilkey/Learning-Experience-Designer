@@ -245,6 +245,9 @@ img{max-width:100%;display:block;}
 main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 
 .section{padding:2.6rem 0;border-top:3px solid var(--forest-deep);border-bottom:1px solid var(--line);scroll-margin-top:1.2rem;}
+.paired-sections{display:grid;grid-template-columns:1fr 1fr;gap:0 2.6rem;border-top:3px solid var(--forest-deep);border-bottom:1px solid var(--line);margin-bottom:0;}
+.paired-sections .section-paired{border-top:none;border-bottom:none;padding:2.6rem 0;}
+@media (max-width:860px){ .paired-sections{grid-template-columns:1fr;gap:0;} .paired-sections .section-paired{padding:1.6rem 0;} .paired-sections .section-paired:first-child{border-bottom:1px solid var(--line);} }
 .section-org-label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:0 0 .6rem;}
 .section:last-child{border-bottom:none;}
 .section-head{margin-bottom:1rem;}
@@ -716,7 +719,8 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
       </details>
     </section>
 
-    <section class="section" id="accredible-migration">
+    <div class="paired-sections">
+    <section class="section section-paired" id="accredible-migration">
       <div class="section-head">
         <span class="section-org-label">Pitt EDGE</span>
         <span class="award-tag-small"><span class="star">&#9733;</span> Nominated &middot; Digital Transformation Award</span>
@@ -726,7 +730,8 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
         <p>University of Pittsburgh &middot; Pitt EDGE &middot; 2026. A comprehensive transformation of Pitt EDGE's Accredible digital credential ecosystem &mdash; moving from a centralized credentialing model to an enterprise-wide governance framework that distributed ownership across academic and administrative units while improving security, scalability, and operational sustainability. Led by a small team, nominated for a Digital Transformation Award for this work.</p>
       </div>
 
-      <div class="case-study-card">
+      <details class="cert-group case-study-card-collapsible">
+        <summary class="cert-group-summary"><span>Read about the challenge, my role, and the results</span><i class="cert-chevron"></i></summary>
         <div class="cs-block">
           <h4 class="cs-head">The Challenge</h4>
           <p>The platform supported 33,121 issued credentials, 15,583 recipients, and 759 credential groups. Growing adoption had outpaced the original governance model, creating permissions, ownership, and scalability challenges that needed a more sustainable operational structure.</p>
@@ -755,10 +760,10 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
         </div>
 
         <p class="cs-takeaway"><strong>Key takeaways:</strong> the project demonstrates leadership in digital transformation, governance design, change management, stakeholder engagement, enterprise platform administration, and scalable technology operations.</p>
-      </div>
+      </details>
     </section>
 
-    <section class="section" id="pitt-professional-ops">
+    <section class="section section-paired" id="pitt-professional-ops">
       <div class="section-head">
         <span class="pill">Program &middot; Pitt Professional</span>
         <h2>Pitt Professional Operations &amp; Governance</h2>
@@ -789,6 +794,7 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
         </div>
       </details>
     </section>
+    </div>
 
     <section class="section" id="naxt-erp">
       <div class="section-head">
