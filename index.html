@@ -315,6 +315,10 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 
 /* SHOT GRID */
 .shot-grid{margin-top:1.2rem;display:grid;grid-template-columns:repeat(3, 1fr);gap:1.4rem;}
+.shot-grid-narrow{grid-template-columns:1fr;gap:1.2rem;}
+.shot-grid-narrow .shot-wide{display:grid;grid-template-columns:140px 1fr;gap:1rem;align-items:start;}
+.shot-grid-narrow .shot-wide .shot-frame{margin:0;}
+.shot-grid-narrow .shot-wide figcaption{padding-top:.2rem;}
 @media (max-width:900px){ .shot-grid{grid-template-columns:repeat(2,1fr);} }
 @media (max-width:600px){ .shot-grid{grid-template-columns:1fr;} }
 
@@ -782,12 +786,12 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
 
         <div class="cs-block">
           <h4 class="cs-head">The Forms</h4>
-          <div class="shot-grid">
-            <figure class="shot" data-full="assets/pp-ops-program-request-form.png" tabindex="0" role="button" aria-label="Open larger view">
+          <div class="shot-grid shot-grid-narrow">
+            <figure class="shot shot-wide" data-full="assets/pp-ops-program-request-form.png" tabindex="0" role="button" aria-label="Open larger view">
               <div class="shot-frame"><img src="assets/pp-ops-program-request-form.png" alt="Pitt Professional New Program Request Form" loading="lazy"></div>
               <figcaption>The New Program Request Form &mdash; registration info and program overview, the first step in getting a new program into the pipeline.</figcaption>
             </figure>
-            <figure class="shot" data-full="assets/pp-ops-course-listing-form.png" tabindex="0" role="button" aria-label="Open larger view">
+            <figure class="shot shot-wide" data-full="assets/pp-ops-course-listing-form.png" tabindex="0" role="button" aria-label="Open larger view">
               <div class="shot-frame"><img src="assets/pp-ops-course-listing-form.png" alt="Pitt Professional Course Listing Form, technical details section" loading="lazy"></div>
               <figcaption>The companion Course Listing form &mdash; stage breakdown, format, certificate/CEU details, registration fee, and the catalog card image, all captured up front for Canvas Catalog.</figcaption>
             </figure>
