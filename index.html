@@ -420,6 +420,8 @@ main{padding-top:2.5rem; padding-bottom:4rem; min-width:0;}
 .text-card-grid{margin-top:1.2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
 @media (max-width:900px){ .text-card-grid{grid-template-columns:1fr;} }
 .award-pill{display:inline-flex;align-items:center;gap:.5em;font-size:.86rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#2A1E07;background:linear-gradient(135deg, var(--gold) 0%, #F3CE7E 50%, var(--gold) 100%);padding:.6em 1.25em;border-radius:999px;margin-bottom:1rem;box-shadow:0 3px 14px rgba(184,135,43,.45), 0 0 0 1px rgba(184,135,43,.35) inset;}
+.award-tag-small{display:inline-flex;align-items:center;gap:.4em;font-size:.76rem;font-weight:600;color:var(--forest-deep);border:1px solid var(--gold);border-radius:999px;padding:.3em .8em .3em .65em;margin-bottom:.9rem;}
+.award-tag-small .star{color:var(--gold);font-size:.95em;}
 .naxt-impact{background:var(--forest-deep);border-radius:6px;padding:1.1rem 1.4rem;margin-top:1.2rem;}
 .naxt-impact-label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;}
 .naxt-impact p{font-size:.92rem;color:#E8E6DE;line-height:1.6;margin:0;max-width:72ch;}
@@ -711,7 +713,7 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
 
     <section class="section" id="accredible-migration">
       <div class="section-head">
-        <span class="award-pill"><span class="star">&#9733;</span> Nominated &middot; Digital Transformation Award</span>
+        <span class="award-tag-small"><span class="star">&#9733;</span> Nominated &middot; Digital Transformation Award</span>
         <h2>Accredible Enterprise Migration &amp; Governance Transformation</h2>
       </div>
       <div class="section-intro">
@@ -765,19 +767,16 @@ footer .contact a{display:inline-flex;align-items:center;gap:.35em;vertical-alig
       </div>
 
       <div class="shot-grid" style="margin-top:1.4rem;">
-        <figure class="shot" data-full="assets/doc-pitt-professional-catalog-intake.png" tabindex="0" role="button" aria-label="Open larger view">
-          <div class="shot-frame"><img src="assets/doc-pitt-professional-catalog-intake.png" alt="Pitt Professional New Program Request Form" loading="lazy"></div>
-          <figcaption>The intake form &mdash; registration info, program overview, and the details needed to list a course in Canvas Catalog and set up Accredible credentialing, gathered in one place instead of an email back-and-forth.</figcaption>
+        <figure class="shot" data-full="assets/pp-ops-program-request-form.png" tabindex="0" role="button" aria-label="Open larger view">
+          <div class="shot-frame"><img src="assets/pp-ops-program-request-form.png" alt="Pitt Professional New Program Request Form" loading="lazy"></div>
+          <figcaption>The New Program Request Form &mdash; registration info and program overview, the first step in getting a new program into the pipeline.</figcaption>
         </figure>
-        <figure class="shot" data-full="assets/doc-pitt-professional-airtable-form.png" tabindex="0" role="button" aria-label="Open larger view">
-          <div class="shot-frame"><img src="assets/doc-pitt-professional-airtable-form.png" alt="Pitt Professional intake form live in Airtable" loading="lazy"></div>
-          <figcaption>The same intake built out as a live Airtable form, turning a static template into a repeatable submission process.</figcaption>
-        </figure>
-        <figure class="shot" data-full="assets/pp-ops-airtable-base.png" tabindex="0" role="button" aria-label="Open larger view">
-          <div class="shot-frame"><img src="assets/pp-ops-airtable-base.png" alt="Airtable base structure: Course Listings and Program Proposals tables" loading="lazy"></div>
-          <figcaption>The underlying Airtable base, with intake submissions organized into Course Listings and Program Proposals &mdash; the tracking layer behind the form.</figcaption>
+        <figure class="shot" data-full="assets/pp-ops-course-listing-form.png" tabindex="0" role="button" aria-label="Open larger view">
+          <div class="shot-frame"><img src="assets/pp-ops-course-listing-form.png" alt="Pitt Professional Course Listing Form, technical details section" loading="lazy"></div>
+          <figcaption>The companion Course Listing form &mdash; stage breakdown, format, certificate/CEU details, registration fee, and the catalog card image, all captured up front for Canvas Catalog.</figcaption>
         </figure>
       </div>
+
     </section>
 
     <section class="section" id="naxt-erp">
